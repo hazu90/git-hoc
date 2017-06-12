@@ -1,0 +1,22 @@
+﻿a, blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+a {
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+input:focus, textarea:focus {
+    outline: 0;
+}
+
+.clear {
+    clear: both;
+}

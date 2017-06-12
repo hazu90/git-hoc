@@ -1,0 +1,174 @@
+﻿.lst-select-control{
+    border:1px solid #eee ;
+    float: left;
+    font-weight: 400;
+    position:relative;
+    cursor: pointer;
+    color:#777;
+    font-size: 14px;
+    border-radius: 2px;
+    margin: 0 5px 0 0;
+    text-align: center;
+    height: 31px;
+    line-height: 31px;
+}
+.lst-select-control:hover{
+    background: #eee;
+    color: #000;
+}
+.lst-select-control>.show-selected-item {
+    padding: 0 15px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+.lst-select-control>.show-selected-item span{
+    float: left;
+}
+.lst-select-control>.show-selected-item span.fa{
+    padding: 5px 0 0 5px;
+}
+.lst-select-control .lst-select-items{
+    background: #fff;
+    -webkit-border-radius: 2px;
+    text-align: left;
+    min-height: 220px;
+    position: absolute;
+    top: 40px;
+    box-shadow: 1px 2px 6px rgba(0,0,0,.5);
+}
+.lst-select-control .lst-select-items .arrow{
+    background: url(img/dropdown/arrow-top.png) no-repeat;
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    top: -8px;
+    z-index: 2;
+    left: 45px;
+}
+.lst-select-control .lst-select-items .fl-panel{
+    color:#000;
+    border-radius:2px 2px 0 0;
+    /*overflow: hidden;*/
+}
+.lst-select-control .lst-select-items .fl-panel .flp-title{
+    font-size: 14px;
+    font-weight: 700;
+    padding: 2px 10px;
+    background: #eee;
+}
+.lst-select-control .lst-select-items .fl-panel .flp-lst-items{
+    overflow: auto;
+    max-height: 295px;
+}
+.lst-select-control .lst-select-items .fl-panel .flp-lst-items>li>label {
+    font-size: 12px;
+    color: #999;
+    display: block;
+    padding: 0 10px;
+    background: #f8f8f8;
+}
+.lst-select-control .lst-select-items .fl-panel .flp-lst-items>li>ul>li>a {
+    border-bottom: 1px solid #F7F7F7;
+    display: block;
+    padding: 0 10px;
+    color: #111;
+}
+.lst-select-control .lst-select-items .fl-panel .flp-lst-items>li>ul>li>a:active,
+.lst-select-control .lst-select-items .fl-panel .flp-lst-items>li>ul>li>a:focus,
+.lst-select-control .lst-select-items .fl-panel .flp-lst-items>li>ul>li>a:hover {
+    color: #c00;
+    background: #f9f9f9;
+}
+.lst-select-control .lst-select-items .fl-panel .flp-lst-items>li>ul>li>a>span {
+    display: inline-block;
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+.lst-select-control .lst-select-items .fl-summary{
+    display: block;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    background: #eee;
+    border-radius: 0 0 2px 2px;
+    white-space: nowrap;
+    padding: 0 10px;
+    font-size: 12px;
+}
+.lst-select-control .lst-select-items .fl-summary a {
+    color: #555;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 15px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+.lst-select-control .lst-select-items .fl-summary a:active,
+.lst-select-control .lst-select-items .fl-summary a:focus,
+.lst-select-control .lst-select-items .fl-summary a:hover {
+    color: #c00;
+    background: #f9f9f9;
+}
+.lst-select-control .lst-select-items .fl-panel li{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.lst-select-control .lst-select-items .fl-panel li a {
+    white-space: nowrap;
+    display: block;
+    clear: both;
+    padding: 0 10px;
+    border-bottom: #f5f5f5 1px solid;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 32px;
+    height: 32px;
+}
+.lst-select-control .lst-select-items .fl-panel>li>a:active,
+.lst-select-control .lst-select-items .fl-panel>li>a:focus,
+.lst-select-control .lst-select-items .fl-panel>li>a:hover{
+    color: #c00;
+    background: #f9f9f9;
+}
+.lst-select-control .lst-select-items .fl-panel>li:hover .menu-box{
+    display: block;
+}
+.lst-select-control .lst-select-items .fl-panel li .menu-box{
+    float: left;
+    border: 1px solid #ccc;
+    color: #222;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    background: #fff;
+    z-index: 1;
+    box-shadow: 1px 2px 6px rgba(0,0,0,.5);
+    border-radius: 2px;
+    left: 200px;
+    top: -1px;
+    width: 300px;
+    display: none;
+}
+.lst-select-control .lst-select-items .fl-panel li:hover .menu-box {
+    display: block;
+}
+.lst-select-control .lst-select-items .fl-panel li:hover .menu-box li{
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.lst-select-control .lst-select-items .fl-panel li:hover .menu-box li>a:active,
+.lst-select-control .lst-select-items .fl-panel li:hover .menu-box li>a:focus,
+.lst-select-control .lst-select-items .fl-panel li:hover .menu-box li>a:hover{
+    color: #c00;
+    background: #f9f9f9;
+}

@@ -1,0 +1,15 @@
+﻿.header-apps {
+    float: left;
+}
+.header-apps a {
+    padding: 0 15px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    margin: 0 5px;
+    line-height: 31px;
+    height: 31px;
+    display: block;
+}
+.header-apps a:hover {
+    background: #eee;
+}
