@@ -6,21 +6,25 @@ using System.Web.Mvc;
 
 namespace MvcApplication1.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
-            return View();
+            if (UserContext != null)
+            {
+                return View();
+            }
+            return RedirectToAction("LogOn", "Account");
         }
 
-        public ActionResult About()
-        {
-            return View();
-        }
+        //public ActionResult About()
+        //{
+        //    return View();
+        //}
 
-        public ActionResult Contact()
-        {
-            return View();
-        }
+        //public ActionResult Contact()
+        //{
+        //    return View();
+        //}
     }
 }

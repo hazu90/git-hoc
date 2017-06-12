@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "LogOn";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.8.3.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/LogOn.js")" type="text/javascript"></script>
+</head>
+<body>
+    <form action="/Account/LogOn" method="POST" id="frmLogOn">
+        <div class="control-group line">
+            <label>Tên đăng nhập</label>
+            <div class="controls">
+                <input id="txtUsername" name="username" type="text" />
+            </div>
+        </div>
+        <div class="control-group line">
+            <label>Mật khẩu</label>
+            <div class="controls">
+                <input id="txtPassword" name="password" type="password" />
+            </div>
+        </div>
+        <br />
+        <div class="form-actions line">
+            <button id="btnLogOn" type="button">Đăng nhập</button>
+            <input type="hidden" id="hidReturn" name="returnUrl" />
+        </div>
+    </form>
+    <script type="text/javascript">
+            log_on.init();
+    </script>
+</body>
+</html>
+
+
+
+
+
