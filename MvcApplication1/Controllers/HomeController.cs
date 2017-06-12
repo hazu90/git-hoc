@@ -10,11 +10,12 @@ namespace MvcApplication1.Controllers
     {
         public ActionResult Index()
         {
-            if (UserContext != null)
-            {
-                return View();
-            }
-            return RedirectToAction("LogOn", "Account");
+            //if (UserContext != null)
+            //{
+            //    return View();
+            //}
+            //return RedirectToAction("LogOn", "Account");
+            return View();
         }
 
         //public ActionResult About()
