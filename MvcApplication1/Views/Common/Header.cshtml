@@ -1,5 +1,37 @@
-﻿@{
-    ViewBag.Title = "Header";
+﻿@using MvcApplication1.Common
+@using MvcApplication1.Models
+@{
+    Layout = null;
+    var curentUser = (UserModel)ViewBag.CurentUser;
 }
-
-<h2>Header</h2>
+<div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        @*@Html.ActionLink("Check in online", "Index", "InviteEvent", null, new { @class = "navbar-brand" })*@
+        <a class="navbar-brand" id="main-home" controller="InviteEvent" action="Index" href="javascript:void(0);">Check in online</a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" id="lst-menu-items">
+            @if (curentUser.HasPermisson(Permission.Manager) || curentUser.HasPermisson(Permission.Admin))
+            {
+                <li><a controller="User" action="Index" href="javascript:void(0);">Tài khoản</a> </li>
+            }
+            @if (curentUser.HasPermisson(Permission.InviteeManager) || curentUser.HasPermisson(Permission.Admin))
+            {
+                <li><a controller="RegisteredInvitee" action="Index" href="javascript:void(0);">Khách mời</a></li>
+            }
+            <li><a controller="InviteEvent" action="Index" href="javascript:void(0);">Checkin</a></li>
+            @if (curentUser.HasPermisson(Permission.Manager) || curentUser.HasPermisson(Permission.Admin))
+            {
+                <li><a controller="Event" action="Index" href="javascript:void(0);">Sự kiện</a></li>
+                <li><a controller="CheckInTimer" action="Index" href="javascript:void(0);">Gia hạn CheckIn</a></li>
+            }
+            <li><a controller="Statistic" action="Index" href="javascript:void(0);">Thống kê</a></li>
+            <li><a href="/Account/LogOff">Thoát</a></li>
+        </ul>
+    </div>
+</div>

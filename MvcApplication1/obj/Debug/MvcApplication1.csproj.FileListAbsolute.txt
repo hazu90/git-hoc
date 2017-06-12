@@ -140,3 +140,4 @@ E:\Projects\Myself\Projects_ Testing\SeafoodWeb\git-hoc\MvcApplication1\bin\DotN
 E:\Projects\Myself\Projects_ Testing\SeafoodWeb\git-hoc\MvcApplication1\bin\DotNetOpenAuth.OAuth.xml
 E:\Projects\Myself\Projects_ Testing\SeafoodWeb\git-hoc\MvcApplication1\bin\DotNetOpenAuth.OpenId.xml
 E:\Projects\Myself\Projects_ Testing\SeafoodWeb\git-hoc\MvcApplication1\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Projects\Myself\Projects_ Testing\SeafoodWeb\git-hoc\MvcApplication1\bin\FluentData.dll

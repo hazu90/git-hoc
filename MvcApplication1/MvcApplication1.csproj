@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentData">
+      <HintPath>DLL and template\FluentData.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -166,6 +169,9 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DataLayer\ConnectionDB.cs" />
+    <Compile Include="DataLayer\UserDL.cs" />
+    <Compile Include="DataLayer\UserRoleDL.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -173,6 +179,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\PagerModel.cs" />
     <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\UserRoleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +250,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Business\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
