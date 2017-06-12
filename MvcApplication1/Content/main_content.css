@@ -1,2 +1,73 @@
-﻿body {
+﻿.main-content{
+    overflow: hidden;
+    width: 1170px;
+    margin: 20px auto;
+    clear: both;
+}
+.main-content .main-content-left{
+    float: left;
+    width: 140px;
+    margin-right: 15px;
+}
+.main-content .main-content-left .category{
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 16px 10px;
+    background: #e5e5e5;
+    color: #333;
+}
+.main-content .main-content-left ul{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+.main-content .main-content-left ul li{
+    overflow: hidden;
+}
+.main-content .main-content-left ul li a {
+    border-left: transparent 2px solid;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+    border-bottom: #e5e5e5 1px solid;
+    color: #555;
+}
+.main-content .main-content-left ul li a.active,
+.main-content .main-content-left ul li a.active .fa,
+.main-content .main-content-left ul li a:hover,
+.main-content .main-content-left ul li a:hover .fa {
+    color: #c00;
+    background: #eee;
+}
+.main-content .main-content-left ul li a .fa {
+    float: right;
+    color: #ccc;
+}
+.main-content .main-content-right{
+    float: right;
+    min-height:1000px;
+    width: 1010px;
+    position: relative;
+}
+.main-content .main-content-right .tool-right-content{
+    background: #ddd;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+}
+.main-content .main-content-right .tool-right-content  ul li {
+    overflow: hidden;
+    float: left;
+}
+.main-content .main-content-right .tool-right-content  ul li a{
+    position: relative;
+    display: block;
+    padding: 15px 20px;
+    float: left;
+    color: #666;
+    height: 45px;
+    box-sizing: border-box;
 }
