@@ -10,12 +10,12 @@
         <link href="~/Content/fixed_layout.css" type="text/css" rel="stylesheet" />
         <link href="~/Content/select_control.css" type="text/css" rel="stylesheet" />
         <link href="~/Content/search_box.css" type="text/css" rel="stylesheet" />
-        <link href="~/Content/search_box.css" type="text/css" rel="stylesheet" />
         <link href="~/Content/Site.css" type="text/css" rel="stylesheet" />
         <link href="~/Content/header_menu_select.css" type="text/css" rel="stylesheet" />
         <link href="~/Content/header_app.css" type="text/css" rel="stylesheet" />
         <link href="~/Content/banner.css" type="text/css" rel="stylesheet" />
         <link href="~/Content/main_content.css" type="text/css" rel="stylesheet" />
+        <link href="~/Content/lastest_news.css" type="text/css" rel="stylesheet" />
     </head>
     <body ng-app="SeaFoodyApp" >
         <div class="header">
@@ -1326,6 +1326,47 @@
                             </select>
                         </li>
                     </ul>
+                </div>
+                <div class="writer-content">
+                    <div class="content-item">
+                        <div class="avatar">
+                            <a href="/ha-noi/an-vat-an-trach" ng-href="/ha-noi/an-vat-an-trach" target="_blank" ng-click="ClickGA(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')" ng-init="ImpressionGa(item,'O_DAU_', $index, DistrictId, '#slDistrictPlace option:selected')">
+                                <img ng-style="{'background':item.MobileBgColor}" src="https://media.foody.vn/res/g26/252832/prof/s640x400/foody-mobile-2-jpg-606-636034201553247191.jpg" ng-src="https://media.foody.vn/res/g26/252832/prof/s640x400/foody-mobile-2-jpg-606-636034201553247191.jpg">
+                            </a>
+                        </div>
+                        <div class="items-content">
+                            <div class="review-points" ng-class="{'green':item.AvgRating>=6,'grey':item.AvgRating==0 || item.AvgRating==null} ">
+                                <span class="ng-binding">5.0</span>
+                            </div>
+                            <div class="title fd-text-ellip">
+                                <a href="/ha-noi/an-vat-an-trach" target="_blank"  class="ng-binding">Ăn Vặt An Trạch</a>
+                            </div>
+                            <div class="desc fd-text-ellip" >116 An Trạch, Quận Đống Đa, Hà Nội</div>
+                        </div>
+                        <div class="items-review" >
+                            <div class="avatar">
+                                <a href="/thanh-vien/Tuyenoc" ng-href="/thanh-vien/Tuyenoc" target="_blank">
+                                    <img ng-src="https://media.foody.vn/default/s100/user-default-female.png" src="https://media.foody.vn/default/s100/user-default-female.png">
+                                </a>
+                            </div>
+                            <div class="users-content">
+                                <a ng-href="/thanh-vien/Tuyenoc" target="_blank" href="/thanh-vien/Tuyenoc">
+                                    <b ng-bind="rv.reviewUserDisplayName" class="ng-binding">Tuyến Ốc</b>
+                                </a>
+                                <a ng-href="/ha-noi/an-vat-an-trach/binh-luan-1477804" ng-bin="" ng-bind-html="rv.Comment" target="_blank" class="ng-binding" href="/ha-noi/an-vat-an-trach/binh-luan-1477804">Quán đã chuyển về ngõ 126 hào nam rồi các bạn nhé</a>
+
+                            </div>
+                        </div>
+                        <div class="items-count">
+                            <a ng-click="ShowPopupReviews(item.Id)"><i class="fa fa-comment"></i> <span ng-bind="item.TotalReviews|formatNK:1" class="ng-binding">1</span></a>
+                            <a ng-click="ShowPopupGallery(item.Id)"><i class="fa fa-camera"></i> <span ng-bind="item.TotalPictures|formatNK:1" class="ng-binding">6</span></a>
+                            <i class="fa fa-bookmark"></i> <span ng-bind="item.TotalSaves|formatNK:1" class="ng-binding">0</span>
+                            <a href="javascript:void(0)" class="item-save tool-custom-list-add" data-id="252832">
+                                <i class="fa fa-bookmark"></i>
+                                <span>Lưu</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             @RenderBody()

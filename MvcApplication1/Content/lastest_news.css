@@ -1,0 +1,21 @@
+﻿.avatar {
+    position: relative;
+}
+.review-points {
+    color: #fff;
+    background: #e52402;
+    text-align: center;
+    border-radius: 100px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+    overflow: hidden;
+}
+.fd-text-ellip {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
