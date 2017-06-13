@@ -389,7 +389,6 @@ namespace MvcApplication1.Controllers
     //    }
     //    #endregion
     //}
-
     public class AccountController : Controller
     {
         public ActionResult LogOn()
@@ -453,108 +452,6 @@ namespace MvcApplication1.Controllers
                 return View(response);
             }
         }
-
-        //public ActionResult LogOnSSO(string data)
-        //{
-        //    try
-        //    {
-        //        if (data.Length > 50)
-        //        {
-        //            //Login thành công SSO
-        //            string token = ConfigurationManager.AppSettings["TokenSSO"];
-        //            string dataDeCript = Libs.CryptorEngine.Decrypt(data, token);
-        //            string[] arrDataLogin = dataDeCript.Split('#');
-        //            string hashCode = Libs.CryptoEngine.MD5Encrypt(arrDataLogin[1] + arrDataLogin[2] + token);
-
-        //            if (arrDataLogin[3] == hashCode)
-        //            {
-        //                var status = arrDataLogin[0];
-        //                if (status == "100")
-        //                {
-        //                    var username = arrDataLogin[1];
-        //                    if (!string.IsNullOrEmpty(username))
-        //                    {
-        //                        try
-        //                        {
-        //                            var userBL = new UserDL();
-        //                            var user = userBL.GetByUserNameWithLockTime(username.Split(',')[0]);
-        //                            if (user != null)
-        //                            {
-
-        //                                if (!user.Status.Equals(1))
-        //                                {
-        //                                    //Tài khoản bị khóa
-        //                                    return View("~/Views/Common/ErrorManual.cshtml", null, "Tài khoản Admin  của bạn đã bị khóa. Vui lòng đăng nhập tài khoản khác hoặc ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //                                }
-        //                                else
-        //                                {
-        //                                    if (user.LockedStartDate != null)
-        //                                    {
-        //                                        var dateLock = user.LockedStartDate.Value.AddMinutes(user.LockTime);
-        //                                        if (dateLock >= DateTime.Now)
-        //                                        {
-        //                                            return View("~/Views/Common/ErrorManual.cshtml", null, "Tài khoản của bạn đã bị khóa. Vui lòng đăng nhập tài khoản khác hoặc ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //                                        }
-        //                                    }
-        //                                    // Lấy danh sách các role của người dùng vừa đăng nhập
-        //                                    var userRoleDL = new UserRoleDL();
-        //                                    var lstRoles = userRoleDL.GetByUserName(user.UserName);
-        //                                    user.PermissionRoles = new List<int>();
-        //                                    foreach (var roleInfo in lstRoles)
-        //                                    {
-        //                                        user.PermissionRoles.Add(roleInfo.RoleId);
-        //                                    }
-
-        //                                    FormsAuthentication.SetAuthCookie(
-        //                                            JsonConvert.SerializeObject(user, Formatting.None).Encrypt(), true);
-        //                                    return RedirectToAction("Index", "Home");
-        //                                }
-        //                            }
-        //                            else
-        //                            {
-        //                                //Không tồn tại user ở db 
-        //                                return View("~/Views/Common/ErrorManual.cshtml", null, "Tài khoản không tồn tại trên hệ thống Admin . Ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //                            }
-        //                        }
-        //                        catch (Exception exx)
-        //                        {
-        //                            return View("~/Views/Common/ErrorManual.cshtml", null, "Có lỗi xảy ra khi đăng nhập hệ thống Admin : " + exx.Message + "<br /> Ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //                        }
-        //                    }
-        //                    else
-        //                    {
-        //                        //Thông tin đăng nhập không chính xác
-        //                        return View("~/Views/Common/ErrorManual.cshtml", null, "Tài khoản không tồn tại trên hệ thống Admin . Ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //                    }
-        //                }
-        //                else
-        //                {
-        //                    //Thông tin đăng nhập không chính xác
-        //                    return View("~/Views/Common/ErrorManual.cshtml", null, "Thông tin đăng nhập SSO không chính xác. Ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //                }
-        //            }
-        //            else
-        //            {
-        //                return View("~/Views/Common/ErrorManual.cshtml", null, "Có lỗi xảy ra khi đăng nhập hệ thống SSO. Ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //            }
-        //        }
-        //        else if (data == "101")
-        //        {
-        //            //Tài khoản chưa được map với 
-        //            return View("~/Views/Common/ErrorManual.cshtml", null, "Tài khoản SSO chưa được kết nối với tài khoản Admin . Liên hệ IT hoặc ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //        }
-        //        else
-        //        {
-        //            //Tài khoản không tồn tại trên hệ thống SSO
-        //            return View("~/Views/Common/ErrorManual.cshtml", null, "Có lỗi khi đăng nhập hệ thống SSO. Ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return View("~/Views/Common/ErrorManual.cshtml", null, "Có lỗi xảy ra khi đăng nhập: " + ex.Message + "<br /> Ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-        //    }
-        //}
-
         public ActionResult LogOff()
         {
             FormsAuthentication.SignOut();

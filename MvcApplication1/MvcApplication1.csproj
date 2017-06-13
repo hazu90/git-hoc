@@ -184,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\banner.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fixed_layout.css" />
     <Content Include="Content\header_app.css" />
     <Content Include="Content\header_menu_select.css" />
@@ -192,6 +193,7 @@
     <Content Include="Content\img\foody-jack%27s deli 1170x60-636281206458926423.jpg" />
     <Content Include="Content\img\foody-vn.png" />
     <Content Include="Content\img\nav_a.gif" />
+    <Content Include="Content\lastest_news.css" />
     <Content Include="Content\main_content.css" />
     <Content Include="Content\Main.css" />
     <Content Include="Content\plugins\font-awesome-4.7.0\css\font-awesome.css" />
