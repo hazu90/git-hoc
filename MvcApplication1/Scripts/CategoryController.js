@@ -8,7 +8,6 @@
         if($scope.isOpen)
         {
             $scope.lstCssStyle = 'lst-select-items minw200';
-
         }
         else
         {
