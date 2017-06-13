@@ -1,0 +1,61 @@
+.home-tab li {
+    display: inline-block;
+    font-size: 12px;
+    position: relative;
+}
+.home-tab li a {
+    float: left;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.home-tab li.active a {
+    color: #c00;
+}
+.footer-down-app-wrap .footer-down-app {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 10px 0;
+    overflow: hidden;
+}
+.footer-friends {
+    clear: both;
+    width: 1200px;
+}
+.footer-friends .items {
+    width: 60px;
+    float: left;
+    margin-right: 9px;
+    text-align: center;
+}
+.footer-friends .footer-friends-data {
+    float: left;
+    width: 60px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: 11px;
+    white-space: nowrap;
+}
+.footer-friends .footer-friends-data a {
+    width: 60px;
+    float: left;
+    text-align: center;
+    white-space: normal;
+}
+.footer-friends .footer-friends-data img {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+}
+.footer-friends .footer-friends-data .more {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #eee;
+    display: block;
+    border-radius: 60px;
+    line-height: 60px;
+}
