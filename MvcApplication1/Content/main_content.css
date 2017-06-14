@@ -129,6 +129,9 @@
     padding: 0 0 3px;
     font-weight: 700;
 }
+.main-content .main-content-right .writer-content .content-item .title a:hover{
+    text-decoration: underline;
+}
 .main-content .main-content-right .writer-content .content-item .desc {
     font-size: 12px;
     color: #888;

@@ -24,36 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_content.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Content/main_content.css">
+      <file leaf-file-name="footer_addtional_tool_and_company.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Content/footer_addtional_tool_and_company.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5295203" vertical-offset="648" max-vertical-offset="1190">
-              <caret line="125" column="45" selection-start-line="125" selection-start-column="45" selection-end-line="125" selection-end-column="45" />
-              <folding>
-                <element signature="e#13#97#0" expanded="false" />
-                <element signature="e#130#192#0" expanded="false" />
-                <element signature="e#235#356#0" expanded="false" />
-                <element signature="e#392#447#0" expanded="false" />
-                <element signature="e#486#511#0" expanded="false" />
-                <element signature="e#553#712#0" expanded="false" />
-                <element signature="e#914#956#0" expanded="false" />
-                <element signature="e#1002#1040#0" expanded="false" />
-                <element signature="e#1074#1161#0" expanded="false" />
-                <element signature="e#1332#1431#0" expanded="false" />
-                <element signature="e#1493#1535#0" expanded="false" />
-                <element signature="e#1598#1749#0" expanded="false" />
-                <element signature="e#1818#1895#0" expanded="false" />
-                <element signature="e#2048#2252#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lastest_news.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Content/lastest_news.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state vertical-scroll-proportion="-0.18378378" vertical-offset="306" max-vertical-offset="884">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -75,6 +50,8 @@
         <option value="$PROJECT_DIR$/Content/search_box.css" />
         <option value="$PROJECT_DIR$/Content/lastest_news.css" />
         <option value="$PROJECT_DIR$/Content/main_content.css" />
+        <option value="$PROJECT_DIR$/Content/footer_admobile.css" />
+        <option value="$PROJECT_DIR$/Content/footer_addtional_tool_and_company.css" />
       </list>
     </option>
   </component>
@@ -110,6 +87,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -190,7 +168,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,14 +184,10 @@
       <ConfigurationWrapper RunnerId="Basic" />
       <method />
     </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -222,6 +195,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -311,6 +288,36 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Content/main_content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1955">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#13#97#0" expanded="false" />
+            <element signature="e#130#192#0" expanded="false" />
+            <element signature="e#235#356#0" expanded="false" />
+            <element signature="e#392#447#0" expanded="false" />
+            <element signature="e#486#511#0" expanded="false" />
+            <element signature="e#553#712#0" expanded="false" />
+            <element signature="e#914#956#0" expanded="false" />
+            <element signature="e#1002#1040#0" expanded="false" />
+            <element signature="e#1074#1161#0" expanded="false" />
+            <element signature="e#1332#1431#0" expanded="false" />
+            <element signature="e#1493#1535#0" expanded="false" />
+            <element signature="e#1598#1749#0" expanded="false" />
+            <element signature="e#2048#2252#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/lastest_news.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="442">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Content/search_box.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
@@ -601,8 +608,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Content/main_content.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5295203" vertical-offset="648" max-vertical-offset="1190">
-          <caret line="125" column="45" selection-start-line="125" selection-start-column="45" selection-end-line="125" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="682" max-vertical-offset="2074">
+          <caret line="132" column="31" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
           <folding>
             <element signature="e#13#97#0" expanded="false" />
             <element signature="e#130#192#0" expanded="false" />
@@ -616,9 +623,24 @@
             <element signature="e#1332#1431#0" expanded="false" />
             <element signature="e#1493#1535#0" expanded="false" />
             <element signature="e#1598#1749#0" expanded="false" />
-            <element signature="e#1818#1895#0" expanded="false" />
             <element signature="e#2048#2252#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/footer_admobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="697">
+          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/footer_addtional_tool_and_company.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.18378378" vertical-offset="306" max-vertical-offset="884">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

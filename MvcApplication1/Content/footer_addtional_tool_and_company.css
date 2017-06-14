@@ -1,0 +1,47 @@
+﻿.footer-addtional-tool-and-company{
+    width: 100%;
+    background: #fff;
+    z-index: 4000;
+    clear: both;
+    line-height: 1.7em;
+    padding: 30px 0;
+    min-height: 90px;
+    font-size: 12px;
+    border-top: #ddd 1px solid;
+    height: 210px;
+}
+.footer-addtional-tool-and-company .footer-fixed {
+    width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.footer-addtional-tool-and-company .footer-min {
+    float: left;
+    width: 1170px;
+    color: #aaa;
+    white-space: normal;
+}
+.footer-left-box {
+    float: left;
+    width: 230px;
+}
+.footer-addtional-tool-and-company .footer-titles {
+    font-weight: 700;
+    color: #aaa;
+    border-bottom: #eee 1px solid;
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.footer-country-list {
+    clear: both;
+    text-align: center;
+    padding: 15px 0;
+    border-top: #eee 1px solid;
+    margin-top: 34px;
+}
+.footer-middle-box {
+    float: left;
+    width: 200px;
+    padding-left: 35px;
+}

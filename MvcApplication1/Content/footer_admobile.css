@@ -1,0 +1,36 @@
+﻿.footer-admobile{
+    height: 462px;
+    background: #eee;
+    clear: both;
+    width: 100%;
+}
+.footer-admobile .footer-down-app {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 10px 0;
+    overflow: hidden;
+}
+.footer-intro-app {
+    font-size: 25px;
+    padding: 20px 0 50px;
+    text-align: center;
+    overflow: hidden;
+    clear: both;
+    font-weight: 700;
+}
+.footer-down-stats {
+    border-bottom: #ddd 1px solid;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+    float: left;
+    width: 100%;
+}
+.footer-down-stats .footer-down-stats-header {
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 3px;
+    text-transform: lowercase;
+}
+.footer-down-stats .footer-down-stats-desc {
+    color: #888;
+}
