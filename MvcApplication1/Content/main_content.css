@@ -133,3 +133,48 @@
     font-size: 12px;
     color: #888;
 }
+.main-content .main-content-right .writer-content .content-item .items-review{
+    clear: both;
+    border-top: #f6f6f6 1px solid;
+    overflow: hidden;
+    padding: 10px;
+}
+.main-content .main-content-right .writer-content .content-item .items-review .avatar{
+    float: left;
+    width: 30px;
+}
+.main-content .main-content-right .writer-content .content-item .items-review .avatar img{
+    border-radius: 30px!important;
+    height: 30px;
+}
+.main-content .main-content-right .writer-content .content-item .items-review .users-content{
+    float: right;
+    width: 265px;
+    color: #666;
+    height: 34px;
+    overflow: hidden;
+    line-height: 1.4em;
+}
+.main-content .main-content-right .writer-content .content-item .items-count{
+    padding: 10px;
+    color: #888;
+    clear: both;
+    max-height: 38px;
+    border-top: #f8f8f8 1px solid;
+    overflow: hidden;
+}
+.main-content .main-content-right .writer-content .content-item .items-count a{
+    color: #888;
+    padding-right: 10px;
+}
+.main-content .main-content-right .writer-content .content-item .items-count a:hover{
+    color: #111;
+}
+.main-content .main-content-right .writer-content .content-item .items-count .item-save{
+    color: #888;
+    float: right;
+    background: #ddd;
+    padding: 2px 10px;
+    margin: -3px 0;
+    border-radius: 2px;
+}

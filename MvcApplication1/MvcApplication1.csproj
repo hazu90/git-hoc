@@ -186,6 +186,7 @@
     <Content Include="Content\banner.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fixed_layout.css" />
+    <Content Include="Content\footer_categoty_statistic.css" />
     <Content Include="Content\header_app.css" />
     <Content Include="Content\header_menu_select.css" />
     <Content Include="Content\img\dropdown\arrow-top.png" />
@@ -202,6 +203,7 @@
     <Content Include="Content\plugins\font-awesome-4.7.0\HELP-US-OUT.txt" />
     <Content Include="Content\search_box.css" />
     <Content Include="Content\select_control.css" />
+    <Content Include="Content\top_user_friend.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\angular.min.js" />
