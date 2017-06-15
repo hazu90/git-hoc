@@ -186,6 +186,8 @@
     <Content Include="Content\banner.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fixed_layout.css" />
+    <Content Include="Content\footer_addtional_tool_and_company.css" />
+    <Content Include="Content\footer_admobile.css" />
     <Content Include="Content\footer_categoty_statistic.css" />
     <Content Include="Content\header_app.css" />
     <Content Include="Content\header_menu_select.css" />
