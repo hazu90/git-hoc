@@ -19,6 +19,24 @@ namespace MvcApplication1.Controllers
             ViewBag.CurentUser = UserContext;
             return View();
         }
+        [HttpGet]
+        [FilterAuthorize]
+        public virtual ActionResult Download(string fileGuid, string fileName)
+        {
+            if (TempData[fileGuid] != null)
+            {
+                byte[] data = TempData[fileGuid] as byte[];
+                if (TempData.ContainsKey(fileGuid))
+                {
+                    TempData.Remove(fileGuid);
+                }
+                return File(data, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+            }
+            else
+            {
+                return new EmptyResult();
+            }
+        }
 
     }
 }
