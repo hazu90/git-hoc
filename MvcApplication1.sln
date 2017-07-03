@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1", "MvcApplication1\MvcApplication1.csproj", "{43EA74D8-C822-4723-8DBE-75CFAFEF1A9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1.Tests", "MvcApplication1.Tests\MvcApplication1.Tests.csproj", "{307BFF14-7E5F-4491-8603-F0FE71B5A848}"
@@ -8,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeafoodEntity", "SeafoodEntity\SeafoodEntity.csproj", "{46B1CC96-B076-4EEA-9684-955C964192B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeafoodAPI", "SeafoodAPI\SeafoodAPI.csproj", "{ABF73C07-12E3-4B86-87A2-230AA59B23F9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{7D420A10-0EA1-4F50-A88B-96496E852B70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CF", "CF\CF.csproj", "{4430D1FA-A496-46B5-B35B-7B1BAAC9094E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,5 +39,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4430D1FA-A496-46B5-B35B-7B1BAAC9094E} = {7D420A10-0EA1-4F50-A88B-96496E852B70}
 	EndGlobalSection
 EndGlobal
