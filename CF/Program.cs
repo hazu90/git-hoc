@@ -1,5 +1,4 @@
-﻿using HtmlAgilityPack;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,9 +14,9 @@ namespace CF
         [STAThread]
         static void Main()
         {
-            string url = "https://www.foody.vn/";
-            HtmlWeb web = new HtmlWeb();
-            HtmlAgilityPack.HtmlDocument document = web.Load(url);
+            //string url = "https://www.foody.vn/";
+            //HtmlWeb web = new HtmlWeb();
+            //HtmlAgilityPack.HtmlDocument document = web.Load(url);
         }
     }
 }
