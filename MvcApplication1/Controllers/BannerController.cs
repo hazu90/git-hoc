@@ -6,11 +6,12 @@ using System.Web.Mvc;
 
 namespace MvcApplication1.Controllers
 {
-    public class HomeController : BaseController
+    public class BannerController : Controller
     {
         public ActionResult Index()
         {
             return View();
         }
+
     }
 }

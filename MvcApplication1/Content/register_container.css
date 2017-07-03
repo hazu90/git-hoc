@@ -1,0 +1,61 @@
+﻿.register-container{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.register-container .register-container-left{
+    width: 500px;
+    float: left;
+}
+.register-container .register-container-right{
+    width: 460px;
+    float: right;
+}
+.register-container .register-container-right .register-form-head{
+    width: 100%;
+    float: left;
+    clear: both;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+.register-container .register-container-right .register-form-head .register-title {
+    font-size: 20px;
+    float: left;
+    width: 250px;
+    color: #333;
+}
+.register-container .register-container-right .register-form-head .register-register-link {
+    float: right;
+    margin-right: 12px;
+}
+.register-container .register-container-right .register-form-head .register-register-link a {
+    color: #28a1be;
+}
+.register-container .register-container-right .input-register-control{
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    width: 300px;
+    height: 38px;
+    margin-top: 3px;
+    float: left;
+}
+.register-container .register-container-right .input-register-control input{
+    border: none;
+    width: 280px;
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0 0 8px;
+    background: none repeat scroll 0 0 transparent;
+}
+
+.register-container .register-container-right input[type=submit]{
+    background: url(/Content/img/account-icons.png) no-repeat 0 -42px;
+    width: 113px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+}

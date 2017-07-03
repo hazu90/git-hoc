@@ -11,7 +11,7 @@ namespace MvcApplication1.DataLayer
     {
         public static IDbContext MainDB()
         {
-            return new DbContext().ConnectionString(ConfigurationManager.AppSettings["DVSCheckIn"], new SqlServerProvider());
+            return new DbContext().ConnectionString(ConfigurationManager.ConnectionStrings["DbSeaFoody"].ConnectionString, new SqlServerProvider());
         }
     }
 }

@@ -1,37 +1,83 @@
-﻿@model MvcApplication1.Models.RegisterModel
+﻿@using SeafoodEntity
+@model MvcApplication1.Models.RegisterInfoModel
 @{
-    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>Create a new account.</h2>
-</hgroup>
+<div class="register-container">
+    <div class="register-container-left">
+        <img src="//static.foody.vn/s1/style/images/test/register-image.png">
+    </div>
+    <div class="register-container-right">
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary()
+            <div class="register-form-head">
+                <div class="register-title">
+                Đăng ký tài khoản</div>
+                <div class="register-register-link">
+                    <a href="/dang-nhap">Đăng nhập</a>
+                </div>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="label-register-control">Tên:</td>
+                        <td class="input-register-control" >@Html.TextBoxFor(m=>m.FirstName)</td>
+                    </tr>
+                    <tr>
+                        <td class="label-register-control">Họ:</td>
+                        <td  class="input-register-control">@Html.TextBoxFor(m=>m.LastName)</td>
+                    </tr>
+                    <tr>
+                        <td class="label-register-control">Email:</td>
+                        <td  class="input-register-control">@Html.TextBoxFor(m=>m.UserEmail)</td</tr>
+                    <tr>
+                        <td class="label-register-control">Tỉnh/Thành phố:</td>
+                        <td  class="input-register-control">@Html.DropDownListFor((m => m.CityCode), Model.LstCity.Select(o => new SelectListItem() { Value = o.CityCode, Text = o.CityName }), new { style="border: 1px solid #ddd;padding: 12px;font-size: 14px;margin-right: 5px;width: 303px;" })</td>
+                    </tr>
+                    <tr>
+                        <td  class="label-register-control">Mật khẩu:</td>
+                        <td  class="input-register-control">
+                            @Html.PasswordFor(m => m.Password)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  class="label-register-control">Nhập lại mật khẩu:</td>
+                        <td  class="input-register-control">
+                            @Html.PasswordFor(m => m.ConfirmPassword)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-register-control">Mã bảo vệ</td>
+                        <td>
+                            <div class="g-recaptcha" data-sitekey="6Lfu7R4UAAAAALjKGlWfQf8O7ttXc9VqW7CMdJsY"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td >
+                            <input type="checkbox" /> Tôi đồng ý với các quy định của Foody.vn
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Đăng kí" />
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <br />
+            
+        }
+    </div>
+    
+</div>
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary()
-
-    <fieldset>
-        <legend>Registration Form</legend>
-        <ol>
-            <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.Password)
-                @Html.PasswordFor(m => m.Password)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.ConfirmPassword)
-                @Html.PasswordFor(m => m.ConfirmPassword)
-            </li>
-        </ol>
-        <input type="submit" value="Register" />
-    </fieldset>
-}
-
+<script src='https://www.google.com/recaptcha/api.js'></script>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

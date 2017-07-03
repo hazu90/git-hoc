@@ -164,13 +164,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Business\CityBAL.cs" />
+    <Compile Include="Business\UserInformationBAL.cs" />
     <Compile Include="Common\CommonEnum.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\FoodyInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DataLayer\CityDL.cs" />
     <Compile Include="DataLayer\ConnectionDB.cs" />
     <Compile Include="DataLayer\UserDL.cs" />
+    <Compile Include="DataLayer\UserInformationDAL.cs" />
     <Compile Include="DataLayer\UserRoleDL.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -178,11 +184,13 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\PagerModel.cs" />
+    <Compile Include="Models\RegisterInfoModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\UserRoleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\account_manager.css" />
     <Content Include="Content\banner.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fixed_layout.css" />
@@ -196,6 +204,7 @@
     <Content Include="Content\img\foody-jack%27s deli 1170x60-636281206458926423.jpg" />
     <Content Include="Content\img\foody-vn.png" />
     <Content Include="Content\img\nav_a.gif" />
+    <Content Include="Content\img\register-image.png" />
     <Content Include="Content\lastest_news.css" />
     <Content Include="Content\main_content.css" />
     <Content Include="Content\Main.css" />
@@ -203,6 +212,7 @@
     <Content Include="Content\plugins\font-awesome-4.7.0\css\font-awesome.min.css" />
     <Content Include="Content\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\plugins\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Content\register_container.css" />
     <Content Include="Content\search_box.css" />
     <Content Include="Content\select_control.css" />
     <Content Include="Content\top_user_friend.css" />
@@ -256,7 +266,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Business\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -307,6 +316,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Account\LogOn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SeafoodEntity\SeafoodEntity.csproj">
+      <Project>{46b1cc96-b076-4eea-9684-955c964192b0}</Project>
+      <Name>SeafoodEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Banner\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LoginLayout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
