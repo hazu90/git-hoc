@@ -69,10 +69,11 @@ namespace MvcApplication1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Register(RegisterInfoModel model)
         {
+            // Lấy thông tin xác thực google API
             var response = Request["g-recaptcha-response"];
-            string secretKey = "6Lfu7R4UAAAAAH1aPC7FCVjwasR6jH3me1PBg8-5";
+            var secretKey = "6Lfu7R4UAAAAAH1aPC7FCVjwasR6jH3me1PBg8-5";
             var client = new WebClient();
-            string urlReQuest = string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secretKey, response);
+            var urlReQuest = string.Format("https://www.google.com/recaptcha/api/siteverify?secret={0}&response={1}", secretKey, response);
             var result = client.DownloadString(urlReQuest);
             var obj = JsonConvert.DeserializeObject<dynamic>(result);
             var isNotRobot = (bool)obj.SelectToken("success");
@@ -82,8 +83,9 @@ namespace MvcApplication1.Controllers
                 // Attempt to register the user
                 try
                 {
+                    // Tạo tài khoản
                     WebSecurity.CreateUserAndAccount(model.UserEmail, model.Password);
-                    // Them thong tin 
+                    // Bổ sung thông tin tài khoản tài khoản 
                     var userInformationBAL = new UserInformationBAL();
                     userInformationBAL.Create( new UserInformation(){
                                                         FirstName = model.FirstName,

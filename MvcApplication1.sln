@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1", "MvcApplication1\MvcApplication1.csproj", "{43EA74D8-C822-4723-8DBE-75CFAFEF1A9F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1.Tests", "MvcApplication1.Tests\MvcApplication1.Tests.csproj", "{307BFF14-7E5F-4491-8603-F0FE71B5A848}"
@@ -12,6 +14,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{7D420A10-0EA1-4F50-A88B-96496E852B70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CF", "CF\CF.csproj", "{4430D1FA-A496-46B5-B35B-7B1BAAC9094E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperLib", "HelperLib\HelperLib.csproj", "{55D5A552-F561-43E3-8D09-AEABFF4C4BEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{4430D1FA-A496-46B5-B35B-7B1BAAC9094E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4430D1FA-A496-46B5-B35B-7B1BAAC9094E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4430D1FA-A496-46B5-B35B-7B1BAAC9094E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D5A552-F561-43E3-8D09-AEABFF4C4BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D5A552-F561-43E3-8D09-AEABFF4C4BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D5A552-F561-43E3-8D09-AEABFF4C4BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D5A552-F561-43E3-8D09-AEABFF4C4BEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
