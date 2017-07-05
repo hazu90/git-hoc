@@ -74,8 +74,9 @@ namespace MvcApplication1.Controllers
             {
                 try
                 {
+                    // Tạo tài khoản
                     WebSecurity.CreateUserAndAccount(model.UserEmail, model.Password);
-                    // Them thong tin 
+                    // Bổ sung thông tin tài khoản tài khoản 
                     var userInformationBAL = new UserInformationBAL();
                     userInformationBAL.Create( new UserInformation(){
                                                         FirstName = model.FirstName,
@@ -409,76 +410,4 @@ namespace MvcApplication1.Controllers
         }
         #endregion
     }
-
-
-    //public class AccountController : Controller
-    //{
-    //    public ActionResult LogOn()
-    //    {
-    //        return View();
-    //    }
-    //    //, bool remember = false
-    //    [HttpPost]
-    //    public ActionResult LogOn(string username, string password, string returnUrl)
-    //    {
-    //        var userDL = new UserDL();
-    //        //Get user with user and password user just entry
-    //        var checkedUser = userDL.GetUserSecurity(username, password);
-    //        var response = new LogonViewModel();
-    //        if (checkedUser != null)
-    //        {
-    //            //If User deactive then return view 
-    //            //if (!checkedUser.Status.Equals(UserState.Active.ToInt(-1)))
-    //            if (!checkedUser.Status.Equals(UserState.Active))
-    //            {
-    //                return View("~/Views/Common/ErrorManual.cshtml", null, "Tài khoản Admin  của bạn đã bị khóa. Vui lòng đăng nhập tài khoản khác hoặc ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-    //            }
-    //            else
-    //            {
-    //                if (checkedUser.LockedStartDate != null)
-    //                {
-    //                    var dateLock = checkedUser.LockedStartDate.Value.AddMinutes(checkedUser.LockTime);
-    //                    if (dateLock >= DateTime.Now)
-    //                    {
-    //                        return View("~/Views/Common/ErrorManual.cshtml", null, "Tài khoản của bạn đã bị khóa. Vui lòng đăng nhập tài khoản khác hoặc ấn vào <a href='/Account/LogOff'>đây</a> để đăng nhập lại!");
-    //                    }
-    //                }
-    //            }
-
-    //            // Lấy danh sách các role của người dùng vừa đăng nhập
-    //            var userRoleDL = new UserRoleDL();
-    //            var lstRoles = userRoleDL.GetByUserName(checkedUser.UserName);
-    //            checkedUser.PermissionRoles = new List<int>();
-    //            foreach (var roleInfo in lstRoles)
-    //            {
-    //                checkedUser.PermissionRoles.Add(roleInfo.RoleId);
-    //            }
-    //            FormsAuthentication.SetAuthCookie(JsonConvert.SerializeObject(checkedUser, Formatting.None), false);
-    //            if (!string.IsNullOrEmpty(returnUrl))
-    //            {
-    //                return Redirect(returnUrl);
-    //            }
-    //            else
-    //            {
-    //                return RedirectToAction("Index", "Home");
-    //            }
-    //        }
-    //        else
-    //        {
-    //            response = new LogonViewModel
-    //            {
-    //                UserName = username,
-    //                Password = password,
-    //                Status = 1
-    //            };
-    //            return View(response);
-    //        }
-    //    }
-    //    public ActionResult LogOff()
-    //    {
-    //        FormsAuthentication.SignOut();
-    //        //return Redirect(ConfigurationManager.AppSettings["LogOffUrl"]);
-    //        return Redirect("/Account/LogOn");
-    //    }
-    //}
 }
