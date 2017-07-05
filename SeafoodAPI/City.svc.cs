@@ -20,5 +20,10 @@ namespace SeafoodAPI
             var cityBL = new CityBL();
             return cityBL.Create(model.Data);
         }
+        public ResponseModel Update(RequestModel model)
+        {
+                var cityBL = new CityBL();
+            return cityBL.Update(model.Data);
+        }
     }
 }

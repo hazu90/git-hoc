@@ -20,5 +20,13 @@ namespace SeafoodAPI.IServices
             ResponseFormat = WebMessageFormat.Json)]
         [return: MessageParameter(Name = "result")]
         ResponseModel Create(RequestModel model);
+        [OperationContract]
+        [WebInvoke(Method = "POST",
+            UriTemplate = "Update",
+            RequestFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.WrappedResponse,
+            ResponseFormat = WebMessageFormat.Json)]
+        [return: MessageParameter(Name = "result")]
+        ResponseModel Update(RequestModel model);
     }
 }

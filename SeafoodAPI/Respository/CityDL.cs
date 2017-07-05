@@ -18,5 +18,16 @@ namespace SeafoodAPI.Respository
                                 .Execute();
             }
         }
+        public void Update(CityModel model)
+        {
+            using (var context = ConnectionDB.MainDB())
+            {
+                context.StoredProcedure("City_Update")
+                                .Parameter("Id", model.Id)
+                                .Parameter("CityName", model.CityName)
+                                .Parameter("CityCode", model.CityCode)
+                                .Execute();
+            }
+        }
     }
 }

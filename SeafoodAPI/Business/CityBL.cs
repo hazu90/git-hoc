@@ -49,5 +49,33 @@ namespace SeafoodAPI.Business
             }
             
         }
+
+        public ResponseModel Update(string jsonData)
+        {
+            try
+            {
+                var model = JsonConvert.DeserializeObject<CityModel>(jsonData);
+                var response = new ResponseModel();
+                // Validate thông tin đầu vào
+                if (string.IsNullOrEmpty(model.CityName))
+                {
+                    response.Code = SystemStatusCode.NotValid.GetHashCode();
+                    response.Message = "Thông tin thành phố bắt buộc nhập";
+                    return response;
+                }
+                CityDL.Update(model);
+                response.Code = SystemStatusCode.Success.GetHashCode();
+                response.Message = "Bạn đã cập nhật thành phố thành công";
+                return response;
+            }
+            catch
+            {
+                return new ResponseModel()
+                {
+                    Code = SystemStatusCode.Error.GetHashCode(),
+                    Message = "Có lỗi trong quá trình xử lý"
+                };
+            }
+        }
     }
 }
