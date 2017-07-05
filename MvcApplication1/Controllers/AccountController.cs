@@ -143,9 +143,6 @@ namespace MvcApplication1.Controllers
             return View();
         }
 
-        //
-        // POST: /Account/Manage
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Manage(LocalPasswordModel model)
@@ -205,9 +202,6 @@ namespace MvcApplication1.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
-        //
-        // POST: /Account/ExternalLogin
 
         [HttpPost]
         [AllowAnonymous]

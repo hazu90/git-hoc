@@ -201,12 +201,15 @@
     <Content Include="Content\footer_categoty_statistic.css" />
     <Content Include="Content\header_app.css" />
     <Content Include="Content\header_menu_select.css" />
+    <Content Include="Content\img\account-icons.png" />
+    <Content Include="Content\img\correct-icon.png" />
     <Content Include="Content\img\dropdown\arrow-top.png" />
     <Content Include="Content\img\foody-1170-60-chacangulong-01-636268082601173100.jpg" />
     <Content Include="Content\img\foody-jack%27s deli 1170x60-636281206458926423.jpg" />
     <Content Include="Content\img\foody-vn.png" />
     <Content Include="Content\img\nav_a.gif" />
     <Content Include="Content\img\register-image.png" />
+    <Content Include="Content\img\uncorrect-icon.png" />
     <Content Include="Content\lastest_news.css" />
     <Content Include="Content\main_content.css" />
     <Content Include="Content\Main.css" />
@@ -224,6 +227,7 @@
     <Content Include="Scripts\CategoryController.js" />
     <Content Include="Scripts\CityController.js" />
     <Content Include="Scripts\MainModule.js" />
+    <Content Include="Scripts\RegisterController.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

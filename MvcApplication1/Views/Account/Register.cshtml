@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
 
-<div class="register-container" ng-controller="CityController">
+<div class="register-container" ng-controller="RegisterController">
     <div class="register-container-left">
         <img src="//static.foody.vn/s1/style/images/test/register-image.png">
     </div>
@@ -23,23 +23,38 @@
                 <tbody>
                     <tr>
                         <td class="label-register-control">Tên:</td>
-                        <td class="input-register-control" >@Html.TextBoxFor(m => m.FirstName)</td>
+                        <td class="input-register-control" >@Html.TextBoxFor(m => m.FirstName, new {ng_blur="required(firstname)",ng_model="firstname" })</td>
+                        <td class="validate-control">
+                            <img src="~/Content/img/{{firstname_validate}}" ng-style="{{firstname_validate_style}}" alt="icon" />
+                        </td>
                     </tr>
                     <tr>
                         <td class="label-register-control">Họ:</td>
                         <td  class="input-register-control">@Html.TextBoxFor(m=>m.LastName)</td>
+                        <td class="validate-control">
+                            <img src="~/Content/img/{{firstname_validate}}" style="display: none;" alt="icon" />
+                        </td>
                     </tr>
                     <tr>
                         <td class="label-register-control">Email:</td>
                         <td  class="input-register-control">@Html.TextBoxFor(m=>m.UserEmail)</td</tr>
+                        <td class="validate-control">
+                            <img src="~/Content/img/correct-icon.png" style="display: none;" alt="icon" />
+                        </td>
                     <tr>
                         <td class="label-register-control">Tỉnh/Thành phố:</td>
                         <td  class="input-register-control">@Html.DropDownListFor((m => m.CityCode), Model.LstCity.Select(o => new SelectListItem() { Value = o.CityCode, Text = o.CityName }), new { style="border: 1px solid #ddd;padding: 12px;font-size: 14px;margin-right: 5px;width: 303px;" })</td>
+                        <td class="validate-control">
+                            <img src="~/Content/img/correct-icon.png" style="display: none;" alt="icon" />
+                        </td>
                     </tr>
                     <tr>
                         <td  class="label-register-control">Mật khẩu:</td>
                         <td  class="input-register-control">
                             @Html.PasswordFor(m => m.Password)
+                        </td>
+                        <td class="validate-control">
+                            <img src="~/Content/img/correct-icon.png" style="display: none;" alt="icon" />
                         </td>
                     </tr>
                     <tr>
@@ -47,11 +62,16 @@
                         <td  class="input-register-control">
                             @Html.PasswordFor(m => m.ConfirmPassword)
                         </td>
+                        <td class="validate-control">
+                            <img src="~/Content/img/correct-icon.png" style="display: none;" alt="icon" />
+                        </td>
                     </tr>
                     <tr>
                         <td class="label-register-control">Mã bảo vệ</td>
                         <td>
                             <div class="g-recaptcha" data-sitekey="6Lfu7R4UAAAAALjKGlWfQf8O7ttXc9VqW7CMdJsY"></div>
+                        </td>
+                        <td class="validate-control">
                         </td>
                     </tr>
                     <tr>
@@ -59,12 +79,11 @@
                         <td >
                             <input type="checkbox" /> Tôi đồng ý với các quy định của Foody.vn
                         </td>
+                        <td class="validate-control"></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td>
-                            <input type="submit" value="Đăng kí" />
-                        </td>
+                        <td><input type="submit" value="Đăng kí" /></td>
                         <td></td>
                     </tr>
                 </tbody>
