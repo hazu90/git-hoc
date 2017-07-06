@@ -9,10 +9,9 @@
         <img src="//static.foody.vn/s1/style/images/test/register-image.png">
     </div>
     <div class="register-container-right">
-        @using (Html.BeginForm(null, null, FormMethod.Post, new { name = "RegisterForm", id = "frm" }))
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { name = "RegisterForm", id = "RegisterForm", ng_submit = "register_submit()" }))
         {
             @Html.AntiForgeryToken()
-            @*@Html.ValidationSummary()*@
             <div class="register-form-head">
                 <div class="register-title">Đăng ký tài khoản</div>
                 <div class="register-register-link">
@@ -21,6 +20,11 @@
             </div>
             <table>
                 <tbody>
+                    <tr>
+                        <td colspan="3">
+                            @Html.ValidationSummary()
+                        </td>
+                    </tr>
                     <tr>
                         <td class="label-register-control">Tên:</td>
                         <td class="input-register-control" >@Html.TextBoxFor(m => m.FirstName, new { ng_blur = "firstname_lost_focus(firstname)", ng_model = "firstname" })</td>
@@ -37,7 +41,7 @@
                     </tr>
                     <tr>
                         <td class="label-register-control">Email:</td>
-                        <td class="input-register-control">@Html.TextBoxFor(m => m.UserEmail, new { ng_blur = "email_lost_focus(email)", ng_model = "email", type = "email", required="required" })</td</tr>
+                        <td class="input-register-control">@Html.TextBoxFor(m => m.UserEmail, new { ng_blur = "email_lost_focus(email)", ng_model = "email", type = "email" })</td</tr>
                         <td class="validate-control">
                             <img ng-src="{{email_validate}}" ng-show="email_validate_show" alt="icon" />
                         </td>
@@ -51,19 +55,19 @@
                     <tr>
                         <td class="label-register-control">Mật khẩu:</td>
                         <td class="input-register-control">
-                            @Html.PasswordFor(m => m.Password)
+                            @Html.PasswordFor(m => m.Password, new { ng_blur="pwd_lost_focus(pwd)" ,ng_model ="pwd" })
                         </td>
                         <td class="validate-control">
-                            <img src="~/Content/img/correct-icon.png" style="display: none;" alt="icon" />
+                            <img ng-src="{{pwd_validate}}" ng-show="pwd_validate_show" alt="icon" />
                         </td>
                     </tr>
                     <tr>
                         <td class="label-register-control">Nhập lại mật khẩu:</td>
                         <td class="input-register-control">
-                            @Html.PasswordFor(m => m.ConfirmPassword)
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { ng_blur="confirm_pwd_lost_focus(confirm_pwd)" ,ng_model ="confirm_pwd" })
                         </td>
                         <td class="validate-control">
-                            <img src="~/Content/img/correct-icon.png" style="display: none;" alt="icon" />
+                            <img ng-src="{{confirm_pwd_validate}}" ng-show="confirm_pwd_validate_show" alt="icon" />
                         </td>
                     </tr>
                     <tr>

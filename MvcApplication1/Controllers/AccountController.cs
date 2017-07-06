@@ -88,9 +88,10 @@ namespace MvcApplication1.Controllers
                                                         UserName = model.UserEmail,
                                                         CityCode = model.CityCode
                                                         });
+                    //Gui thong bao yeu cau kich hoat tai khoan
 
-                    WebSecurity.Login(model.UserEmail, model.Password);
-                    return RedirectToAction("Index", "Home");
+                    //WebSecurity.Login(model.UserEmail, model.Password);
+                    return RedirectToAction("ActivateNotification", "Account");
                 }
                 catch (MembershipCreateUserException e)
                 {
@@ -103,6 +104,11 @@ namespace MvcApplication1.Controllers
             model.LstCity = cityBAL.GetAll();
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+        [AllowAnonymous]
+        public ActionResult ActivateNotification()
+        {
+            return View();
         }
 
         [HttpPost]
