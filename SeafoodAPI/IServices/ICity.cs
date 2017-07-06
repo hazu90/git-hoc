@@ -16,7 +16,7 @@ namespace SeafoodAPI.IServices
         [WebInvoke(Method = "POST",
             UriTemplate = "Create",
             RequestFormat = WebMessageFormat.Json,
-            BodyStyle = WebMessageBodyStyle.WrappedResponse,
+            BodyStyle = WebMessageBodyStyle.Bare,
             ResponseFormat = WebMessageFormat.Json)]
         [return: MessageParameter(Name = "result")]
         ResponseModel Create(RequestModel model);

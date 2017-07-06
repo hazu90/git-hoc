@@ -16,6 +16,7 @@ namespace MvcApplication1.Models
         [Required]
         public string LastName { get; set; }
         [Required]
+        [DataType(DataType.EmailAddress)]
         public string UserEmail { get; set; }
         public string CityCode { get; set; }
         [Required]

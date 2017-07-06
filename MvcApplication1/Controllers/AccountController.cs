@@ -16,6 +16,7 @@ using MvcApplication1.DataLayer;
 using MvcApplication1.Business;
 using SeafoodEntity;
 using System.Net;
+using HelperLib;
 
 namespace MvcApplication1.Controllers
 {
@@ -74,6 +75,8 @@ namespace MvcApplication1.Controllers
             {
                 try
                 {
+                    // Kiểm tra tính hợp lệ của thông tin email
+                    //if(Helper.IsValidMail(model.UserEmail))
                     // Tạo tài khoản
                     WebSecurity.CreateUserAndAccount(model.UserEmail, model.Password);
                     // Bổ sung thông tin tài khoản tài khoản 

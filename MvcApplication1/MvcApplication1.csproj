@@ -165,10 +165,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Business\AccountRegisterBAL.cs" />
     <Compile Include="Business\CityBAL.cs" />
     <Compile Include="Business\GoogleCaptchaBAL.cs" />
     <Compile Include="Business\UserInformationBAL.cs" />
     <Compile Include="Common\CommonEnum.cs" />
+    <Compile Include="Common\IDataValidator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -187,6 +189,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\PagerModel.cs" />
     <Compile Include="Models\RegisterInfoModel.cs" />
+    <Compile Include="Models\ResponseModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\UserRoleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

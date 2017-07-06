@@ -9,12 +9,12 @@
         <img src="//static.foody.vn/s1/style/images/test/register-image.png">
     </div>
     <div class="register-container-right">
-        @using (Html.BeginForm()) {
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { name = "RegisterForm", id = "frm" }))
+        {
             @Html.AntiForgeryToken()
-            @Html.ValidationSummary()
+            @*@Html.ValidationSummary()*@
             <div class="register-form-head">
-                <div class="register-title">
-                Đăng ký tài khoản</div>
+                <div class="register-title">Đăng ký tài khoản</div>
                 <div class="register-register-link">
                     <a href="/dang-nhap">Đăng nhập</a>
                 </div>
@@ -23,34 +23,34 @@
                 <tbody>
                     <tr>
                         <td class="label-register-control">Tên:</td>
-                        <td class="input-register-control" >@Html.TextBoxFor(m => m.FirstName, new {ng_blur="required(firstname)",ng_model="firstname" })</td>
+                        <td class="input-register-control" >@Html.TextBoxFor(m => m.FirstName, new { ng_blur = "firstname_lost_focus(firstname)", ng_model = "firstname" })</td>
                         <td class="validate-control">
-                            <img src="~/Content/img/{{firstname_validate}}" ng-style="{{firstname_validate_style}}" alt="icon" />
+                            <img ng-src="{{firstname_validate}}" ng-show="firstname_validate_show" alt="icon" />
                         </td>
                     </tr>
                     <tr>
                         <td class="label-register-control">Họ:</td>
-                        <td  class="input-register-control">@Html.TextBoxFor(m=>m.LastName)</td>
+                        <td  class="input-register-control">@Html.TextBoxFor(m => m.LastName, new { ng_blur = "lastname_lost_focus(lastname)", ng_model = "lastname" })</td>
                         <td class="validate-control">
-                            <img src="~/Content/img/{{firstname_validate}}" style="display: none;" alt="icon" />
+                            <img ng-src="{{lastname_validate}}" ng-show="lastname_validate_show" alt="icon" />
                         </td>
                     </tr>
                     <tr>
                         <td class="label-register-control">Email:</td>
-                        <td  class="input-register-control">@Html.TextBoxFor(m=>m.UserEmail)</td</tr>
+                        <td class="input-register-control">@Html.TextBoxFor(m => m.UserEmail, new { ng_blur = "email_lost_focus(email)", ng_model = "email", type = "email", required="required" })</td</tr>
                         <td class="validate-control">
-                            <img src="~/Content/img/correct-icon.png" style="display: none;" alt="icon" />
+                            <img ng-src="{{email_validate}}" ng-show="email_validate_show" alt="icon" />
                         </td>
                     <tr>
                         <td class="label-register-control">Tỉnh/Thành phố:</td>
-                        <td  class="input-register-control">@Html.DropDownListFor((m => m.CityCode), Model.LstCity.Select(o => new SelectListItem() { Value = o.CityCode, Text = o.CityName }), new { style="border: 1px solid #ddd;padding: 12px;font-size: 14px;margin-right: 5px;width: 303px;" })</td>
+                        <td class="input-register-control">@Html.DropDownListFor((m => m.CityCode), Model.LstCity.Select(o => new SelectListItem() { Value = o.CityCode, Text = o.CityName }), new { style = "border: 1px solid #ddd;padding: 12px;font-size: 14px;margin-right: 5px;width: 303px;" })</td>
                         <td class="validate-control">
-                            <img src="~/Content/img/correct-icon.png" style="display: none;" alt="icon" />
+                            <img  src="~/Content/img/correct-icon.png" style="display: none;" alt="icon" />
                         </td>
                     </tr>
                     <tr>
-                        <td  class="label-register-control">Mật khẩu:</td>
-                        <td  class="input-register-control">
+                        <td class="label-register-control">Mật khẩu:</td>
+                        <td class="input-register-control">
                             @Html.PasswordFor(m => m.Password)
                         </td>
                         <td class="validate-control">
@@ -58,8 +58,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td  class="label-register-control">Nhập lại mật khẩu:</td>
-                        <td  class="input-register-control">
+                        <td class="label-register-control">Nhập lại mật khẩu:</td>
+                        <td class="input-register-control">
                             @Html.PasswordFor(m => m.ConfirmPassword)
                         </td>
                         <td class="validate-control">
