@@ -231,6 +231,7 @@
     <Content Include="Scripts\CityController.js" />
     <Content Include="Scripts\MainModule.js" />
     <Content Include="Scripts\RegisterController.js" />
+    <Content Include="Views\Account\ActivateNotification.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -341,9 +342,6 @@
       <Project>{46b1cc96-b076-4eea-9684-955c964192b0}</Project>
       <Name>SeafoodEntity</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Account\ActivateNotification.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
