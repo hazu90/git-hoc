@@ -88,7 +88,9 @@ namespace MvcApplication1.Controllers
                                                         UserName = model.UserEmail,
                                                         CityCode = model.CityCode
                                                         });
-                    //Gui thong bao yeu cau kich hoat tai khoan
+                    //Gui mail yeu cau kich hoat tai khoan
+                    var mailConfirmAccountBAL = new MailConfirmAccountBAL();
+                    mailConfirmAccountBAL.SendConfirmMail(model.UserEmail, model.UserEmail, "5788afeedb73a792ae0213f65d1e28a6");
 
                     //WebSecurity.Login(model.UserEmail, model.Password);
                     return RedirectToAction("ActivateNotification", "Account");
@@ -105,9 +107,17 @@ namespace MvcApplication1.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+        
         [AllowAnonymous]
         public ActionResult ActivateNotification()
         {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public ActionResult Activate(string userName, string token)
+        {
+            //var accountRegister
             return View();
         }
 

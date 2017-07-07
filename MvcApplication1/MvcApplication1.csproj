@@ -168,6 +168,7 @@
     <Compile Include="Business\AccountRegisterBAL.cs" />
     <Compile Include="Business\CityBAL.cs" />
     <Compile Include="Business\GoogleCaptchaBAL.cs" />
+    <Compile Include="Business\MailConfirmAccountBAL.cs" />
     <Compile Include="Business\UserInformationBAL.cs" />
     <Compile Include="Common\CommonEnum.cs" />
     <Compile Include="Common\IDataValidator.cs" />

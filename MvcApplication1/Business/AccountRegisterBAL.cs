@@ -31,5 +31,16 @@ namespace MvcApplication1.Business
             }
             return response;
         }
+
+        /// <summary>
+        /// activate account after gegister
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="tokenKey"></param>
+        /// <returns></returns>
+        public ResponseModel Activate(string userName,string tokenKey)
+        {
+            // authenticate with token key    
+        }
     }
 }

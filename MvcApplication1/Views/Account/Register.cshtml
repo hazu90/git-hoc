@@ -9,7 +9,7 @@
         <img src="//static.foody.vn/s1/style/images/test/register-image.png">
     </div>
     <div class="register-container-right">
-        @using (Html.BeginForm(null, null, FormMethod.Post, new { name = "RegisterForm", id = "RegisterForm", ng_submit = "register_submit()" }))
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { name = "RegisterForm", id = "RegisterForm", ng_submit = "register_submit()" }))
         {
             @Html.AntiForgeryToken()
             <div class="register-form-head">
