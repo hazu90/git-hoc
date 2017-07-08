@@ -1,4 +1,5 @@
 ﻿using HelperLib;
+using MvcApplication1.DataLayer;
 using MvcApplication1.Models;
 using System;
 using System.Collections.Generic;
@@ -40,7 +41,24 @@ namespace MvcApplication1.Business
         /// <returns></returns>
         public ResponseModel Activate(string userName,string tokenKey)
         {
+            var response = new ResponseModel();
+            // Kiểm tra tính hợp lệ của token
+
             // authenticate with token key    
+            var userInformationDL = new UserInformationDAL();
+            var userInfo = userInformationDL.GetByUserName(userName);
+            if (userInfo != null)
+            {
+                userInformationDL.UpdateConfirmEmail(userInfo.UserEmail);
+                response.Code = SystemStatusCode.Success.GetHashCode();
+                return response;
+            }
+            else
+            {
+                response.Code = SystemStatusCode.DataNull.GetHashCode() ;
+                response.Message = "Không tìm thấy thông tin người dùng !";
+                return response;
+            }
         }
     }
 }

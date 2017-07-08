@@ -10,6 +10,7 @@ namespace HelperLib
     {
         Error = 0,
         Success = 1,
-        NotValid = 2
+        NotValid = 2,
+        DataNull = 3
     }
 }

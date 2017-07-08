@@ -21,5 +21,25 @@ namespace MvcApplication1.DataLayer
                         .Execute();
             }
         }
+
+        public UserInformation GetByUserName(string userName)
+        {
+            using (var context = ConnectionDB.MainDB())
+            {
+                return context.StoredProcedure("UserInformation_GetByUserName")
+                        .Parameter("UserEmail",userName )
+                        .QuerySingle<UserInformation>();
+            }
+        }
+
+        public void UpdateConfirmEmail(string userName)
+        {
+            using (var context = ConnectionDB.MainDB())
+            {
+                context.StoredProcedure("UserInformation_UpdateConfirmedEmailAndActive")
+                        .Parameter("UserEmail", userName)
+                        .Execute();
+            }
+        }
     }
 }

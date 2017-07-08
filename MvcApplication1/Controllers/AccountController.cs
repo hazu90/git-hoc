@@ -117,7 +117,7 @@ namespace MvcApplication1.Controllers
         [AllowAnonymous]
         public ActionResult Activate(string userName, string token)
         {
-            //var accountRegister
+            var accountRegisterBL = new AccountRegisterBAL();
             return View();
         }
 
