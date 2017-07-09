@@ -1,0 +1,97 @@
+﻿.login-container{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.login-container .login-container-left{
+    width: 500px;
+    float: left;
+}
+.login-container .login-container-right{
+    width: 360px;
+    float: right;
+}
+.login-container .login-container-right .login-form-head{
+    width: 100%;
+    float: left;
+    clear: both;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+.login-container .login-container-right .login-form-head .login-title {
+    font-size: 20px;
+    float: left;
+    width: 250px;
+    color: #333;
+}
+.login-container .login-container-right .login-form-head .login-register-link {
+    float: right;
+    margin-right: 12px;
+}
+.login-container .login-container-right a {
+    color: #28a1be;
+}
+.login-container .login-container-right a:hover {
+    text-decoration: underline;
+}
+.login-container .login-container-right .input-login-control{
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    width: 300px;
+    height: 38px;
+    margin-top: 3px;
+    float: left;
+}
+.login-container .login-container-right .input-login-control input{
+    border: none;
+    width: 280px;
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0 0 8px;
+    background: none repeat scroll 0 0 transparent;
+}
+.login-container .login-container-right input[type=submit]{
+    background: url(/Content/img/account-icons.png) no-repeat 0 -42px;
+    width: 113px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+}
+.validation-summary-errors {
+    background: #fbf7ca;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    color: #c00;
+}
+.pn-box {
+    width: 500px;
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 10px;
+}
+.pn-box .title {
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+.pn-box .des {
+    padding: 10px 0;
+}
+.login-layout{
+    width:100% ;
+}
+.loginbutton {
+    background: url(/Content/img/account-icons.png) no-repeat 0 -42px;
+    width: 113px;
+    height: 41px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}

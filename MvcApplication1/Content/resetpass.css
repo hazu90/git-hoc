@@ -1,0 +1,58 @@
+﻿.reset-pass-page {
+    width: 800px;
+    margin: 0 auto;
+    z-index: 2000;
+}
+.reset-pass-page-box {
+    float: left;
+    margin: 100px 0;
+    width: 750px;
+    border: 1px solid #fff;
+    background: #f6f6f6;
+    padding: 30px 20px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+    z-index: 2000;
+}
+.reset-pass-page-box .resetbox {
+    float: left;
+    width: 660px;
+    margin-left: 20px;
+    white-space: normal;
+}
+.reset-password-header {
+    padding: 10px 0;
+    font-weight: 700;
+}
+.reset-password-guide {
+    padding: 10px 0 20px;
+}
+.reset-pass-title {
+    float: left;
+    padding-top: 12px;
+    padding-right: 10px;
+}
+.reset-pass-input {
+    padding: 4px 0;
+    width: 420px;
+    float: left;
+}
+.reset-pass-input input {
+    border: 1px solid #ddd;
+    padding: 5px;
+    font-size: 15px;
+    width: 400px;
+}
+.reset-pass-button {
+    margin-top: 4px;
+    float: left;
+}
+.reset-pass-button input {
+    padding: 6px 10px 5px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #ff3019;
+}

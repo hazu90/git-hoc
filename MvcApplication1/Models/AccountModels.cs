@@ -57,11 +57,11 @@ namespace MvcApplication1.Models
 
     public class LoginModel
     {
-        [Required]
+        [Required(ErrorMessage="Tên đăng nhập bắt buộc nhập") ]
         [Display(Name = "User name")]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Thông tin mật khẩu bắt buộc nhập")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }

@@ -215,6 +215,7 @@
     <Content Include="Content\img\register-image.png" />
     <Content Include="Content\img\uncorrect-icon.png" />
     <Content Include="Content\lastest_news.css" />
+    <Content Include="Content\login_container.css" />
     <Content Include="Content\main_content.css" />
     <Content Include="Content\Main.css" />
     <Content Include="Content\plugins\font-awesome-4.7.0\css\font-awesome.css" />
@@ -222,6 +223,7 @@
     <Content Include="Content\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\plugins\font-awesome-4.7.0\HELP-US-OUT.txt" />
     <Content Include="Content\register_container.css" />
+    <Content Include="Content\resetpass.css" />
     <Content Include="Content\search_box.css" />
     <Content Include="Content\select_control.css" />
     <Content Include="Content\top_user_friend.css" />
@@ -233,6 +235,9 @@
     <Content Include="Scripts\MainModule.js" />
     <Content Include="Scripts\RegisterController.js" />
     <Content Include="Views\Account\ActivateNotification.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

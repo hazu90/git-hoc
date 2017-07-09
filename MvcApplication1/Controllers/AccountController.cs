@@ -42,7 +42,7 @@ namespace MvcApplication1.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            ModelState.AddModelError("", "Thông tin username hoặc password nhập vào không đúng.");
             return View(model);
         }
 
@@ -51,7 +51,6 @@ namespace MvcApplication1.Controllers
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
-
             return RedirectToAction("Index", "Home");
         }
 
@@ -76,9 +75,8 @@ namespace MvcApplication1.Controllers
                 try
                 {
                     // Kiểm tra tính hợp lệ của thông tin email
-                    //if(Helper.IsValidMail(model.UserEmail))
                     // Tạo tài khoản
-                    WebSecurity.CreateUserAndAccount(model.UserEmail, model.Password);
+                    var tokenKey= WebSecurity.CreateUserAndAccount(model.UserEmail, model.Password,null,true);
                     // Bổ sung thông tin tài khoản tài khoản 
                     var userInformationBAL = new UserInformationBAL();
                     userInformationBAL.Create( new UserInformation(){
@@ -91,7 +89,6 @@ namespace MvcApplication1.Controllers
                     //Gui mail yeu cau kich hoat tai khoan
                     var mailConfirmAccountBAL = new MailConfirmAccountBAL();
                     mailConfirmAccountBAL.SendConfirmMail(model.UserEmail, model.UserEmail, "5788afeedb73a792ae0213f65d1e28a6");
-
                     //WebSecurity.Login(model.UserEmail, model.Password);
                     return RedirectToAction("ActivateNotification", "Account");
                 }
@@ -117,7 +114,10 @@ namespace MvcApplication1.Controllers
         [AllowAnonymous]
         public ActionResult Activate(string userName, string token)
         {
-            var accountRegisterBL = new AccountRegisterBAL();
+            if (WebSecurity.ConfirmAccount(userName, token))
+            {
+                return View();
+            }
             return View();
         }
 
@@ -345,6 +345,11 @@ namespace MvcApplication1.Controllers
 
             ViewBag.ShowRemoveButton = externalLogins.Count > 1 || OAuthWebSecurity.HasLocalAccount(WebSecurity.GetUserId(User.Identity.Name));
             return PartialView("_RemoveExternalLoginsPartial", externalLogins);
+        }
+        [AllowAnonymous]
+        public ActionResult ForgotPassword()
+        {
+            return View();
         }
 
         #region Helpers
