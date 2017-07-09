@@ -90,7 +90,7 @@ namespace MvcApplication1.Controllers
                     var mailConfirmAccountBAL = new MailConfirmAccountBAL();
                     mailConfirmAccountBAL.SendConfirmMail(model.UserEmail, model.UserEmail, "5788afeedb73a792ae0213f65d1e28a6");
                     //WebSecurity.Login(model.UserEmail, model.Password);
-                    return RedirectToAction("ActivateNotification", "Account");
+                    return RedirectToAction("ActivateNotification", "Account", new { username = model.UserEmail });
                 }
                 catch (MembershipCreateUserException e)
                 {
@@ -106,9 +106,10 @@ namespace MvcApplication1.Controllers
         }
         
         [AllowAnonymous]
-        public ActionResult ActivateNotification()
+        [ChildActionOnly]
+        public ActionResult ActivateNotification(string username)
         {
-            return View();
+            return View(username);
         }
 
         [AllowAnonymous]

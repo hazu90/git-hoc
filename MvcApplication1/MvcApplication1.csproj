@@ -232,6 +232,7 @@
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\CategoryController.js" />
     <Content Include="Scripts\CityController.js" />
+    <Content Include="Scripts\LoginController.js" />
     <Content Include="Scripts\MainModule.js" />
     <Content Include="Scripts\RegisterController.js" />
     <Content Include="Views\Account\ActivateNotification.cshtml" />
