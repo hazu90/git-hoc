@@ -1,0 +1,152 @@
+﻿.fd-dlg-login {
+    background: #f2f2f2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 350px;
+    font-size: 13px;
+}
+.fd-dlg-login * {
+    box-sizing: border-box;
+}
+.fd-dlg-login .row {
+    width:100%;
+    float: left;
+    padding: 5px 0;
+}
+.fd-dlg-login .btn-close {
+    background: url(img/x.png)no-repeat center center;
+    width: 25px;
+    height: 29px;
+    position: absolute;
+    top: -8px;
+    right: -9px;
+    cursor: pointer;
+}
+.fd-dlg-login .frame .content
+{
+    min-width: 300px;
+    padding: 10px;
+}
+.fd-dlg-login .frame .title{
+    font-weight: 700;
+    padding: 20px 0 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+.fd-dlg-login .social-btns>li.fb {
+    padding: 5px 0;
+}
+.fd-dlg-login .social-btns>li>a {
+    color: #fff;
+    line-height: 40px;
+    font-size: 16px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.fd-dlg-login .social-btns>li.fb>a {
+    background: #4066b0;
+}
+.fd-dlg-login .social-btns>li>a .fa {
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 10px 0 0;
+}
+.fd-dlg-login .social-btns>li.fb .fa {
+    background: #3a5a98;
+}
+
+.fd-dlg-login .social-btns>li.gg>a {
+    background: #d34836;
+}
+.fd-dlg-login .social-btns>li.gg .fa {
+    background: #ba3c2b;
+}
+
+.fd-dlg-login .row .split {
+    text-align: center;
+    position: relative;
+}
+.fd-dlg-login .row .split label {
+    background: #f2f2f2;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 3px 10px;
+}
+.fd-dlg-login .row .split:after {
+    display: block;
+    content: ' ';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: #ddd;
+    z-index: 0;
+}
+.fd-dlg-login .row .input input[type=password], .fd-dlg-login .row .input input[type=text] {
+    width: 100%;
+    padding: 10px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+}
+.fd-dlg-login .lbl-remember {
+    float: left;
+}
+.fd-dlg-login .lbl-forgot {
+    float: right;
+}
+.fd-dlg-login .btns.bottom {
+    border-top: 1px solid #ddd;
+}
+.fd-dlg-login .btns .btn {
+    display: inline-block;
+    padding: 10px;
+    background: 0 0;
+    color: #000;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+.fd-dlg-login .btns.col2 .btn {
+    width: 50%;
+}
+.fd-dlg-login .btns.bottom .btn {
+    display: block;
+    float: left;
+    border-right: 1px solid #ddd;
+    text-align: center;
+}
+.fd-dlg-login .btns.bottom {
+    border-top: 1px solid #ddd;
+    width: 100%;
+    float: left;
+}
+.fd-dlg-login .btns .btn-login {
+    font-weight: 700;
+}
+
+.btn.active, .btn:active {
+    background-image: none;
+    -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15),0 1px 2px rgba(0,0,0,.05);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    background-color: #e6e6e6;
+    color: rgba(0,0,0,.5);
+    outline: 0;
+}
+.fd-dlg-login .lbl-forgot a {
+    text-decoration: underline;
+    color: #4a6ea9;
+}

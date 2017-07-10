@@ -30,6 +30,12 @@ namespace MvcApplication1.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
+        [AllowAnonymous]
+        [ChildActionOnly]
+        public ActionResult ShowLoginDialog()
+        {
+            return View();
+        }
 
         [HttpPost]
         [AllowAnonymous]
@@ -88,7 +94,7 @@ namespace MvcApplication1.Controllers
                                                         });
                     //Gui mail yeu cau kich hoat tai khoan
                     var mailConfirmAccountBAL = new MailConfirmAccountBAL();
-                    mailConfirmAccountBAL.SendConfirmMail(model.UserEmail, model.UserEmail, "5788afeedb73a792ae0213f65d1e28a6");
+                    mailConfirmAccountBAL.SendConfirmMail(model.UserEmail, model.UserEmail, tokenKey);
                     //WebSecurity.Login(model.UserEmail, model.Password);
                     return RedirectToAction("ActivateNotification", "Account", new { username = model.UserEmail });
                 }

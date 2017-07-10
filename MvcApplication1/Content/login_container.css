@@ -85,6 +85,15 @@
 .login-layout{
     width:100% ;
 }
+.login-remember {
+    width: 100%;
+    height: 41px;
+    border-bottom: #dbd8cf 1px dashed;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
 .loginbutton {
     background: url(/Content/img/account-icons.png) no-repeat 0 -42px;
     width: 113px;
@@ -95,3 +104,52 @@
     font-weight: bold;
     font-size: 15px;
 }
+.login-social h4 {
+    font-weight: normal;
+    font-size: 16px;
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    color: #111;
+}
+.login-social .social-icon ul {
+    text-align: center;
+}
+.login-social .social-icon li {
+    margin: 6px;
+    display: inline-block;
+}
+.login-social .social-icon li.fb a {
+    display: block;
+    background: url(/Content/img/socials-icon-big-2015.png) no-repeat;
+    width: 60px;
+    height: 60px;
+}
+.login-social .social-icon li.gl a {
+    display: block;
+    background: url(/Content/img/socials-icon-big-2015.png) no-repeat;
+    background-position: 0 -59px;
+    width: 60px;
+    height: 60px;
+}
+.login-social .social-icon li.yh a {
+    display: block;
+    background: url(/Content/img/socials-icon-big-2015.png) no-repeat;
+    background-position: 0 -118px;
+    width: 60px;
+    height: 60px;
+}
+.login-social .social-icon li.in a {
+    display: block;
+    background: url(/Content/img/socials-icon-big-2015.png) no-repeat;
+    background-position: 0 -177px;
+    width: 60px;
+    height: 60px;
+}
+/*.login-social .social-icon li.tw a {*/
+    /*display: block;*/
+    /*background: url(/Content/img/socials-icon-big-2015.png) no-repeat;*/
+    /*background-position: 0 -178px;*/
+    /*width: 60px;*/
+    /*height: 60px;*/
+/*}*/

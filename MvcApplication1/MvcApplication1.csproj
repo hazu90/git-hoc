@@ -213,9 +213,11 @@
     <Content Include="Content\img\foody-vn.png" />
     <Content Include="Content\img\nav_a.gif" />
     <Content Include="Content\img\register-image.png" />
+    <Content Include="Content\img\socials-icon-big-2015.png" />
     <Content Include="Content\img\uncorrect-icon.png" />
     <Content Include="Content\lastest_news.css" />
     <Content Include="Content\login_container.css" />
+    <Content Include="Content\login_dialog.css" />
     <Content Include="Content\main_content.css" />
     <Content Include="Content\Main.css" />
     <Content Include="Content\plugins\font-awesome-4.7.0\css\font-awesome.css" />
@@ -233,6 +235,7 @@
     <Content Include="Scripts\CategoryController.js" />
     <Content Include="Scripts\CityController.js" />
     <Content Include="Scripts\LoginController.js" />
+    <Content Include="Scripts\LoginDialogController.js" />
     <Content Include="Scripts\MainModule.js" />
     <Content Include="Scripts\RegisterController.js" />
     <Content Include="Views\Account\ActivateNotification.cshtml" />
@@ -349,6 +352,9 @@
       <Project>{46b1cc96-b076-4eea-9684-955c964192b0}</Project>
       <Name>SeafoodEntity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\ShowLoginDialog.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
