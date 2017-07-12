@@ -1,4 +1,6 @@
-﻿@{
+﻿@using MvcApplication1.Models
+@model AllCategoryModel
+@{
     Layout = null;
 }
 <div class="lst-select-control" id="lst-cate" ng-controller="CategoryController">
@@ -17,148 +19,30 @@
                     <span>Select category</span>
                 </div>
             </li>
-            <li data-id="1">
-                <a id="gcat-1" rel="nofollow" href="/ha-noi">
-                    <span style="float:left;">Ăn uống</span> <span class="fa fa-angle-right" style="float: right; padding-top: 8px;"></span>
-                </a>
-                <ul class="menu-box" id="nav-place-1" style="overflow:auto;max-height:300px;">
-                    <li>
-                        <a href="/ha-noi/food/sang-trong" title="Sang trọng">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-12-sangtrong-635950388128057921.png" alt="" title="Sang trọng" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Sang trọng</span>
-                            <span class="rn-nav-sum">80</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/buffet" title="Buffet">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-39-buffet-635950383405966956.png" alt="" title="Buffet" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Buffet</span>
-                            <span class="rn-nav-sum">82</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/nha-hang" title="Nhà hàng">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-01-restoran-635950389575416940.png" alt="" title="Nhà hàng" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Nhà hàng</span>
-                            <span class="rn-nav-sum">2,583</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/an-vat-via-he" title="Ăn vặt/vỉa hè">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-11-anvat-635950388395266822.png" alt="" title="Ăn vặt/vỉa hè" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Ăn vặt/vỉa hè</span>
-                            <span class="rn-nav-sum">3,131</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/an-chay" title="Ăn chay">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-56-anchay-635950379675005450.png" alt="" title="Ăn chay" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Ăn chay</span>
-                            <span class="rn-nav-sum">83</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/cafe" title="Café/Dessert">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-02-kedai%20kopi-635950389484472462.png" alt="" title="Café/Dessert" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Café/Dessert</span>
-                            <span class="rn-nav-sum">5,596</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/quan-an" title="Quán ăn">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-03-rumah%20makan-635950389304770706.png" alt="" title="Quán ăn" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Quán ăn</span>
-                            <span class="rn-nav-sum">9,379</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/bar-pub" title="Bar/Pub">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-04-barpub-635950389189605062.png" alt="" title="Bar/Pub" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Bar/Pub</span>
-                            <span class="rn-nav-sum">243</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/quan-nhau" title="Quán nhậu">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-54-quannhau-635950379866739193.png" alt="" title="Quán nhậu" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Quán nhậu</span>
-                            <span class="rn-nav-sum">1,073</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/beer-club" title="Beer club">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-43-beerclub-635950382429048603.png" alt="" title="Beer club" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Beer club</span>
-                            <span class="rn-nav-sum">78</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/tiem-banh" title="Tiệm bánh">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-06-tiembanh-635950389009259871.png" alt="" title="Tiệm bánh" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Tiệm bánh</span>
-                            <span class="rn-nav-sum">754</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/tiec-tan-noi" title="Tiệc tận nơi">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-44-tiectannoi-635950382223863942.png" alt="" title="Tiệc tận nơi" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Tiệc tận nơi</span>
-                            <span class="rn-nav-sum">9</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/shop-online" title="Shop Online">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-27-shoponline-635950385288337691.png" alt="" title="Shop Online" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Shop Online</span>
-                            <span class="rn-nav-sum">965</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/giao-com-van-phong" title="Giao cơm văn phòng">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-28-comvanphong-635950385047534150.png" alt="" title="Giao cơm văn phòng" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Giao cơm văn phòng</span>
-                            <span class="rn-nav-sum">53</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/ha-noi/food/Foodcourt" title="Khu Ẩm Thực">
-                            <span class="rm-nav-icon">
-                                <img src="https://media.foody.vn/caticon/s60x60/foody-64x64_pic-category-khuamthuc-636266402889811778.png" alt="" title="Khu Ẩm Thực" width="15" height="15">
-                            </span>
-                            <span class="rn-nav-name">Khu Ẩm Thực</span>
-                            <span class="rn-nav-sum">18</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
+            @foreach (var cateGr in Model.LstCategoryGroup)
+            {
+                var lstCateItem = Model.LstCategory.FindAll(o => o.CateGrId == cateGr.CateGrId);
+                
+                <li data-id="@cateGr.CateGrId">
+                    <a id="gcat-@cateGr.CateGrId" rel="nofollow" href="/@cateGr.GrCateLink">
+                        <span style="float:left;">@cateGr.CateName </span> <span class="fa fa-angle-right" style="float: right; padding-top: 8px;"></span>
+                    </a>
+                    <ul class="menu-box" id="nav-place-1" style="overflow:auto;max-height:300px;">
+                        @foreach(var cateItem in lstCateItem )
+                        {
+                            <li>
+                                <a href="@(@"/"+cateGr.GrCateLink+@"/"+cateItem.CateLink )" title="@cateItem.CateName">
+                                    <span class="rm-nav-icon">
+                                        <img src="@cateItem.IconImgUrl" alt="" title="@cateItem.CateName" width="15" height="15">
+                                    </span>
+                                    <span class="rn-nav-name">@cateItem.CateName</span>
+                                    <span class="rn-nav-sum">80</span>
+                                </a>
+                            </li>    
+                        }
+                    </ul>
+                </li> 
+            }
         </ul>
     </div>
 </div>

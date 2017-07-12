@@ -167,6 +167,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Business\AccountRegisterBAL.cs" />
     <Compile Include="Business\CategoryBAL.cs" />
+    <Compile Include="Business\CategoryGroupBAL.cs" />
     <Compile Include="Business\CityBAL.cs" />
     <Compile Include="Business\GoogleCaptchaBAL.cs" />
     <Compile Include="Business\MailConfirmAccountBAL.cs" />
@@ -183,6 +184,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="DataLayer\CategoryDL.cs" />
+    <Compile Include="DataLayer\CategoryGroupDL.cs" />
     <Compile Include="DataLayer\CityDL.cs" />
     <Compile Include="DataLayer\ConnectionDB.cs" />
     <Compile Include="DataLayer\UserInformationDAL.cs" />
@@ -193,6 +195,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AllCategoryModel.cs" />
+    <Compile Include="Models\CategoryGroupModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\PagerModel.cs" />
     <Compile Include="Models\RegisterInfoModel.cs" />
@@ -244,7 +248,9 @@
     <Content Include="Scripts\LoginController.js" />
     <Content Include="Scripts\LoginDialogController.js" />
     <Content Include="Scripts\MainModule.js" />
+    <Content Include="Scripts\MenuLoginController.js" />
     <Content Include="Scripts\RegisterController.js" />
+    <Content Include="Scripts\Services\DialogLoginService.js" />
     <Content Include="Views\Account\ActivateNotification.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml">
       <SubType>Code</SubType>

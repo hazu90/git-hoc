@@ -33,46 +33,24 @@
                 @Html.Partial("~/Views/Menu/_TopbarPartial.cshtml")
             </div>
             <div class="header-toolbar">
-                @Html.Partial("~/Views/Menu/_HeaderToolbarPartial.cshtml")
+                <div class="header-toolbar-wraper">
+                    <a href="#" class="logo"> <img src="~/Content/img/foody-vn.png" alt="Foody.vn" /> </a>
+                    @Html.Action("GetAllCity","City")
+                    @Html.Action("GetAll", "Category")
+                    @Html.Partial("~/Views/MainPageSearch/_SearchBarTopPartial.cshtml")
+                    @Html.Partial("~/Views/Menu/_HeaderMenuSelect.cshtml")
+                    <div class="header-apps">
+                        <a href="/ung-dung-mobile" target="_blank"><span class="fa fa-mobile"></span>&nbsp;Apps</a>
+                    </div>
+                    <div class="longin-box-and-language">
+                        @Html.Action("IsAuthenticated", "Home")
+                    </div>
+                </div>
             </div>
         </div>
         <div id="body" class="main-content">
             <div class="main-content-left">
-                <div class="category">
-                    Danh mục
-                </div>
-                <ul>
-                    <li>
-                        <a ng-class="{'active':MenuId=='1'}" href="#places" class="active">Ở đâu <i class="fa fa-angle-right"></i></a>
-                    </li>
-                    <li>
-                        <a ng-class="{'active':MenuId=='3'}" href="#booking">Đặt bàn <i class="fa fa-angle-right"></i></a>
-                    </li>
-                    <li>
-                        <a ng-class="{'active':MenuId=='2'}" href="#delivery">Giao hàng <i class="fa fa-angle-right"></i></a>
-                    </li>
-                    <li>
-                        <a ng-class="{'active':MenuId=='5'}" href="#foods">Ăn gì <i class="fa fa-angle-right"></i></a>
-                    </li>
-                    <li>
-                        <a ng-class="{'active':MenuId=='4'}" href="#collections">Sưu tập <i class="fa fa-angle-right"></i></a>
-                    </li>
-                    <li>
-                        <a ng-class="{'active':MenuId=='6'}" href="#video">TV <i class="fa fa-angle-right"></i></a>
-                    </li>
-                    <li>
-                        <a ng-class="{'active':MenuId=='7'}" href="#reviews">Bình luận <i class="fa fa-angle-right"></i></a>
-                    </li>
-                    <li>
-                        <a ng-class="{'active':MenuId=='8'}" href="#food/articles">Blogs <i class="fa fa-angle-right"></i></a>
-                    </li>
-                    <li>
-                        <a ng-class="{'active':MenuId=='11'}" href="#promotion">Khuyến mãi <i class="fa fa-angle-right"></i></a>
-                    </li>
-                    <li>
-                        <a ng-class="{'active':MenuId=='10'}" href="#bank-card">Bank-Card <i class="fa fa-angle-right"></i></a>
-                    </li>
-                </ul>
+                @Html.Partial("~/Views/Shared/_LeftContent_MainPagePartial.cshtml")
             </div>
             <div class="main-content-right">
                 <div class="tool-right-content">

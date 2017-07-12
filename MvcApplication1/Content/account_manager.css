@@ -2,3 +2,32 @@
     line-height: 30px;
     padding: 0 5px;
 }
+.account-manager .topnav {
+    line-height: 30px;
+    text-align: right;
+    float: left;
+}
+
+.account-manager .topnav a.acemail {
+    float: left;
+}
+
+.account-manager .topnav a.acemail .fname {
+    float: left;
+    font-weight: 700;
+    padding-right: 5px;
+    width: 65px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+}
+.account-manager .topnav a.acemail img {
+    float: right;
+}
+.account-manager .topnav a.acemail img.avatar-user {
+    vertical-align: middle;
+    background: #fff;
+    width: 30px;
+    border-radius: 30px;
+}

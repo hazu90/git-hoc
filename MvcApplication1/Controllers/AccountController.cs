@@ -46,7 +46,6 @@ namespace MvcApplication1.Controllers
             {
                 return RedirectToLocal(returnUrl);
             }
-
             // If we got this far, something failed, redisplay form
             ModelState.AddModelError("", "Thông tin username hoặc password nhập vào không đúng.");
             return View(model);
@@ -112,7 +111,6 @@ namespace MvcApplication1.Controllers
         }
         
         [AllowAnonymous]
-        [ChildActionOnly]
         public ActionResult ActivateNotification(string username)
         {
             return View(username);
