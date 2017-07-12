@@ -1,0 +1,57 @@
+﻿@model List<SeafoodEntity.City>
+@{
+    Layout = null;   
+}
+<div class="lst-select-control" id="lst-city" ng-controller="CityController">
+    <div class="show-selected-item">
+        <a href="#" ng-click="show_lst_items($event);">
+            <span class="show-selected-item-label">{{selectedItem}}</span>
+            <span class="show-selected-item-icon fa fa-sort-desc"></span>
+        </a>
+    </div>
+    <div ng-class="lstCssStyle">
+        <div class="arrow"></div>
+        <ul class="fl-panel">
+            <li>
+                <div class="flp-title">
+                    <i class="fa fa-globe"></i>
+                    <span>Select city</span>
+                </div>
+                <ul class="flp-lst-items">
+                    <li>
+                        <label>Tìm tỉnh thành</label>
+                        <ul>
+                            @foreach (var itemCity in Model)
+                            {
+                                 <li>
+                                     <a data-id="@itemCity.Id" href="@itemCity.LocationLink">
+                                         <label>@itemCity.CityName</label>
+                                         <span>53.028</span>
+                                     </a>
+                                 </li>
+                            }
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="fl-summary">
+            <a href="/ha-noi/o-dau">
+                <i class="fa fa-map-marker"></i>
+                <span>216.9K</span>
+            </a>
+            <a href="/ha-noi/binh-luan">
+                <i class="fa fa-comment"></i>
+                <span>819.4K</span>
+            </a>
+            <a href="/ha-noi/hinh-anh">
+                <i class="fa fa-camera"></i>
+                <span>5.7M</span>
+            </a>
+            <a href="/ha-noi/bo-suu-tap">
+                <i class="fa fa-bookmark"></i>
+                <span>10.1M</span>
+            </a>
+        </div>
+    </div>
+</div>

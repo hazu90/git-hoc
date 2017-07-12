@@ -1,4 +1,5 @@
-﻿using MvcApplication1.Models;
+﻿using MvcApplication1.Business;
+using MvcApplication1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,12 +42,11 @@ namespace MvcApplication1.Controllers
                 return PartialView("_AnonymousPartial");
             }
         }
-
         [AllowAnonymous]
         public ActionResult Login()
         {
             return View();
         }
-
+        
     }
 }
