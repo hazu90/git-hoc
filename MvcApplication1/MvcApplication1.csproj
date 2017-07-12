@@ -180,7 +180,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataLayer\CityDL.cs" />
     <Compile Include="DataLayer\ConnectionDB.cs" />
-    <Compile Include="DataLayer\UserDL.cs" />
     <Compile Include="DataLayer\UserInformationDAL.cs" />
     <Compile Include="DataLayer\UserRoleDL.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -191,6 +190,7 @@
     <Compile Include="Models\PagerModel.cs" />
     <Compile Include="Models\RegisterInfoModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
+    <Compile Include="Models\SignnedInUserModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\UserRoleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -355,6 +355,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Account\ShowLoginDialog.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_AuthenticatedPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_AnonymousPartial.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

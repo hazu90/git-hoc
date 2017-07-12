@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+<div ng-controller="LoginDialogController as loginDialog">
+    <div class="b-modal __b-popup1__" ng-show="singleton.show_element" style="background-color: rgb(0, 0, 0); position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.7; z-index: 9998; cursor: pointer;"></div>
+    <div class="fd-dlg-login"  id="fdDlgLogin" ng-show="singleton.show_element" style="left:499.5px;position:absolute;top:90px;z-index:9999;opacity:1;display:block;">
+        <div class="btn-cancel btn-close" ng-click="close_dialog()" ></div>
+        <div class="frame">
+            <div class="title">Đăng nhập hệ thống</div>
+            <div class="content">
+                <div class="row">
+                    <ul class="social-btns col4">
+                        <li class="fb" style="float:left;width:100%;">
+                            <a data-type="fb" style="float:left;width:100%;">
+                                <i class="fa fa-facebook"></i>
+                                <label>Đăng nhập bằng</label>&nbsp;<span>FaceBook</span>
+                            </a>
+                        </li>
+                        <li class="gg" style="float:left;width:100%;">
+                            <a data-type="gg" style="float:left;width:100%;">
+                                <i class="fa fa-google-plus"></i>
+                                <label>Đăng nhập bằng</label>&nbsp;<span>Google+</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="split">
+                        <label>Đăng nhập bằng email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input">
+                        <input type="text" placeholder="Email hoặc Username" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input">
+                        <input type="text" placeholder="Mật khẩu" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="lbl-remember">
+                        <input type="checkbox" /> Nhớ tài khoản
+                    </div>
+                    <div class="lbl-forgot">
+                        <a href="/quen-mat-khau" >Quên mật khẩu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="btns bottom col2">
+                <a class="btn btn-login" href="javascript:void(0)" ng-click="Login()">Đăng nhập</a>
+                <a class="btn btn-cancel" href="/dang-ky">Đăng ký</a>
+            </div>
+        </div>
+    </div>
+
+</div>

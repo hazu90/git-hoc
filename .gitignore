@@ -293,5 +293,4 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
-*.cshtml
-MvcApplication1/Views/Account/Register.cshtml
+

@@ -1108,9 +1108,7 @@
                         <a href="/ung-dung-mobile" target="_blank"><span class="fa fa-mobile"></span>&nbsp;Apps</a>
                     </div>
                     <div class="longin-box-and-language">
-                        <div class="account-manager" ng-controller="MenuLoginController">
-                            <a class="fd-btn-login-new" ng-click="show_login_dialog()" ><span>Đăng nhập</span> </a>
-                        </div>
+                        @Html.Action("IsAuthenticated","Home")
                     </div>
                 </div>
             </div>
