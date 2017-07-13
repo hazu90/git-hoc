@@ -15,17 +15,7 @@ namespace MvcApplication1.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-            var userInfo = new SignnedInUserModel();
-            if (WebSecurity.IsAuthenticated)
-            {
-                userInfo.UserName = WebSecurity.CurrentUserName;
-                userInfo.IsLoggedIn = WebSecurity.IsAuthenticated;
-            }
-            else
-            {
-                userInfo.IsLoggedIn = false;
-            }
-            return View(userInfo);
+            return View();
         }
         [AllowAnonymous]
         public ActionResult IsAuthenticated()
