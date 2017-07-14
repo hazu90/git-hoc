@@ -218,6 +218,7 @@
     <Content Include="Content\header_app.css" />
     <Content Include="Content\header_menu_select.css" />
     <Content Include="Content\img\account-icons.png" />
+    <Content Include="Content\img\arrow-top.png" />
     <Content Include="Content\img\correct-icon.png" />
     <Content Include="Content\img\dropdown\arrow-top.png" />
     <Content Include="Content\img\foody-1170-60-chacangulong-01-636268082601173100.jpg" />
@@ -227,6 +228,7 @@
     <Content Include="Content\img\register-image.png" />
     <Content Include="Content\img\socials-icon-big-2015.png" />
     <Content Include="Content\img\uncorrect-icon.png" />
+    <Content Include="Content\img\x.png" />
     <Content Include="Content\lastest_news.css" />
     <Content Include="Content\login_container.css" />
     <Content Include="Content\login_dialog.css" />

@@ -2,6 +2,10 @@
     line-height: 30px;
     padding: 0 5px;
 }
+#account{
+    position: relative;
+    float: left;
+}
 .account-manager .topnav {
     line-height: 30px;
     text-align: right;
@@ -30,4 +34,111 @@
     background: #fff;
     width: 30px;
     border-radius: 30px;
+}
+#account_menu{
+    /*display: none;*/
+    position: absolute;
+    z-index: 100;
+    text-align: left;
+    line-height: 1.6em;
+    top: 40px;
+    right: -110px;
+    width: 320px;
+    margin-right: 0;
+    color: #789;
+    font-size: 12px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    font-weight: 400;
+}
+#account_menu .arrow {
+    background: url(/Content/img/arrow-top.png) no-repeat;
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    top: -8px;
+    right: 116px;
+}
+.usermenudrop {
+    clear: both;
+    overflow: hidden;
+    background: #fff;
+}
+.useremail {
+    border-bottom: #ccc 1px solid;
+    padding: 4px 8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    overflow: hidden;
+    font-weight: 400;
+    color: #888;
+}
+.usermenudrop .useremail .profile-verify-button {
+    padding: 0!important;
+    position: relative;
+}
+.usermenudrop .useremail .profile-verify-button .toolbar-verify-full {
+    height: 18px;
+    background: #ccc;
+    margin: 0;
+    position: relative;
+}
+.usermenudrop .useremail .profile-verify-button .toolbar-verify-full div {
+    border-radius: 0;
+    position: absolute;
+    background: #f58552;
+    float: left;
+    top: 0;
+    left: 0;
+    height: 18px;
+}
+.usermenudrop .useremail .profile-verify-button .toolbar-verify-text {
+    color: #000;
+    padding-left: 5px;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    text-shadow: none;
+    font-weight: 400;
+    position: relative;
+}
+#account_menu .headerlabel {
+    font-weight: 700;
+    font-size: 11px;
+    overflow: hidden;
+    padding: 5px 15px;
+    background: #f6f6f6;
+    color: #333;
+    text-transform: uppercase;
+}
+#account_menu .items {
+    overflow: hidden;
+    clear: both;
+    margin: 0;
+    font-size: 13px;
+}
+#account_menu .items a {
+    color: #132a42;
+    padding: 5px 15px;
+    text-shadow: 0 1px 1px #fff;
+    display: block;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+#account_menu .items a:hover {
+    text-decoration: none;
+    background: #ffe9ad;
+    color: #000;
+    text-shadow: none;
+}
+#account_menu .items span {
+    border-radius: 4px;
+    color: #aaa;
+    float: right;
+    font-size: 11px;
+    padding: 0 3px;
+    text-shadow: none;
+    min-width: 18px;
+    text-align: right;
 }
