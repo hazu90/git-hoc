@@ -28,7 +28,13 @@ namespace MvcApplication1.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            return View();
+            var model = new LoginModel();
+            if (Request.Cookies["Login"] != null)
+            {
+                model.UserName = Request.Cookies["Login"].Values["cookie_Username"];
+                model.Password = Request.Cookies["Login"].Values["cookie_Password"];
+            }
+            return View(model);
         }
         [AllowAnonymous]
         [ChildActionOnly]
@@ -44,9 +50,19 @@ namespace MvcApplication1.Controllers
         {
             if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
             {
+                if (model.RememberMe)
+                {
+                    var cookie = new HttpCookie("Login");
+                    cookie.Values.Add("cookie_Username", model.UserName);
+                    cookie.Values.Add("cookie_Password", model.Password);
+                    cookie.Expires = DateTime.Now.AddDays(15);
+                    Response.Cookies.Add(cookie);
+                }
                 return RedirectToLocal(returnUrl);
             }
-            // If we got this far, something failed, redisplay form
+            //Lu
+            
+
             ModelState.AddModelError("", "Thông tin username hoặc password nhập vào không đúng.");
             return View(model);
         }
@@ -94,7 +110,6 @@ namespace MvcApplication1.Controllers
                     //Gui mail yeu cau kich hoat tai khoan
                     var mailConfirmAccountBAL = new MailConfirmAccountBAL();
                     mailConfirmAccountBAL.SendConfirmMail(model.UserEmail, model.UserEmail, tokenKey);
-                    //WebSecurity.Login(model.UserEmail, model.Password);
                     return RedirectToAction("ActivateNotification", "Account", new { username = model.UserEmail });
                 }
                 catch (MembershipCreateUserException e)

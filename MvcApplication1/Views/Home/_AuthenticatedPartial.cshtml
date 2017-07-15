@@ -95,10 +95,19 @@
                 <div class="items">
                     <a href="/tai-khoan">Cập nhật tài khoản </a>
                 </div>
+
                 <div class="items" style="border-top: #eee 1px solid;">
-                    <a href="javascript:SignOut(0);" class="register">
-                    Thoát<span class="fa fa-sign-out"></span>
-                    </a>
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id="FormLogOff"}))
+                    {
+                        @Html.AntiForgeryToken()
+                        @*<button type="submit"  class="register">
+                            Thoát<span class="fa fa-sign-out"></span>
+                        </button>*@
+                        <a href="javascript:SignOut(0);" onclick="document.getElementById('FormLogOff').submit()" class="register">
+                            Thoát<span class="fa fa-sign-out"></span>
+                        </a>
+                    }
+                    
                 </div>
             </div>
         </div>
