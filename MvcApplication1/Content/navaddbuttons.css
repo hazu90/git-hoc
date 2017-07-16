@@ -1,0 +1,82 @@
+﻿.nav-add-buttons {
+    float: left;
+    margin: 0;
+    line-height: 20px;
+    position: relative;
+}
+.nav-add-buttons>a {
+    background: #eee;
+    border: 1px solid #eee;
+    border-radius: 30px;
+    color: #666;
+    display: block;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: 400;
+    height: 28px;
+    width: 28px;
+}
+.nav-add-buttons>a:hover {
+    background: #ddd;
+}
+#add-buttons {
+    /*display: none;*/
+    width: 320px;
+    text-align: left;
+    float: right;
+    background: none repeat scroll 0 0 #f6f6f6;
+    border: 1px solid #AAA;
+    border-radius: 2px;
+    color: #222;
+    list-style: none;
+    font-weight: 700;
+    padding: 0;
+    position: absolute;
+    right: -33px;
+    top: 40px;
+    z-index: 51;
+}
+.nav-add-buttons .arrow {
+    background: url(../Content/img/arrow-top.png) no-repeat;
+    width: 12px;
+    height: 8px;
+    position: absolute;
+    top: -8px;
+    right: 63px;
+}
+#add-buttons ul li {
+    overflow: hidden;
+}
+#add-buttons ul li a {
+    background: #fff;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 8px 10px 6px 15px;
+    display: block;
+    border-bottom: #eee 1px solid;
+}
+#add-buttons .icons {
+    font-size: 18px;
+    padding-top: 2px;
+    padding-right: 10px;
+    width: 15px;
+    float: left;
+    height: 15px;
+    color: #bbb;
+}
+#add-buttons .add-buttons-text {
+    float: left;
+    line-height: 1.4em;
+}
+#add-buttons .add-buttons-text .text-main {
+    font-size: 12px;
+    overflow: hidden;
+    font-weight: 700;
+}
+#add-buttons .add-buttons-text .text-desc {
+    color: #999;
+    font-size: 11px;
+}

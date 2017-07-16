@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,9 +48,6 @@
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="StackExchange.Redis">
-      <HintPath>..\packages\StackExchange.Redis.1.2.4\lib\net45\StackExchange.Redis.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -186,6 +185,7 @@
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\FoodyInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\MainPageSearchController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="DataLayer\CategoryDL.cs" />
@@ -228,16 +228,20 @@
     <Content Include="Content\img\foody-1170-60-chacangulong-01-636268082601173100.jpg" />
     <Content Include="Content\img\foody-jack%27s deli 1170x60-636281206458926423.jpg" />
     <Content Include="Content\img\foody-vn.png" />
+    <Content Include="Content\img\ico_not.png" />
     <Content Include="Content\img\nav_a.gif" />
     <Content Include="Content\img\register-image.png" />
     <Content Include="Content\img\socials-icon-big-2015.png" />
     <Content Include="Content\img\uncorrect-icon.png" />
+    <Content Include="Content\img\vn.png" />
     <Content Include="Content\img\x.png" />
     <Content Include="Content\lastest_news.css" />
     <Content Include="Content\login_container.css" />
     <Content Include="Content\login_dialog.css" />
     <Content Include="Content\main_content.css" />
     <Content Include="Content\Main.css" />
+    <Content Include="Content\navaddbuttons.css" />
+    <Content Include="Content\notification.css" />
     <Content Include="Content\plugins\font-awesome-4.7.0\css\font-awesome.css" />
     <Content Include="Content\plugins\font-awesome-4.7.0\css\font-awesome.min.css" />
     <Content Include="Content\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
@@ -249,9 +253,12 @@
     <Content Include="Content\top_user_friend.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\AdditionalNavigationController.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\CategoryController.js" />
     <Content Include="Scripts\CityController.js" />
+    <Content Include="Scripts\Directives\ClickAnyWhereButHere.js" />
+    <Content Include="Scripts\Directives\ShowMenuBarAlwaysOnTop.js" />
     <Content Include="Scripts\LoginController.js" />
     <Content Include="Scripts\LoginDialogController.js" />
     <Content Include="Scripts\MainModule.js" />
@@ -409,6 +416,9 @@
   <ItemGroup>
     <Content Include="Views\Footer\_AdMobile.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Location\Create.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -437,6 +447,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

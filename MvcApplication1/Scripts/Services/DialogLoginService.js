@@ -8,19 +8,4 @@
             this.show_element = false;
         }
     }
-
-    //var data = {
-    //    show_element : false
-    //};
-    //var item_services = {};
-    //item_services.show_dialog=function(){
-    //    data.show_element = true;
-    //};
-    //item_services.hide_dialog=function(){
-    //    data.show_element = false;
-    //};
-    //item_services.get_status = function(){
-    //    return data;
-    //}
-    //return item_services;
 });

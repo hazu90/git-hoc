@@ -1,3 +1,66 @@
 ﻿<div class="account-manager" ng-controller="MenuLoginController">
     <a class="fd-btn-login-new" ng-click="show_login_dialog()" ><span>Đăng nhập</span> </a>
 </div>
+<div id="NotificationCtrl" style="position:relative;float:left;">
+    <div style="float:right;">
+        <div class="notificationBox">
+            <div class="notification-new-none">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav-add-buttons"  ng-controller ="AdditionalNavigationController"  click-anywhere-but-here="hide()" is-active="is_show" >
+    <a ng-click="toggle_detail()" >+</a>
+    <div id="add-buttons" ng-show="is_show" >
+        <span class="arrow" style="left:257px;display:block;"></span>
+        <ul>
+            <li style="padding:8px 15px 6px 15px;border-bottom:#ddd 1px solid;" >Bạn có thể</li>
+            <li>
+                <a>
+                    <span class="fa fa-map-marker icons" style="font-size:26px;"></span>
+                    <span class="add-buttons-text">
+                        <span class="text-main">Tạo địa điểm</span>
+                        <br />
+                        <span class="text-desc">Sẽ được duyệt trong vòng 48 tiếng</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="add-new-reviews">
+                    <span class="fa fa-comment icons"></span>
+                    <span class="add-buttons-text">
+                        <span class="text-main">Viết bình luận</span>
+                        <br />
+                        <span class="text-desc">Để chia sẻ trải nghiệm cho cộng đồng</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="add-new-list">
+                    <span class="fa fa-bars icons"></span>
+                    <span class="add-buttons-text">
+                        <span class="text-main">Tạo bộ sưu tập</span>
+                        <br />
+                        <span class="text-desc">Để lưu trữ địa điểm của bạn</span>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="add-feedback">
+                    <span class="fa fa-thumbs-down icons"></span>
+                    <span class="add-buttons-text">
+                        <span class="text-main">Góp ý</span>
+                        <br />
+                        <span class="text-desc">Để phục vụ bạn tốt hơn</span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="language-dropdown-container">
+    <a class="language-dropdown-btn">
+        <img src="~/Content/img/vn.png" style="float:left;" />
+    </a>
+</div>

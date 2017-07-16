@@ -6,6 +6,13 @@
     position: relative;
     float: left;
 }
+.account-manager {
+    float: left;
+    z-index: 6;
+    text-align: right;
+    display: block;
+    margin-right: 5px;
+}
 .account-manager .topnav {
     line-height: 30px;
     text-align: right;
@@ -141,4 +148,21 @@
     text-shadow: none;
     min-width: 18px;
     text-align: right;
+}
+.language-dropdown-container {
+    position: relative;
+    float: left;
+}
+.language-dropdown-container .language-dropdown-btn {
+    padding: 5px;
+    display: block;
+    line-height: 28px;
+    background: #eee;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.language-dropdown-container .language-dropdown-btn img {
+    width: 20px;
+    float: left;
 }

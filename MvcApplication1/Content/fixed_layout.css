@@ -4,3 +4,7 @@
 .minw200{
     min-width: 200px;
 }
+.fixed{
+    position: fixed;
+    top:0px ;
+}

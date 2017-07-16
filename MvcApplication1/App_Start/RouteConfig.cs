@@ -28,6 +28,12 @@ namespace MvcApplication1
                 defaults: new { controller = "Account", action = "ForgotPassword" }
             );
             routes.MapRoute(
+                name: "AddLocation",
+                url: "them-dia-diem",
+                defaults: new { controller = "Location", action = "Create" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
