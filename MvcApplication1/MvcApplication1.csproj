@@ -203,6 +203,7 @@
     <Compile Include="Models\AllCategoryModel.cs" />
     <Compile Include="Models\CategoryGroupModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\LocationForCreateModel.cs" />
     <Compile Include="Models\PagerModel.cs" />
     <Compile Include="Models\RegisterInfoModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
@@ -447,7 +448,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

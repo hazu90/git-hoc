@@ -1,5 +1,241 @@
 ﻿@{
-    ViewBag.Title = "Create";
 }
-
-<h2>Create</h2>
+<section class="static-page">
+    <div class="static-container">
+        <div class="static-content">
+            <div class="static-area" style="background: #fff; border: none;padding:20px; margin-left:160px; width:660px;">
+                @using(Html.BeginForm("Create","Location"))
+                {
+                    @Html.AntiForgeryToken()
+                    <h1 class="static-headers">Thêm địa điểm</h1>
+                    <div class="feedback-form">
+                        <div class="feedback-notes">Những địa điểm yêu thích của bạn chưa có trên Foody.vn? Chia sẻ với cộng đồng ngay!</div>
+                        <div class="feedback-table">
+                            <div>
+                                <section style="padding-top:0;">
+                                    <div class="information-box">
+                                        <div class="information-name">Thông tin cơ bản</div>
+                                        <div class="information-content">
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Tên địa điểm <span>*</span>
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtLocationName"  name="LocationName" />
+                                                    <div style="padding:5px 0;">
+                                                        <span class="field-validation-valid"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Địa chỉ <span>*</span>
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtAddress"  name="Address" />
+                                                    <div style="padding:5px 0;">
+                                                        <span class="field-validation-valid"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Loại hình <span>*</span>
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllCategoryGrId" name="CategoryGrId"></select>
+                                                    <div style="padding:5px 0;">
+                                                        <span class="field-validation-valid"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Tỉnh thành <span>*</span>
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllCountries" name="CountryId"></select>
+                                                    <select id="dllProvinces" name="ProvinceId"></select>
+                                                    <select id="dllDistricts" name="DistrictId"></select>
+                                                    <span class="field-validation-valid"></span>
+                                                    <span class="field-validation-valid"></span>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Gần khu vực 
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtNearBy"  name="NearBy" />
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Chỉ đường chi tiết
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtAddressDescription"  name="AddressDescription" />
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Điện thoại
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtPhoneNumber"  name="PhoneNumber" />
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Email
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtEmail"  name="Email" />
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Website
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtWebsiteUrl"  name="WebsiteUrl" />
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Mô tả địa điểm 
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtWebsiteUrl"  name="WebsiteUrl" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div class="information-box">
+                                        <div class="information-name">Thông tin khác</div>
+                                        <div class="information-content">
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Sức chứa
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtWebsiteUrl"  name="WebsiteUrl" />
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Giờ mở cửa
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllHourOpen"></select>
+                                                    <select id="dllMinuteOpen"></select>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Giờ đóng cửa
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllHourClose"></select>
+                                                    <select id="dllMinuteClose"></select>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Giờ nhận khách cuối
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllHourLastClientIn"></select>
+                                                    <select id="dllMinuteLastClientIn"></select>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Giá thấp nhất
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtMinCost" />
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Giá cao nhất
+                                                </div>
+                                                <div class="details">
+                                                    <input type="text" id="txtMaxCost" />
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Ngôn ngữ
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllLanguage"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div class="information-box">
+                                        <div class="information-name">Phân loại danh mục</div>
+                                        <div class="information-content">
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Hoạt động
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllOperationTime"></select>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Tiện ích
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllUtilities"></select>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Phù hợp với mục đích
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllUsefulFor"></select>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Món đặc trưng
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllFeatured"></select>
+                                                </div>
+                                            </div>
+                                            <div class="box-information-normal">
+                                                <div class="label">
+                                                    Ẩm thực
+                                                </div>
+                                                <div class="details">
+                                                    <select id="dllArea"></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div style="clear: both; float: left; margin-top: 20px;">
+                                    <button style="width: 660px; font-size: 20px; padding: 10px; color: #333; text-shadow: 0 1px 1px #FFFFFF; border: #F4890E 1px solid;">+ thêm địa điểm</button>
+                                    <div id="restaurant-saving" style="display: none; float: left; margin-top: 27px;">
+                                        <img src="//static.foody.vn/s1/style/images/icons/loading.gif">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                } 
+            </div>
+        </div>
+    </div>
+</section>
