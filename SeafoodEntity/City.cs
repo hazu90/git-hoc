@@ -12,5 +12,6 @@ namespace SeafoodEntity
         public string CityName { get; set; }
         public string CityCode { get; set; }
         public string LocationLink { get; set; }
+        public int CountryId { get; set; }
     }
 }

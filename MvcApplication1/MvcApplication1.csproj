@@ -172,6 +172,8 @@
     <Compile Include="Business\CategoryBAL.cs" />
     <Compile Include="Business\CategoryGroupBAL.cs" />
     <Compile Include="Business\CityBAL.cs" />
+    <Compile Include="Business\CountryBAL.cs" />
+    <Compile Include="Business\DistrictBAL.cs" />
     <Compile Include="Business\GoogleCaptchaBAL.cs" />
     <Compile Include="Business\LocationBAL.cs" />
     <Compile Include="Business\MailConfirmAccountBAL.cs" />
@@ -179,6 +181,7 @@
     <Compile Include="Common\CommonEnum.cs" />
     <Compile Include="Common\IDataValidator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AreaController.cs" />
     <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
@@ -193,6 +196,8 @@
     <Compile Include="DataLayer\CategoryGroupDL.cs" />
     <Compile Include="DataLayer\CityDL.cs" />
     <Compile Include="DataLayer\ConnectionDB.cs" />
+    <Compile Include="DataLayer\CountryDL.cs" />
+    <Compile Include="DataLayer\DistrictDL.cs" />
     <Compile Include="DataLayer\LocationDL.cs" />
     <Compile Include="DataLayer\UserInformationDAL.cs" />
     <Compile Include="DataLayer\UserRoleDL.cs" />
@@ -203,6 +208,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AllCategoryModel.cs" />
+    <Compile Include="Models\AreaModel.cs" />
     <Compile Include="Models\CategoryGroupModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\LocationForCreateModel.cs" />

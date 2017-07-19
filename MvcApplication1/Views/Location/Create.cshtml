@@ -6,7 +6,7 @@
     <div class="static-container"  >
         <div class="static-content">
             <div class="static-area" style="background: #fff; border: none;padding:20px; margin-left:160px; width:660px;">
-                @using (Html.BeginForm("Create", "Location", FormMethod.Post, new { id = "frmCreateLocation", ng_controller = "LocationForCreateController" }))
+                @using (Html.BeginForm("Create", "Location", FormMethod.Post, new { id = "frmCreateLocation", ng_controller = "LocationForCreateController" ,ng_init="init()" }))
                 {
                     @Html.AntiForgeryToken()
                     <h1 class="static-headers">Thêm địa điểm</h1>
@@ -70,14 +70,15 @@
                                                     Tỉnh thành <span>*</span>
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllCountries" name="CountryId">
-
+                                                    <select id="dllCountries" ng-change="change_country()" ng-model="LocationInfo.CountryId" name="CountryId">
+                                                        <option value="">---</option>
+                                                        <option ng-repeat="country in LstCountry" value="{{country.Id}}" >{{country.CountryName}}</option>
                                                     </select>
-                                                    <select id="dllProvinces" name="ProvinceId">
-
+                                                    <select id="dllCity" ng-change="change_city()" ng-model="LocationInfo.CityId"  name="CityId">
+                                                        <option ng-repeat="city in LstSelectedCity" value="{{city.Id}}" >{{city.CityName}}</option>
                                                     </select>
-                                                    <select id="dllDistricts" name="DistrictId">
-
+                                                    <select id="dllDistricts" ng-model="LocationInfo.ProvinceId" name="ProvinceId">
+                                                        <option ng-repeat="distict in LstSelectedDistrict" value="{{distict.Id}}" >{{distict.DistrictName}}</option>
                                                     </select>
                                                     <span class="field-validation-valid"></span>
                                                     <span class="field-validation-valid"></span>
@@ -151,8 +152,12 @@
                                                     Giờ mở cửa
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllHourOpen"></select>
-                                                    <select id="dllMinuteOpen"></select>
+                                                    <select id="dllHourOpen">
+                                                        <option ng-repeat="hh in LstHour"  value="{{hh}}" >{{hh}}</option>
+                                                    </select>
+                                                    <select id="dllMinuteOpen">
+                                                        <option ng-repeat="mm in LstMinute"  value="{{mm}}" >{{mm}}</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
@@ -160,8 +165,12 @@
                                                     Giờ đóng cửa
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllHourClose"></select>
-                                                    <select id="dllMinuteClose"></select>
+                                                    <select id="dllHourClose">
+                                                        <option ng-repeat="hh in LstHour"  value="{{hh}}" >{{hh}}</option>
+                                                    </select>
+                                                    <select id="dllMinuteClose">
+                                                        <option ng-repeat="mm in LstMinute"  value="{{mm}}" >{{mm}}</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
@@ -169,8 +178,12 @@
                                                     Giờ nhận khách cuối
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllHourLastClientIn"></select>
-                                                    <select id="dllMinuteLastClientIn"></select>
+                                                    <select id="dllHourLastClientIn">
+                                                        <option ng-repeat="hh in LstHour"  value="{{hh}}" >{{hh}}</option>
+                                                    </select>
+                                                    <select id="dllMinuteLastClientIn">
+                                                        <option ng-repeat="mm in LstMinute"  value="{{mm}}" >{{mm}}</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
@@ -248,7 +261,7 @@
                                     </div>
                                 </section>
                                 <div style="clear: both; float: left; margin-top: 20px;">
-                                    <button ng-click="post_add_location()" type="submit" style="width: 660px; font-size: 20px; padding: 10px; color: #333; text-shadow: 0 1px 1px #FFFFFF; border: #F4890E 1px solid;">+ thêm địa điểm</button>
+                                    <button type="submit" style="width: 660px; font-size: 20px; padding: 10px; color: #333; text-shadow: 0 1px 1px #FFFFFF; border: #F4890E 1px solid;">+ thêm địa điểm</button>
                                     <div id="restaurant-saving" style="display: none; float: left; margin-top: 27px;">
                                         <img src="//static.foody.vn/s1/style/images/icons/loading.gif">
                                     </div>

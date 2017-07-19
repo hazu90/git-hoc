@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeafoodEntity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -35,6 +36,5 @@ namespace MvcApplication1.Models
         public int LanguageUsed { get; set; }
         public List<CategoryModel> LstCategory { get; set; }
         public List<CategoryGroupModel> LstCategoryGroup { get; set; }
-        
     }
 }

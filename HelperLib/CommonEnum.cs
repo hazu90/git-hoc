@@ -13,4 +13,30 @@ namespace HelperLib
         NotValid = 2,
         DataNull = 3
     }
+    /// <summary>
+    /// Thời điểm hoạt động của cửa hàng
+    /// </summary>
+    public enum ActiveLocationTime
+    {
+        /// <summary>
+        /// Sáng
+        /// </summary>
+        Morning = 1,
+        /// <summary>
+        /// Trưa
+        /// </summary>
+        Noon    = 2,
+        /// <summary>
+        /// Chiều
+        /// </summary>
+        Afternoon = 3,
+        /// <summary>
+        /// Tối
+        /// </summary>
+        Evening    = 4,
+        /// <summary>
+        /// Nửa đêm
+        /// </summary>
+        Midnight    = 5
+    }
 }
