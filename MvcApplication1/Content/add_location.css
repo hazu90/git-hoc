@@ -1,0 +1,108 @@
+﻿.static-page {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    color: #333;
+}
+.static-page .static-container {
+    width: 1000px;
+    margin: 0 auto;
+    z-index: 3000;
+}
+.static-page .static-container .static-content {
+    width: 1000px;
+    padding: 0px 0 0;
+    float: left;
+    margin-bottom: 20px;
+}
+.static-area {
+    float: left;
+    font-size: 12px;
+    width: 1000px;
+}
+.static-area a:hover {
+    text-decoration: underline;
+}
+.static-headers {
+    padding-bottom: 10px;
+    width: 100%;
+    float: left;
+    font-weight: 700;
+    text-shadow: 0 1px 1px #fff;
+    font-size: 22px;
+}
+.feedback-form {
+    text-align: left;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    position: relative;
+    text-shadow: 0 1px 1px #fff;
+}
+.feedback-form .feedback-notes {
+    color: #333;
+}
+.feedback-form .feedback-table {
+    float: left;
+}
+.information-name {
+    float: left;
+    border-bottom: #ddd 1px solid;
+    padding: 5px 0;
+    font-weight: 700;
+    width: 660px;
+    margin: 15px 0;
+    color: #c00;
+    font-size: 16px;
+}
+.box-information-normal {
+    float: left;
+    width: 100%;
+    padding: 2px 0;
+}
+.box-information-normal .label {
+    width: 150px;
+    float: left;
+}
+.box-information-normal .label span {
+    color: #c00;
+    font-weight: 700;
+}
+.box-information-normal .details {
+    float: left;
+    width: 510px;
+}
+.feedback-form .feedback-table input {
+    border: 1px solid #ddd;
+    padding: 10px 6px;
+    width: 410px;
+}
+.box-information-normal .details input {
+    border-radius: 2px;
+    background: #f9f9f9;
+}
+.feedback-form .feedback-table select {
+    border: 1px solid #ddd;
+    padding: 5px;
+    float: left;
+    margin-right: 4px;
+    width: 139px;
+    border-radius: 2px;
+}
+.feedback-form .feedback-table button {
+    padding: 6px 15px;
+    border: 1px solid #888;
+    text-shadow: 0 1px 1px #fff;
+    cursor: pointer;
+    font-weight: 700;
+    color: #333;
+    border-radius: 2px;
+    background: #f9c667;
+}
+.input-validation-error {
+    border: 1px solid red!important;
+}
+.field-validation-error {
+     color: #e80c4d!important;
+    font-weight: 700!important;
+}

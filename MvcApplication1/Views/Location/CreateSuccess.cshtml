@@ -1,0 +1,25 @@
+﻿@model MvcApplication1.Models.LocationSuccessForCreateModel
+@{
+    
+}
+<section class="static-page">
+    <div class="static-container"  >
+        <div class="static-content">
+            <div class="static-area" style="background: #fff; border: none;padding:20px; margin-left:160px; width:660px;">
+                <h1 class="static-headers">Thêm địa điểm</h1>
+                <div style="clear: both; padding-top: 10px;">Bạn vừa thêm:<span style="font-weight: bold; color: #06aceb">@Model.LocationName</span> thành công!</div>    
+                <div id="suggest-success" class="submit-success" style="margin-top: 20px; font-weight: bold;">
+                    <span style="color: Green; font-size: 13px; font-style: italic; font-weight: normal;">Địa điểm sẽ được Admin Foody duyệt trước khi đăng lên, thời gian duyệt trong vòng 48 giờ!</span>
+                </div>
+                <div style="margin-top: 10px">
+                    <div><br>Bạn vẫn có thể:</div> <br>
+                    <div>
+                        <a style="padding: 8px 15px; border: #06aceb; background: #06aceb; color: #fff; font-weight: bold;" href="/them-dia-diem">+ Tạo địa điểm khác</a>
+                        <a style="padding: 8px 15px; border: #06aceb; background: #06aceb; color: #fff; font-weight: bold;" data-res-id="675334" class="fd-write-review">+ Bình luận</a>
+                        <a style="padding: 8px 15px; border: #06aceb; background: #06aceb; color: #fff; font-weight: bold;" class="uploadResPic">+ Đăng hình ảnh</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

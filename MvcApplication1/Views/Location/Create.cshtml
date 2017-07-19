@@ -1,10 +1,12 @@
-﻿@{
+﻿@using MvcApplication1.Models
+@model LocationForCreateModel
+@{
 }
 <section class="static-page">
-    <div class="static-container">
+    <div class="static-container"  >
         <div class="static-content">
             <div class="static-area" style="background: #fff; border: none;padding:20px; margin-left:160px; width:660px;">
-                @using(Html.BeginForm("Create","Location"))
+                @using (Html.BeginForm("Create", "Location", FormMethod.Post, new { id = "frmCreateLocation", ng_controller = "LocationForCreateController" }))
                 {
                     @Html.AntiForgeryToken()
                     <h1 class="static-headers">Thêm địa điểm</h1>
@@ -21,9 +23,9 @@
                                                     Tên địa điểm <span>*</span>
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtLocationName"  name="LocationName" />
+                                                    @Html.TextBoxFor(m=>m.LocationName , new {maxlength="100",id="txtLocationName"})
                                                     <div style="padding:5px 0;">
-                                                        <span class="field-validation-valid"></span>
+                                                        @Html.ValidationMessage("LocationName", "", new { @class = "text-danger" })
                                                     </div>
                                                 </div>
                                             </div>
@@ -32,7 +34,7 @@
                                                     Địa chỉ <span>*</span>
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtAddress"  name="Address" />
+                                                    <input type="text" id="txtAddress" ng-model="LocationInfo.Address"  name="Address" />
                                                     <div style="padding:5px 0;">
                                                         <span class="field-validation-valid"></span>
                                                     </div>
@@ -43,7 +45,7 @@
                                                     Loại hình <span>*</span>
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllCategoryGrId" name="CategoryGrId"></select>
+                                                    <select id="dllCategoryGrId" ng-model="LocationInfo.CategoryGrId" name="CategoryGrId"></select>
                                                     <div style="padding:5px 0;">
                                                         <span class="field-validation-valid"></span>
                                                     </div>
@@ -66,7 +68,7 @@
                                                     Gần khu vực 
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtNearBy"  name="NearBy" />
+                                                    <input type="text" ng-model="LocationInfo.NearBy" id="txtNearBy"  name="NearBy" />
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
@@ -74,7 +76,7 @@
                                                     Chỉ đường chi tiết
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtAddressDescription"  name="AddressDescription" />
+                                                    <input type="text" id="txtAddressDescription" ng-model="LocationInfo.AddressDescription"  name="AddressDescription" />
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
@@ -82,7 +84,7 @@
                                                     Điện thoại
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtPhoneNumber"  name="PhoneNumber" />
+                                                    <input type="text" id="txtPhoneNumber" ng-model="LocationInfo.PhoneNumber"  name="PhoneNumber" />
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
@@ -90,7 +92,7 @@
                                                     Email
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtEmail"  name="Email" />
+                                                    <input type="text" id="txtEmail" ng-model="LocationInfo.Email"  name="Email" />
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
@@ -98,7 +100,7 @@
                                                     Website
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtWebsiteUrl"  name="WebsiteUrl" />
+                                                    <input type="text" id="txtWebsiteUrl" ng-model="LocationInfo.WebsiteUrl"  name="WebsiteUrl" />
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
@@ -106,7 +108,7 @@
                                                     Mô tả địa điểm 
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtWebsiteUrl"  name="WebsiteUrl" />
+                                                    <input type="text" id="txtDescription" ng-model="LocationInfo.Description"  name="Description" />
                                                 </div>
                                             </div>
                                         </div>
@@ -121,7 +123,7 @@
                                                     Sức chứa
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtWebsiteUrl"  name="WebsiteUrl" />
+                                                    <input type="text" id="txtNumberOfPersonInRoom" ng-model="LocationInfo.NumberOfPersonInRoom"  name="NumberOfPersonInRoom" />
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
@@ -226,7 +228,7 @@
                                     </div>
                                 </section>
                                 <div style="clear: both; float: left; margin-top: 20px;">
-                                    <button style="width: 660px; font-size: 20px; padding: 10px; color: #333; text-shadow: 0 1px 1px #FFFFFF; border: #F4890E 1px solid;">+ thêm địa điểm</button>
+                                    <button ng-click="post_add_location()" type="submit" style="width: 660px; font-size: 20px; padding: 10px; color: #333; text-shadow: 0 1px 1px #FFFFFF; border: #F4890E 1px solid;">+ thêm địa điểm</button>
                                     <div id="restaurant-saving" style="display: none; float: left; margin-top: 27px;">
                                         <img src="//static.foody.vn/s1/style/images/icons/loading.gif">
                                     </div>

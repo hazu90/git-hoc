@@ -173,6 +173,7 @@
     <Compile Include="Business\CategoryGroupBAL.cs" />
     <Compile Include="Business\CityBAL.cs" />
     <Compile Include="Business\GoogleCaptchaBAL.cs" />
+    <Compile Include="Business\LocationBAL.cs" />
     <Compile Include="Business\MailConfirmAccountBAL.cs" />
     <Compile Include="Business\UserInformationBAL.cs" />
     <Compile Include="Common\CommonEnum.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="DataLayer\CategoryGroupDL.cs" />
     <Compile Include="DataLayer\CityDL.cs" />
     <Compile Include="DataLayer\ConnectionDB.cs" />
+    <Compile Include="DataLayer\LocationDL.cs" />
     <Compile Include="DataLayer\UserInformationDAL.cs" />
     <Compile Include="DataLayer\UserRoleDL.cs" />
     <Compile Include="Error\HandleCustomError.cs" />
@@ -204,6 +206,7 @@
     <Compile Include="Models\CategoryGroupModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\LocationForCreateModel.cs" />
+    <Compile Include="Models\LocationSuccessForCreateModel.cs" />
     <Compile Include="Models\PagerModel.cs" />
     <Compile Include="Models\RegisterInfoModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
@@ -214,6 +217,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\account_manager.css" />
+    <Content Include="Content\add_location.css" />
     <Content Include="Content\banner.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fixed_layout.css" />
@@ -260,6 +264,7 @@
     <Content Include="Scripts\CityController.js" />
     <Content Include="Scripts\Directives\ClickAnyWhereButHere.js" />
     <Content Include="Scripts\Directives\ShowMenuBarAlwaysOnTop.js" />
+    <Content Include="Scripts\LocationForCreateController.js" />
     <Content Include="Scripts\LoginController.js" />
     <Content Include="Scripts\LoginDialogController.js" />
     <Content Include="Scripts\MainModule.js" />
@@ -419,6 +424,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Location\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Location\CreateSuccess.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
