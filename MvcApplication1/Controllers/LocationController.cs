@@ -11,21 +11,27 @@ namespace MvcApplication1.Controllers
     [Authorize]
     public class LocationController : Controller
     {
+        [AllowAnonymous]
         public ActionResult Create()
         {
-            return View();
+            return View(new LocationForCreateModel()
+            {
+                LstCategory = (new CategoryBAL()).GetAll(),
+                LstCategoryGroup = (new CategoryGroupBAL()).GetAll()
+            });
         }
         [HttpPost]
+        [AllowAnonymous]
         public ActionResult Create(LocationForCreateModel model)
         {
             if (ModelState.IsValid)
             {
-                var locationBL = new LocationBAL();
-                locationBL.Create(model);
+                // Tạo mới địa điểm
+                (new LocationBAL()).Create(model);
                 // Gửi thông báo thêm mới thành công đến người dùng
-                var successInfo = new LocationSuccessForCreateModel();
-                successInfo.LocationName = model.LocationName;
-                return View("CreateSuccess",successInfo);
+                return View("CreateSuccess", new LocationSuccessForCreateModel() { 
+                    LocationName = model.LocationName
+                });
             }
             return View();
         }

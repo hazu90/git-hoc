@@ -33,5 +33,8 @@ namespace MvcApplication1.Models
         public decimal MinCost { get; set; }
         public decimal MaxCost { get; set; }
         public int LanguageUsed { get; set; }
+        public List<CategoryModel> LstCategory { get; set; }
+        public List<CategoryGroupModel> LstCategoryGroup { get; set; }
+        
     }
 }

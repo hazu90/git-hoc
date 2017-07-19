@@ -45,9 +45,23 @@
                                                     Loại hình <span>*</span>
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllCategoryGrId" ng-model="LocationInfo.CategoryGrId" name="CategoryGrId"></select>
+                                                    <select id="dllCategoryGrId" name="CategoryGrId" >
+                                                        <option value="">---</option>
+                                                        @foreach (var itemGr in Model.LstCategoryGroup)
+                                                        {
+                                                            var lstItemCate = Model.LstCategory.FindAll(o => o.CateGrId == itemGr.CateGrId);
+                                                            <optgroup label="@itemGr.CateName">
+                                                                @foreach (var itemCate in lstItemCate)
+                                                                {
+                                                                    <option value="@itemCate.CateId">@itemCate.CateName</option>
+                                                                }
+                                                            </optgroup> 
+                                                        }
+                                                    </select>
                                                     <div style="padding:5px 0;">
-                                                        <span class="field-validation-valid"></span>
+                                                        <span class="field-validation-valid">
+                                                            @Html.ValidationMessage("CategoryGrId", "", new { @class = "text-danger" })
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -56,9 +70,15 @@
                                                     Tỉnh thành <span>*</span>
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllCountries" name="CountryId"></select>
-                                                    <select id="dllProvinces" name="ProvinceId"></select>
-                                                    <select id="dllDistricts" name="DistrictId"></select>
+                                                    <select id="dllCountries" name="CountryId">
+
+                                                    </select>
+                                                    <select id="dllProvinces" name="ProvinceId">
+
+                                                    </select>
+                                                    <select id="dllDistricts" name="DistrictId">
+
+                                                    </select>
                                                     <span class="field-validation-valid"></span>
                                                     <span class="field-validation-valid"></span>
                                                 </div>

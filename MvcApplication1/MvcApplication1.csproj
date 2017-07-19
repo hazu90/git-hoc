@@ -428,6 +428,12 @@
   <ItemGroup>
     <Content Include="Views\Location\CreateSuccess.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\UserInformation\_TopUser.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Category\_Statistic.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
