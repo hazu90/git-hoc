@@ -28,7 +28,7 @@ namespace MvcApplication1.Business
                 Email = model.Email,
                 WebsiteUrl = model.WebsiteUrl,
                 Description =model.Description,
-                NumberOfPersonInRoom = model.NumberOfPersonInRoom,
+                NumberOfPersonInRoom = model.NumberOfPersonInRoom.GetValueOrDefault(0) ,
                 OpenTime = model.OpenTime,
                 ClosedTime =model.ClosedTime,
                 LastClientInTime = model.LastClientInTime,

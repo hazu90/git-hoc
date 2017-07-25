@@ -27,7 +27,7 @@ namespace MvcApplication1.Models
         public string Email { get; set; }
         public string WebsiteUrl { get; set; }
         public string Description { get; set; }
-        public int NumberOfPersonInRoom { get; set; }
+        public int? NumberOfPersonInRoom { get; set; }
         public TimeSpan OpenTime { get; set; }
         public TimeSpan ClosedTime { get; set; }
         public TimeSpan LastClientInTime { get; set; }

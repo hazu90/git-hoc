@@ -179,6 +179,7 @@
     <Compile Include="Business\MailConfirmAccountBAL.cs" />
     <Compile Include="Business\UserInformationBAL.cs" />
     <Compile Include="Common\CommonEnum.cs" />
+    <Compile Include="Common\CustomModelBinder.cs" />
     <Compile Include="Common\IDataValidator.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AreaController.cs" />

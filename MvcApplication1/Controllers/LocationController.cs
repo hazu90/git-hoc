@@ -17,9 +17,6 @@ namespace MvcApplication1.Controllers
             {
                 LstCategory = (new CategoryBAL()).GetAll(),
                 LstCategoryGroup = (new CategoryGroupBAL()).GetAll(),
-                //LstCity = (new CityBAL()).GetAll(),
-                //LstCountry = ( new CountryBAL()).GetAll(),
-                //LstDistrict = (new DistrictBAL()).GetAll()
             });
         }
         [HttpPost]
@@ -34,7 +31,11 @@ namespace MvcApplication1.Controllers
                     LocationName = model.LocationName
                 });
             }
-            return View();
+            return View(new LocationForCreateModel()
+            {
+                LstCategory = (new CategoryBAL()).GetAll(),
+                LstCategoryGroup = (new CategoryGroupBAL()).GetAll(),
+            });
         }
     }
 }

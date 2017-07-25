@@ -36,7 +36,9 @@
                                                 <div class="details">
                                                     <input type="text" id="txtAddress" ng-model="LocationInfo.Address"  name="Address" />
                                                     <div style="padding:5px 0;">
-                                                        <span class="field-validation-valid"></span>
+                                                        <span class="field-validation-valid">
+                                                            @Html.ValidationMessage("Address", "", new { @class = "text-danger" })
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -85,33 +87,25 @@
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
-                                                <div class="label">
-                                                    Gần khu vực 
-                                                </div>
+                                                <div class="label">Gần khu vực </div>
                                                 <div class="details">
                                                     <input type="text" ng-model="LocationInfo.NearBy" id="txtNearBy"  name="NearBy" />
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
-                                                <div class="label">
-                                                    Chỉ đường chi tiết
-                                                </div>
+                                                <div class="label">Chỉ đường chi tiết</div>
                                                 <div class="details">
                                                     <input type="text" id="txtAddressDescription" ng-model="LocationInfo.AddressDescription"  name="AddressDescription" />
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
-                                                <div class="label">
-                                                    Điện thoại
-                                                </div>
+                                                <div class="label">Điện thoại</div>
                                                 <div class="details">
                                                     <input type="text" id="txtPhoneNumber" ng-model="LocationInfo.PhoneNumber"  name="PhoneNumber" />
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
-                                                <div class="label">
-                                                    Email
-                                                </div>
+                                                <div class="label">Email</div>
                                                 <div class="details">
                                                     <input type="text" id="txtEmail" ng-model="LocationInfo.Email"  name="Email" />
                                                 </div>
@@ -140,11 +134,15 @@
                                         <div class="information-name">Thông tin khác</div>
                                         <div class="information-content">
                                             <div class="box-information-normal">
-                                                <div class="label">
-                                                    Sức chứa
-                                                </div>
+                                                <div class="label">Sức chứa</div>
                                                 <div class="details">
                                                     <input type="text" id="txtNumberOfPersonInRoom" ng-model="LocationInfo.NumberOfPersonInRoom"  name="NumberOfPersonInRoom" />
+                                                    
+                                                    <div style="padding:5px 0;">
+                                                        <span class="field-validation-valid">
+                                                            @Html.ValidationMessage("NumberOfPersonInRoom", "", new { @class = "text-danger" })
+                                                        </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="box-information-normal">
