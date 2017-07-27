@@ -137,7 +137,6 @@
                                                 <div class="label">Sức chứa</div>
                                                 <div class="details">
                                                     <input type="text" id="txtNumberOfPersonInRoom" ng-model="LocationInfo.NumberOfPersonInRoom"  name="NumberOfPersonInRoom" />
-                                                    
                                                     <div style="padding:5px 0;">
                                                         <span class="field-validation-valid">
                                                             @Html.ValidationMessage("NumberOfPersonInRoom", "", new { @class = "text-danger" })
@@ -150,10 +149,10 @@
                                                     Giờ mở cửa
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllHourOpen">
+                                                    <select id="dllHourOpen" name="HourOpenTime">
                                                         <option ng-repeat="hh in LstHour"  value="{{hh}}" >{{hh}}</option>
                                                     </select>
-                                                    <select id="dllMinuteOpen">
+                                                    <select id="dllMinuteOpen" name="MinuteOpenTime">
                                                         <option ng-repeat="mm in LstMinute"  value="{{mm}}" >{{mm}}</option>
                                                     </select>
                                                 </div>
@@ -163,10 +162,10 @@
                                                     Giờ đóng cửa
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllHourClose">
+                                                    <select id="dllHourClose" name="HourClosedTime" >
                                                         <option ng-repeat="hh in LstHour"  value="{{hh}}" >{{hh}}</option>
                                                     </select>
-                                                    <select id="dllMinuteClose">
+                                                    <select id="dllMinuteClose" name="MinuteClosedTime">
                                                         <option ng-repeat="mm in LstMinute"  value="{{mm}}" >{{mm}}</option>
                                                     </select>
                                                 </div>
@@ -176,10 +175,10 @@
                                                     Giờ nhận khách cuối
                                                 </div>
                                                 <div class="details">
-                                                    <select id="dllHourLastClientIn">
+                                                    <select id="dllHourLastClientIn" name="HourLastClientInTime" >
                                                         <option ng-repeat="hh in LstHour"  value="{{hh}}" >{{hh}}</option>
                                                     </select>
-                                                    <select id="dllMinuteLastClientIn">
+                                                    <select id="dllMinuteLastClientIn" name="MinuteLastClientInTime">
                                                         <option ng-repeat="mm in LstMinute"  value="{{mm}}" >{{mm}}</option>
                                                     </select>
                                                 </div>

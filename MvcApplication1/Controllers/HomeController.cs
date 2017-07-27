@@ -20,6 +20,7 @@ namespace MvcApplication1.Controllers
         [AllowAnonymous]
         public ActionResult IsAuthenticated()
         {
+            
             if (WebSecurity.IsAuthenticated)
             {
                 var userInfo = new SignnedInUserModel();

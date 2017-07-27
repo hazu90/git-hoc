@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebMatrix.WebData;
 
 namespace MvcApplication1.Controllers
 {
@@ -24,6 +25,8 @@ namespace MvcApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Lấy ra thông tin của người tạo địa điểm
+                model.CreatedBy = WebSecurity.CurrentUserName;
                 // Tạo mới địa điểm
                 (new LocationBAL()).Create(model);
                 // Gửi thông báo thêm mới thành công đến người dùng
@@ -31,11 +34,11 @@ namespace MvcApplication1.Controllers
                     LocationName = model.LocationName
                 });
             }
-            return View(new LocationForCreateModel()
-            {
-                LstCategory = (new CategoryBAL()).GetAll(),
-                LstCategoryGroup = (new CategoryGroupBAL()).GetAll(),
-            });
+
+            model.LstCategory = (new CategoryBAL()).GetAll();
+            model.LstCategoryGroup = (new CategoryGroupBAL()).GetAll();
+
+            return View(model);
         }
     }
 }

@@ -22,11 +22,15 @@ namespace SeafoodEntity
         public string WebsiteUrl { get; set; }
         public string Description { get; set; }
         public int NumberOfPersonInRoom { get; set; }
-        public TimeSpan? OpenTime { get; set; }
-        public TimeSpan? ClosedTime { get; set; }
-        public TimeSpan? LastClientInTime { get; set; }
+        public DateTime? OpenTime { get; set; }
+        public DateTime? ClosedTime { get; set; }
+        public DateTime? LastClientInTime { get; set; }
         public decimal? MinCost { get; set; }
         public decimal? MaxCost { get; set; }
         public int? LanguageUsed { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public string UpdatedBy { get; set; }
+        public DateTime? UpdatedDate { get; set; }
     }
 }

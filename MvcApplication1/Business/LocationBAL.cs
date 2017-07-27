@@ -14,6 +14,14 @@ namespace MvcApplication1.Business
         {
             var response = new ResponseModel();
             var locationDL = new LocationDL();
+            // 
+            var yyyy = DateTime.Now.Year;
+            var mm = DateTime.Now.Month;
+            var dd = DateTime.Now.Day;
+            model.OpenTime = new DateTime(yyyy,mm,dd,model.HourOpenTime,model.MinuteOpenTime,0);
+            model.ClosedTime = new DateTime(yyyy, mm, dd, model.HourClosedTime, model.MinuteClosedTime, 0);
+            model.LastClientInTime = new DateTime(yyyy, mm, dd, model.HourLastClientInTime, model.MinuteLastClientInTime, 0);
+
             locationDL.Create(new Location()
             {
                 LocationName = model.LocationName,
