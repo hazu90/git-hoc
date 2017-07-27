@@ -91,8 +91,8 @@ namespace MvcApplication1.Controllers
         public ActionResult Register(RegisterInfoModel model)
         {
             var googleCaptchaBAL = new GoogleCaptchaBAL();
-            if (googleCaptchaBAL.Authenticate(Request["g-recaptcha-response"]) && ModelState.IsValid)
-            {
+            //if (googleCaptchaBAL.Authenticate(Request["g-recaptcha-response"]) && ModelState.IsValid)
+            //{
                 try
                 {
                     // Kiểm tra tính hợp lệ của thông tin email
@@ -116,7 +116,7 @@ namespace MvcApplication1.Controllers
                 {
                     ModelState.AddModelError("", ErrorCodeToString(e.StatusCode));
                 }
-            }
+            //}
             
             // Get list of city
             var cityBAL = new CityBAL();

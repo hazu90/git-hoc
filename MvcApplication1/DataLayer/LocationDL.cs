@@ -32,6 +32,7 @@ namespace MvcApplication1.DataLayer
                                 .Parameter("MinCost", model.MinCost)
                                 .Parameter("MaxCost", model.MaxCost)
                                 .Parameter("LanguageUsed", model.LanguageUsed)
+                                .Parameter("CreatedBy", model.CreatedBy)
                                 .QuerySingle<int>();
             }
         }

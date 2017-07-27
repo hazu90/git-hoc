@@ -32,5 +32,6 @@ namespace SeafoodEntity
         public DateTime CreatedDate { get; set; }
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
+        public bool IsApproved { get; set; }
     }
 }

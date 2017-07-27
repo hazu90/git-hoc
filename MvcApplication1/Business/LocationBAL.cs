@@ -42,7 +42,8 @@ namespace MvcApplication1.Business
                 LastClientInTime = model.LastClientInTime,
                 MinCost =model.MinCost,
                 MaxCost =model.MaxCost,
-                LanguageUsed = model.LanguageUsed
+                LanguageUsed = model.LanguageUsed,
+                CreatedBy = model.CreatedBy
             });
             return response;
         }
