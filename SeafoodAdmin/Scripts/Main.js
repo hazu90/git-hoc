@@ -206,12 +206,15 @@ var sys_call_ajax = {
     call_json_type:function(controller,action,data,block_element,callback){
         $.ajax({
             url: '/'+controller+'/'+action,
-            type: "json",
+            type: "POST",
             data: data,
             dataType: "json",
             async: true,
             beforeSend: function () {
-                block_element.attr("disabled","disabled",function(){});
+                if(block_element !== null)
+                {
+                    block_element.attr("disabled","disabled",function(){});
+                }
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 sysmess.error("Có lỗi trong quá trình xử lý", function () {});
@@ -220,7 +223,11 @@ var sys_call_ajax = {
                 callback(response);
             },
             complete: function () {
-                block_element.removeAttr("disabled");
+                if(block_element !== null)
+                {
+                    block_element.removeAttr("disabled");
+                }
+
             }
         });
     },

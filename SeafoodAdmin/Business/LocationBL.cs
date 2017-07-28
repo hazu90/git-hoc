@@ -1,4 +1,5 @@
-﻿using SeafoodAdmin.Models;
+﻿using SeafoodAdmin.DAL;
+using SeafoodAdmin.Models;
 using SeafoodEntity;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,12 @@ namespace SeafoodAdmin.Business
     {
         public List<Location>  GetList(LocationForSearchModel model)
         {
+            return (new LocationDL()).GetList();
+        }
 
+        public bool Appove(int locationId)
+        {
+            return (new LocationDL()).Approve(locationId);
         }
     }
 }
