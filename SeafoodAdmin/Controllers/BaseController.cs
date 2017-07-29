@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeafoodAdmin.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,5 +9,11 @@ namespace SeafoodAdmin.Controllers
 {
     public class BaseController:Controller
     {
+        private CurrentUserModel UserContext{get;set;}
+        public BaseController()
+        {
+            //WebSecurity.
+        }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using SeafoodAdmin.Business;
+﻿using HelperLib;
+using SeafoodAdmin.Business;
 using SeafoodAdmin.Models;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,9 @@ namespace SeafoodAdmin.Controllers
         {
             var response = new ResponseModel();
             var locationBL = new LocationBL();
+            locationBL.Appove(id);
+            response.Code = SystemStatusCode.Success.GetHashCode();
+            response.Message = "Bạn đã duyệt thông tin địa điểm thành công !";
             return Json(response, JsonRequestBehavior.AllowGet);
         }
 

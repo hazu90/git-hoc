@@ -10,11 +10,20 @@ namespace SeafoodAdmin.DAL
     {
         public List<Location> GetList()
         {
-            using (var context = ConnectionDB.MainDB())
+            try
             {
-                return context.StoredProcedure("Location_GetList")
-                        .QueryMany<Location>();
+                using (var context = ConnectionDB.MainDB())
+                {
+                    return context.StoredProcedure("Location_GetList")
+                            .QueryMany<Location>();
+                }
             }
+            catch (Exception ex)
+            {
+                return new List<Location>();
+            }
+
+            
         }
 
         public bool Approve(int id)
