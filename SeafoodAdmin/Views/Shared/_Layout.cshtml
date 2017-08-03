@@ -2,15 +2,17 @@
 <html>
 <head>
     <title>Phần mềm quản lý banhaisan.com </title>
-    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/plugins/font-awesome/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/plugins/bootstrap-datepicker/css/datepicker.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/plugins/bootstrap-timepicker/compiled/timepicker.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/plugins/uniform/css/uniform.default.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/plugins/bootstrap/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/plugins/bootstrap/css/bootstrap-responsive.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/plugins/font-awesome/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/style-metro.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/style-responsive.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/css/themes/default.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/assets/plugins/uniform/css/uniform.default.css")" rel="stylesheet" type="text/css" />
 </head>
-<body style="background-color: #E9E9EE;height:100%;">
-    <div class="navbar navbar-inverse navbar-fixed-top menu-bar">
+<body class="fixed-top">
+    <div class="header navbar navbar-inverse navbar-fixed-top">
         @Html.Action("Header", "Common")
     </div>
     <div id="dialog-system">
