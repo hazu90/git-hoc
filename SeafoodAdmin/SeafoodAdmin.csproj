@@ -1807,8 +1807,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
@@ -1831,10 +1829,6 @@
     <Content Include="Content\plugins\font-awesome\font\fontawesome-webfont.woff" />
     <Content Include="Content\plugins\font-awesome\font\FontAwesome.otf" />
     <Content Include="Content\plugins\uniform\README.textile" />
-    <Content Include="Scripts\jquery-1.8.3.min.js" />
-    <Content Include="Scripts\Location.js" />
-    <Content Include="Scripts\Main.js" />
-    <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

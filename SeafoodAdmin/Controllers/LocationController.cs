@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace SeafoodAdmin.Controllers
 {
+    [Authorize]
     public class LocationController:Controller
     {
         public ActionResult Index()
