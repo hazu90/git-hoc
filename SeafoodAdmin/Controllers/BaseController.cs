@@ -12,6 +12,7 @@ namespace SeafoodAdmin.Controllers
         private CurrentUserModel UserContext{get;set;}
         public BaseController()
         {
+            
             //WebSecurity.
         }
 
