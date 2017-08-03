@@ -19,5 +19,10 @@ namespace SeafoodAdmin.Controllers
             //ViewBag.CurentUser = UserContext;
             return View();
         }
+
+        public ActionResult Sidebar()
+        {
+            return View();
+        }
     }
 }
