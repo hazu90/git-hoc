@@ -24,5 +24,10 @@ namespace SeafoodAdmin.Controllers
         {
             return View();
         }
+
+        public ActionResult Dialog()
+        {
+            return View();
+        }
     }
 }

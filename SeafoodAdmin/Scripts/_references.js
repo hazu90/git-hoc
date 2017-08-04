@@ -557,3 +557,5 @@
 /// <reference path="../content/assets/scripts/ui-nestable.js" />
 /// <reference path="../content/assets/scripts/ui-sliders.js" />
 /// <reference path="../content/assets/scripts/ui-tree.js" />
+/// <reference path="../content/assets/scripts/views/location.js" />
+/// <reference path="../content/assets/scripts/views/library.js" />
