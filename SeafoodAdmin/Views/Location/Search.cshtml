@@ -15,6 +15,7 @@
                 </div>
             </div>
             <div class="portlet-body">
+                <table class="table table-condensed table-hover" id="table-unappove-location" >
                     <thead>
                         <tr>
                             <th>#</th>
@@ -31,6 +32,7 @@
                                 <td>@(locationItem.LocationName)</td>
                                 <td>@(locationItem.Address)</td>
                                 <td>
+                                    <a href="javascript:void(0);" name="approve" data-location-id="@(locationItem.LocationId)"  class="btn mini blue"><i class="icon-ok"></i> Duyệt</a>
                                 </td>
                             </tr>
                         }
