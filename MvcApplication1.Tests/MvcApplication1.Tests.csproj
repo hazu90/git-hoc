@@ -100,7 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="RedisCacheTest.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -110,13 +109,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MvcApplication1\MvcApplication1.csproj">
+    <ProjectReference Include="..\MvcApplication1\Seafood.Frontend.csproj">
       <Project>{43EA74D8-C822-4723-8DBE-75CFAFEF1A9F}</Project>
-      <Name>MvcApplication1</Name>
+      <Name>Seafood.Frontend</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

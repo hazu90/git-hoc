@@ -1,11 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1", "MvcApplication1\MvcApplication1.csproj", "{43EA74D8-C822-4723-8DBE-75CFAFEF1A9F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1.Tests", "MvcApplication1.Tests\MvcApplication1.Tests.csproj", "{307BFF14-7E5F-4491-8603-F0FE71B5A848}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeafoodEntity", "SeafoodEntity\SeafoodEntity.csproj", "{46B1CC96-B076-4EEA-9684-955C964192B0}"
 EndProject
@@ -19,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperLib", "HelperLib\Help
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeafoodAdmin", "SeafoodAdmin\SeafoodAdmin.csproj", "{E2559836-AD40-4280-ACFF-3A97F8D39B1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seafood.Notification", "Seafood.Notification\Seafood.Notification.csproj", "{111E9123-955B-4553-B672-C2AEBBA85F0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{43EA74D8-C822-4723-8DBE-75CFAFEF1A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43EA74D8-C822-4723-8DBE-75CFAFEF1A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43EA74D8-C822-4723-8DBE-75CFAFEF1A9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{307BFF14-7E5F-4491-8603-F0FE71B5A848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{307BFF14-7E5F-4491-8603-F0FE71B5A848}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{307BFF14-7E5F-4491-8603-F0FE71B5A848}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{307BFF14-7E5F-4491-8603-F0FE71B5A848}.Release|Any CPU.Build.0 = Release|Any CPU
 		{46B1CC96-B076-4EEA-9684-955C964192B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{46B1CC96-B076-4EEA-9684-955C964192B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46B1CC96-B076-4EEA-9684-955C964192B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +47,10 @@ Global
 		{E2559836-AD40-4280-ACFF-3A97F8D39B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2559836-AD40-4280-ACFF-3A97F8D39B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2559836-AD40-4280-ACFF-3A97F8D39B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{111E9123-955B-4553-B672-C2AEBBA85F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{111E9123-955B-4553-B672-C2AEBBA85F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{111E9123-955B-4553-B672-C2AEBBA85F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{111E9123-955B-4553-B672-C2AEBBA85F0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -225,6 +225,7 @@
     </Compile>
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\BreadcumbModel.cs" />
     <Compile Include="Models\CurrentUserModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LocationForSearchModel.cs" />
@@ -1726,6 +1727,9 @@
     <Content Include="Content\assets\scripts\ui-nestable.js" />
     <Content Include="Content\assets\scripts\ui-sliders.js" />
     <Content Include="Content\assets\scripts\ui-tree.js" />
+    <Content Include="Content\assets\scripts\views\dialogs.js" />
+    <Content Include="Content\assets\scripts\views\library.js" />
+    <Content Include="Content\assets\scripts\views\location.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -2082,6 +2086,8 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Common\Sidebar.cshtml" />
+    <Content Include="Views\Common\_BreadcumbPartial.cshtml" />
+    <Content Include="Views\Common\_DialogPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HelperLib\HelperLib.csproj">

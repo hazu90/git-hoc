@@ -3,17 +3,15 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12">
-            <h3 class="page-title">
-                Danh sách địa điểm chưa duyệt
-                <small>Hiển thị danh sách các địa điểm chưa được duyệt</small>
-            </h3>
+            <h3 class="page-title">Danh sách địa điểm chưa được duyệt <small>Hiển thị danh sách các địa điểm chưa được duyệt bởi người quản trị website</small> </h3>
             <ul class="breadcrumb">
-                <li class="icon-home">
+                <li>
+                    <i class="icon-home"></i>
                     <a href="/Home/Index">Trang chủ</a>
                     <i class="icon-angle-right"></i>
                 </li>
                 <li>
-                    <a href="/Location/Index">Danh sách địa điểm chưa duyệt</a>
+                    <a href="/Location/Index">Danh sách các địa điểm chưa được duyệt</a>
                 </li>
             </ul>
         </div>
@@ -22,19 +20,27 @@
         <div class="span12">
             <div class="portlet box green">
                 <div class="portlet-title">
-                    <div class="caption"><i class="icon-reorder"></i>Danh sách tìm kiếm</div>
-                    <div class="pagination pagination-small">
-                    
+                    <div class="caption"><i class="icon-reorder"></i>Tiêu chí tìm kiếm</div>
+                    <div class="actions">
+                        @*<a href="#" class="btn yellow"><i class="icon-pencil"></i> Edit</a>
+                            <a href="#" class="btn green"><i class="icon-plus"></i> Add</a>*@
                     </div>
                 </div>
                 <div class="portlet-body">
-                    <button id="btnSearch" type="button" class="btn green">
-                        <i class="icon-search"></i> Tìm kiếm
+                    <button type="button" class="btn green" id="btnSearch">
+                        <i class="icon-search"></i>
+                        Tìm kiếm
                     </button>
                 </div>
             </div>
         </div>
     </div>
-    @Html.Action("Search","Location")
+    @Html.Action("Search", "Location")
 </div>
-
+@section Script
+{
+    <script type="text/javascript" src="~/Content/assets/scripts/views/location.js"></script>
+    <script type="text/javascript">
+        location_index.init();
+    </script>
+}

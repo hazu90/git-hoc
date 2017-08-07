@@ -30,7 +30,7 @@ namespace SeafoodAdmin.DAL
         {
             using (var context = ConnectionDB.MainDB())
             {
-                return context.StoredProcedure("Location_Approve")
+                return context.StoredProcedure("Location_Appove")
                                 .Parameter("LocationId", id)
                                 .Execute()>0;
             }
