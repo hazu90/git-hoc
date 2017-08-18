@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.SignalR;
+using Seafood.Notification.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,9 @@ namespace Seafood.Notification.Hubs
             return base.OnDisconnected(stopCalled);
         }
 
-
+        public List<NotificationModel> Send()
+        {
+            return new List<NotificationModel>();
+        }
     }
 }
