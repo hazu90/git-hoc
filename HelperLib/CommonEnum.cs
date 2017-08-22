@@ -39,4 +39,10 @@ namespace HelperLib
         /// </summary>
         Midnight    = 5
     }
+
+    public enum AuthExternalMode
+    {
+        Default = 0,
+        AttachLogin = 1
+    }
 }

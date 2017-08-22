@@ -1,0 +1,1 @@
+ALTER TABLE [UserInformation] ADD [IsMailRegistered] BIT

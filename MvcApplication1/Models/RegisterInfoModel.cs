@@ -10,7 +10,7 @@ namespace MvcApplication1.Models
     public class RegisterInfoModel
     {
         //[Required]
-        //public string UserName { get; set; }
+        public string UserName { get; set; }
         [Required(ErrorMessage = "Bạn phải nhập thông tin tên")]
         public string FirstName { get; set; }
         [Required(ErrorMessage="Bạn phải nhập thông tin họ")]

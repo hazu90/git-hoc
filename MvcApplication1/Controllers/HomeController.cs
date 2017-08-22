@@ -26,6 +26,14 @@ namespace MvcApplication1.Controllers
                 var userInfo = new SignnedInUserModel();
                 userInfo.UserName = WebSecurity.CurrentUserName;
                 userInfo.IsLoggedIn = WebSecurity.IsAuthenticated;
+                var userInformationBL = new UserInformationBAL();
+                var currUserInfo = userInformationBL.GetByUserName(userInfo.UserName);
+                if (currUserInfo != null)
+                {
+                    userInfo.UserEmail = currUserInfo.UserEmail;
+                    userInfo.FirstName = currUserInfo.FirstName;
+                    userInfo.LastName = currUserInfo.LastName;
+                }
                 return PartialView("_AuthenticatedPartial",userInfo );
             }
             else

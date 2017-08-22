@@ -5,7 +5,7 @@
     <div id="account">
         <div class="topnav">
             <a href="javascript:void(0);" class="acemail">
-                <div class="fname" title="Hazu">Hazu</div>
+                <div class="fname" title="Hazu">@Model.FirstName</div>
                 <img src="https://media.foody.vn/usr/g899/8983480/avt/c30x30/foody-avatar-949-636352924754329699.jpg" class="avatar-user" alt="Hazu" title="Hazu">
             </a>
         </div>
@@ -13,7 +13,7 @@
             <span class="arrow"></span>
             <div class="usermenudrop">
                 <div class="useremail">
-                    <div class="email">manunghaycuoi@gmail.com</div>
+                    <div class="email">@Model.UserEmail</div>
                     <a href="javascript:void(0)" class="profile-verify-button">
                         <div class="toolbar-verify-full">
                             <div style="width:0%;"></div>
@@ -100,9 +100,6 @@
                     @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id="FormLogOff"}))
                     {
                         @Html.AntiForgeryToken()
-                        @*<button type="submit"  class="register">
-                            Thoát<span class="fa fa-sign-out"></span>
-                        </button>*@
                         <a href="javascript:SignOut(0);" onclick="document.getElementById('FormLogOff').submit()" class="register">
                             Thoát<span class="fa fa-sign-out"></span>
                         </a>

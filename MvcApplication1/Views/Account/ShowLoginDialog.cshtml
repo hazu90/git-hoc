@@ -7,11 +7,14 @@
         <div class="btn-cancel btn-close" ng-click="close_dialog()" ></div>
         <div class="frame">
             <div class="title">Đăng nhập hệ thống</div>
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            { 
+                @Html.AntiForgeryToken()
             <div class="content">
                 <div class="row">
                     <ul class="social-btns col4">
                         <li class="fb" style="float:left;width:100%;">
-                            <a data-type="fb" style="float:left;width:100%;">
+                            <a data-type="fb" style="float:left;width:100%;" ng-click="loginFacebook()" >
                                 <i class="fa fa-facebook"></i>
                                 <label>Đăng nhập bằng</label>&nbsp;<span>FaceBook</span>
                             </a>
@@ -24,35 +27,36 @@
                         </li>
                     </ul>
                 </div>
-                <div class="row">
-                    <div class="split">
-                        <label>Đăng nhập bằng email</label>
+                    <div class="row">
+                        <div class="split">
+                            <label>Đăng nhập bằng email</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input">
-                        <input type="text" placeholder="Email hoặc Username" />
+                    <div class="row">
+                        <div class="input">
+                            <input type="text" name="UserName" placeholder="Email hoặc Username" ng-model="userInfo.UserName" />
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input">
-                        <input type="text" placeholder="Mật khẩu" />
+                    <div class="row">
+                        <div class="input">
+                            <input type="password" name="Password" placeholder="Mật khẩu" ng-model="userInfo.Password" />
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="lbl-remember">
-                        <input type="checkbox" /> Nhớ tài khoản
+                    <div class="row">
+                        <div class="lbl-remember">
+                            <input type="checkbox" ng-model="userInfo.RememberMe" /> Nhớ tài khoản
+                            <input type="hidden" name="RememberMe" value="{{userInfo.RememberMe}}" />
+                        </div>
+                        <div class="lbl-forgot">
+                            <a href="/quen-mat-khau" >Quên mật khẩu</a>
+                        </div>
                     </div>
-                    <div class="lbl-forgot">
-                        <a href="/quen-mat-khau" >Quên mật khẩu</a>
-                    </div>
-                </div>
             </div>
             <div class="btns bottom col2">
-                <a class="btn btn-login" href="javascript:void(0)" ng-click="Login()">Đăng nhập</a>
-                <a class="btn btn-cancel" href="/dang-ky">Đăng ký</a>
+                <button class="btn btn-login" type="submit">đăng nhập</button>
+                <a class="btn btn-cancel" href="/dang-ky">đăng ký</a>
             </div>
+            }
         </div>
     </div>
-
 </div>

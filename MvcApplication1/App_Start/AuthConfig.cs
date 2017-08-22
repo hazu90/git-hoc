@@ -22,9 +22,9 @@ namespace MvcApplication1
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            //OAuthWebSecurity.RegisterFacebookClient(
-            //    appId: "",
-            //    appSecret: "");
+            OAuthWebSecurity.RegisterFacebookClient(
+                appId: "786338091490944",
+                appSecret: "86049934efe63e74e133d6b077c9df70");
 
             //OAuthWebSecurity.RegisterGoogleClient();
         }

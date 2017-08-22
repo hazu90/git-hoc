@@ -27,7 +27,7 @@ namespace MvcApplication1.DataLayer
             using (var context = ConnectionDB.MainDB())
             {
                 return context.StoredProcedure("UserInformation_GetByUserName")
-                        .Parameter("UserEmail",userName )
+                        .Parameter("UserName", userName)
                         .QuerySingle<UserInformation>();
             }
         }
@@ -39,6 +39,15 @@ namespace MvcApplication1.DataLayer
                 context.StoredProcedure("UserInformation_UpdateConfirmedEmailAndActive")
                         .Parameter("UserEmail", userName)
                         .Execute();
+            }
+        }
+
+        public UserInformation GetLastestAnonymous()
+        {
+            using (var context = ConnectionDB.MainDB())
+            {
+                return context.StoredProcedure("UserInformation_GetAnonymousLastest")
+                                .QuerySingle<UserInformation>();
             }
         }
     }

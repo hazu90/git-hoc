@@ -17,6 +17,7 @@ using MvcApplication1.Business;
 using SeafoodEntity;
 using System.Net;
 using HelperLib;
+using DotNetOpenAuth.AspNet.Clients;
 
 namespace MvcApplication1.Controllers
 {
@@ -91,32 +92,44 @@ namespace MvcApplication1.Controllers
         public ActionResult Register(RegisterInfoModel model)
         {
             var googleCaptchaBAL = new GoogleCaptchaBAL();
-            //if (googleCaptchaBAL.Authenticate(Request["g-recaptcha-response"]) && ModelState.IsValid)
-            //{
+            if (googleCaptchaBAL.Authenticate(Request["g-recaptcha-response"]) && ModelState.IsValid)
+            {
                 try
                 {
-                    // Kiểm tra tính hợp lệ của thông tin email
+                    // Tách lấy username của người dùng
+                    var userName = model.UserEmail.Split('@')[0];
+
+                    // Kiểm tra thông tin người dùng này đã tồn tại chưa
+                    // Nếu tồn tại rồi thì đánh chỉ số cho người dùng đó
+                    var id= WebSecurity.GetUserId(userName);
+                    if (id > 0)
+                    {
+                        var indexUser = (new Random()).Next(1, 10000);
+                        userName += indexUser.ToString();
+                    }
+                    model.UserName = userName;
+
                     // Tạo tài khoản
-                    var tokenKey= WebSecurity.CreateUserAndAccount(model.UserEmail, model.Password,null,true);
+                    var tokenKey= WebSecurity.CreateUserAndAccount(model.UserName, model.Password,null,true);
                     // Bổ sung thông tin tài khoản tài khoản 
                     var userInformationBAL = new UserInformationBAL();
                     userInformationBAL.Create( new UserInformation(){
                                                         FirstName = model.FirstName,
                                                         LastName = model.LastName,
                                                         UserEmail = model.UserEmail,
-                                                        UserName = model.UserEmail,
+                                                        UserName = model.UserName,
                                                         CityCode = model.CityCode
                                                         });
                     //Gui mail yeu cau kich hoat tai khoan
                     var mailConfirmAccountBAL = new MailConfirmAccountBAL();
-                    mailConfirmAccountBAL.SendConfirmMail(model.UserEmail, model.UserEmail, tokenKey);
+                    mailConfirmAccountBAL.SendConfirmMail(model.UserEmail, model.UserName, tokenKey);
                     return RedirectToAction("ActivateNotification", "Account", new { username = model.UserEmail });
                 }
                 catch (MembershipCreateUserException e)
                 {
                     ModelState.AddModelError("", ErrorCodeToString(e.StatusCode));
                 }
-            //}
+            }
             
             // Get list of city
             var cityBAL = new CityBAL();
@@ -128,7 +141,7 @@ namespace MvcApplication1.Controllers
         [AllowAnonymous]
         public ActionResult ActivateNotification(string username)
         {
-            return View(username);
+            return View("ActivateNotification", (object)username);
         }
 
         [AllowAnonymous]
@@ -256,6 +269,7 @@ namespace MvcApplication1.Controllers
         [AllowAnonymous]
         public ActionResult ExternalLoginCallback(string returnUrl)
         {
+            returnUrl = "/Home/Index";
             AuthenticationResult result = OAuthWebSecurity.VerifyAuthentication(Url.Action("ExternalLoginCallback", new { ReturnUrl = returnUrl }));
             if (!result.IsSuccessful)
             {
@@ -447,5 +461,6 @@ namespace MvcApplication1.Controllers
             }
         }
         #endregion
+
     }
 }

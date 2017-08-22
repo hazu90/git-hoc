@@ -1,4 +1,5 @@
 ﻿using MvcApplication1.DataLayer;
+using MvcApplication1.Models;
 using SeafoodEntity;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,22 @@ namespace MvcApplication1.Business
             var userInformationDAL = new UserInformationDAL();
             userInformationDAL.Insert(model);
             return true;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public UserInformation GetByUserName(string userName)
+        {
+            var userInformationDAL = new UserInformationDAL();
+            return userInformationDAL.GetByUserName(userName);
+        }
+
+        public ResponseModel CreateAnonymous()
+        {
+
+            return new ResponseModel();
         }
     }
 
