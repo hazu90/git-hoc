@@ -9,10 +9,10 @@ namespace MvcApplication1.Controllers
 {
     public class CommonController : BaseController
     {
-        public ActionResult Paging(PagerModel pager)
-        {
-            return View(pager);
-        }
+        //public ActionResult Paging(PagerModel pager)
+        //{
+        //    return View(pager);
+        //}
 
         public ActionResult Header()
         {

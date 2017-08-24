@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace SeafoodEntity
+namespace MvcApplication1.Models
 {
-    public class UserInformation
+    public class UserInformationForEditModel
     {
+        [Key]
         public string UserName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -18,9 +19,5 @@ namespace SeafoodEntity
         public string Sex { get; set; }
         public string Description { get; set; }
         public bool IsPrivate { get; set; }
-        public string Yahoo { get; set; }
-        public string FacebookUrl { get; set; }
-        public string Skype { get; set; }
-        public string Phone { get; set; }
     }
 }

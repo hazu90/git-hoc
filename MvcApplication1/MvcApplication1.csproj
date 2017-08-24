@@ -203,10 +203,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AreaController.cs" />
     <Compile Include="Controllers\BannerController.cs" />
-    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CityController.cs" />
-    <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\ExternalAccountController.cs" />
     <Compile Include="Controllers\FoodyInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -222,7 +220,6 @@
     <Compile Include="DataLayer\DistrictDL.cs" />
     <Compile Include="DataLayer\LocationDL.cs" />
     <Compile Include="DataLayer\UserInformationDAL.cs" />
-    <Compile Include="DataLayer\UserRoleDL.cs" />
     <Compile Include="Error\HandleCustomError.cs" />
     <Compile Include="Filters\GoogleCaptchaValidatorAttribute.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -237,12 +234,10 @@
     <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\LocationForCreateModel.cs" />
     <Compile Include="Models\LocationSuccessForCreateModel.cs" />
-    <Compile Include="Models\PagerModel.cs" />
     <Compile Include="Models\RegisterInfoModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
     <Compile Include="Models\SignnedInUserModel.cs" />
-    <Compile Include="Models\UserModel.cs" />
-    <Compile Include="Models\UserRoleModel.cs" />
+    <Compile Include="Models\UserInformationForEditModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -275,6 +270,8 @@
     <Content Include="Content\login_dialog.css" />
     <Content Include="Content\main_content.css" />
     <Content Include="Content\Main.css" />
+    <Content Include="Content\my_profile.css" />
+    <Content Include="Content\my_profile_menu.css" />
     <Content Include="Content\navaddbuttons.css" />
     <Content Include="Content\notification.css" />
     <Content Include="Content\plugins\font-awesome-4.7.0\css\font-awesome.css" />
@@ -470,6 +467,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\ExternalAccount\LoginSuccess.cshtml" />
+    <Content Include="Views\UserInformation\Edit.cshtml" />
+    <Content Include="Views\Menu\_MyProfilePartial.cshtml" />
     <None Include="Web.Oauth.config">
       <SubType>Designer</SubType>
     </None>

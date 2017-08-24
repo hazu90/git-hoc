@@ -1,0 +1,209 @@
+﻿@{
+    
+}
+@Html.Partial("~/Views/Menu/_MyProfilePartial.cshtml")
+<div class="profile-upgrade pull-right">
+    <div class="profile-panel">
+        <h4 class="profile-title">Thông tin cơ bản</h4>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Tên :</label>
+                <div class="profile-input-box">
+                    <input type="text" id="FirstName" name="FirstName" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Họ :</label>
+                <div class="profile-input-box">
+                    <input type="text" id="LastName" name="LastName" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Username :</label>
+                <div class="profile-input-box">
+                    <input type="text" id="UserName" name="UserName" />
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <button type="button">Sửa</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Tình trạng hôn nhân :</label>
+                <div class="profile-input-box">
+                    <select id="ddlStatus" name="Status">
+                        <option value="1">Độc thân</option>
+                        <option value="2">Đã cưới</option>
+                        <option value="3">Phức tạp</option>
+                        <option value="4">Đang hẹn hò</option>
+                        <option value="5">Đã đính hôn</option>
+                        <option value="6">Quan hệ mở</option>
+                        <option value="7">Góa</option>
+                        <option value="8">Ly dị</option>
+                        <option value="9">Ly thân</option>
+                    </select>
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <select>
+                    <option value="1">Mọi người</option>
+                    <option value="2">Bạn bè</option>
+                    <option value="3">Ẩn thông tin</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Ngày sinh :</label>
+                <div class="profile-input-box">
+                    <select id="ddlStatus" name="DateOfBirthDay"></select>
+                    <select id="ddlStatus" name="DateOfBirthMonth"></select>
+                    <select id="ddlStatus" name="DateOfBirthYear"></select>
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <select>
+                    <option value="1">Mọi người</option>
+                    <option value="2">Bạn bè</option>
+                    <option value="3">Ẩn thông tin</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Giới tính :</label>
+                <div class="profile-input-box">
+                    <input type="radio" name="genderGroup" />
+                    <div>Nam</div>
+                    <input type="radio" name="genderGroup" />
+                    <div>Nữ</div>
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <select>
+                    <option value="1">Mọi người</option>
+                    <option value="2">Bạn bè</option>
+                    <option value="3">Ẩn thông tin</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Giới thiệu bản thân :</label>
+                <div class="profile-input-box">
+                    <textarea cols="20" id="Description" name="Description" rows="2"></textarea>
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <select>
+                    <option value="1">Mọi người</option>
+                    <option value="2">Bạn bè</option>
+                    <option value="3">Ẩn thông tin</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Ẩn trang cá nhân :</label>
+                <div class="profile-input-box">
+                    <input type="checkbox" />
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <select>
+                    <option value="1">Mọi người</option>
+                    <option value="2">Bạn bè</option>
+                    <option value="3">Ẩn thông tin</option>
+                </select>
+            </div>
+        </div>
+        <h4 class="profile-title">Thông tin liên hệ</h4>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Email :</label>
+                <div class="profile-input-box">
+                    <input type="checkbox" />
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <select>
+                    <option value="1">Mọi người</option>
+                    <option value="2">Bạn bè</option>
+                    <option value="3">Ẩn thông tin</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Yahoo :</label>
+                <div class="profile-input-box">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <select>
+                    <option value="1">Mọi người</option>
+                    <option value="2">Bạn bè</option>
+                    <option value="3">Ẩn thông tin</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Facebook :</label>
+                <div class="profile-input-box">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <select>
+                    <option value="1">Mọi người</option>
+                    <option value="2">Bạn bè</option>
+                    <option value="3">Ẩn thông tin</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Skype :</label>
+                <div class="profile-input-box">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="profile-col-2">
+                <select>
+                    <option value="1">Mọi người</option>
+                    <option value="2">Bạn bè</option>
+                    <option value="3">Ẩn thông tin</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label">Phone :</label>
+                <div class="profile-input-box">
+                    
+                </div>
+            </div>
+            <div class="profile-col-2">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="profile-col-6">
+                <label class="profile-label"></label>
+                <div class="profile-input-box">
+                    <input class="submit-button ac-btn" type="submit" id="" value="Lưu thay đổi" name="">
+                </div>
+            </div>
+            <div class="profile-col-2">
+                
+            </div>
+        </div>
+    </div>
+</div>

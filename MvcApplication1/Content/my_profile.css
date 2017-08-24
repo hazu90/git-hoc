@@ -1,0 +1,24 @@
+﻿.profile-upgrade {
+    width: 930px;
+    box-sizing: border-box;
+    padding: 0 0 20px;
+}
+.profile-panel{
+    font-size: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    background: #fff;
+    border: 1px solid #fff;
+}
+.profile-upgrade .profile-panel .profile-title{
+    display: block;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 34px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 10px 5px;
+}
