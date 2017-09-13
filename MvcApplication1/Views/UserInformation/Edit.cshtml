@@ -1,209 +1,173 @@
-﻿@{
+﻿@using MvcApplication1.Models
+@model UserInformationForEditModel
+@{
     
 }
 @Html.Partial("~/Views/Menu/_MyProfilePartial.cshtml")
-<div class="profile-upgrade pull-right">
-    <div class="profile-panel">
-        <h4 class="profile-title">Thông tin cơ bản</h4>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Tên :</label>
-                <div class="profile-input-box">
-                    <input type="text" id="FirstName" name="FirstName" />
+
+@using (Html.BeginForm("Edit", "UserInformation", FormMethod.Post , new {ng_controller="UserInformationController",ng_submit="submit_form()"} )) 
+{
+    <div class="profile-upgrade pull-right" >
+        <div class="profile-panel">
+            <h4 class="profile-title">Thông tin cơ bản</h4>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Tên :</label>
+                    <div class="profile-input-box">
+                        @Html.EditorFor(m => m.FirstName, new {id="FirstName",name="FirstName",ng_model="form_data.FirstName" })
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Họ :</label>
-                <div class="profile-input-box">
-                    <input type="text" id="LastName" name="LastName" />
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Họ :</label>
+                    <div class="profile-input-box">
+                        @Html.EditorFor(m => m.LastName, new {id="LastName",name="LastName" ,ng_model="form_data.LastName" })
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Username :</label>
-                <div class="profile-input-box">
-                    <input type="text" id="UserName" name="UserName" />
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Username :</label>
+                    <div class="profile-input-box">
+                        @Html.TextBoxFor(m=>m.UserName, new {id="UserName",name="UserName",@readonly="true",ng_model="form_data.UserName" } )
+                    </div>
+                </div>
+                <div class="profile-col-2">
+                    <button type="button">Sửa</button>
                 </div>
             </div>
-            <div class="profile-col-2">
-                <button type="button">Sửa</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Tình trạng hôn nhân :</label>
-                <div class="profile-input-box">
-                    <select id="ddlStatus" name="Status">
-                        <option value="1">Độc thân</option>
-                        <option value="2">Đã cưới</option>
-                        <option value="3">Phức tạp</option>
-                        <option value="4">Đang hẹn hò</option>
-                        <option value="5">Đã đính hôn</option>
-                        <option value="6">Quan hệ mở</option>
-                        <option value="7">Góa</option>
-                        <option value="8">Ly dị</option>
-                        <option value="9">Ly thân</option>
-                    </select>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Tình trạng hôn nhân :</label>
+                    <div class="profile-input-box">
+                        @Html.DropDownListFor(m => m.Status, Model.LstRelationStatus, new {id="ddlStatus",name="Status",ng_model="form_data.Status" })
+                    </div>
+                </div>
+                <div class="profile-col-2">
+                    @Html.DropDownListFor(m => m.StatusPublishedType, Model.LstPrivateStatus, new {id="ddlStatusPublishedType",name="StatusPublishedType",ng_model="form_data.StatusPublishedType" })
                 </div>
             </div>
-            <div class="profile-col-2">
-                <select>
-                    <option value="1">Mọi người</option>
-                    <option value="2">Bạn bè</option>
-                    <option value="3">Ẩn thông tin</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Ngày sinh :</label>
-                <div class="profile-input-box">
-                    <select id="ddlStatus" name="DateOfBirthDay"></select>
-                    <select id="ddlStatus" name="DateOfBirthMonth"></select>
-                    <select id="ddlStatus" name="DateOfBirthYear"></select>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Ngày sinh :</label>
+                    <div class="profile-input-box" ng-init="day_info='Ngày';month_info='Tháng';year_info='Năm';" >
+                        <select id="ddlDateOfBirthDay" name="DateOfBirthDay" ng-model="day_info" >
+                            <option ng-repeat="day in all_day_in_month" value="{{day}}" >{{day}}</option>
+                        </select>
+                        <select id="ddlDateOfBirthMonth" name="DateOfBirthMonth" ng-model="month_info">
+                            <option ng-repeat="month in all_month_in_year" value="{{month}}" >{{month}}</option>
+                        </select>
+                        <select id="ddlDateOfBirthYear" name="DateOfBirthYear" ng-model="year_info">
+                            <option ng-repeat="year in all_year" value="{{year}}" >{{year}}</option>
+                        </select>
+                        <input  type="hidden" value="{{month_info+'/'+day_info+'/'+year_info}}" name="DateOfBirth" ng-model="form_data.DateOfBirth" />
+                    </div>
+                </div>
+                <div class="profile-col-2">
+                    @Html.DropDownListFor(m => m.DayOfBirthPublishedType, Model.LstPrivateStatus, new {id="DayOfBirthPublishedType",name="DayOfBirthPublishedType",ng_model="form_data.DayOfBirthPublishedType" });
                 </div>
             </div>
-            <div class="profile-col-2">
-                <select>
-                    <option value="1">Mọi người</option>
-                    <option value="2">Bạn bè</option>
-                    <option value="3">Ẩn thông tin</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Giới tính :</label>
-                <div class="profile-input-box">
-                    <input type="radio" name="genderGroup" />
-                    <div>Nam</div>
-                    <input type="radio" name="genderGroup" />
-                    <div>Nữ</div>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Giới tính :</label>
+                    <div class="profile-input-box" >
+                        <input type="radio" ng-model="form_data.Sex" ng-value='"M"' name="genderGroup" /><div>Nam</div>
+                        <input type="radio" ng-model="form_data.Sex" ng-value='"F"' name="genderGroup" /><div>Nữ</div>
+                        <input type="hidden" name="Sex" ng-model="form_data.Sex" value="{{form_data.Sex}}" />
+                    </div>
+                </div>
+                <div class="profile-col-2">
+                    @Html.DropDownListFor(m => m.GenderPublishedType, Model.LstPrivateStatus, new {id="GenderPublishedType",name="GenderPublishedType" });
                 </div>
             </div>
-            <div class="profile-col-2">
-                <select>
-                    <option value="1">Mọi người</option>
-                    <option value="2">Bạn bè</option>
-                    <option value="3">Ẩn thông tin</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Giới thiệu bản thân :</label>
-                <div class="profile-input-box">
-                    <textarea cols="20" id="Description" name="Description" rows="2"></textarea>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Giới thiệu bản thân :</label>
+                    <div class="profile-input-box">
+                        <textarea cols="20" id="Description" name="Description" rows="2" ng-model="{{form_data.Description}}" ></textarea>
+                    </div>
+                </div>
+                <div class="profile-col-2">
+                    @Html.DropDownListFor(m => m.DescriptionPublishedType, Model.LstPrivateStatus, new {id="DescriptionPublishedType",name="DescriptionPublishedType" });
                 </div>
             </div>
-            <div class="profile-col-2">
-                <select>
-                    <option value="1">Mọi người</option>
-                    <option value="2">Bạn bè</option>
-                    <option value="3">Ẩn thông tin</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Ẩn trang cá nhân :</label>
-                <div class="profile-input-box">
-                    <input type="checkbox" />
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Ẩn trang cá nhân :</label>
+                    <div class="profile-input-box">
+                        <input type="checkbox" ng-model="{{form_data.IsPrivate}}" />
+                    </div>
                 </div>
-            </div>
-            <div class="profile-col-2">
-                <select>
-                    <option value="1">Mọi người</option>
-                    <option value="2">Bạn bè</option>
-                    <option value="3">Ẩn thông tin</option>
-                </select>
-            </div>
-        </div>
-        <h4 class="profile-title">Thông tin liên hệ</h4>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Email :</label>
-                <div class="profile-input-box">
-                    <input type="checkbox" />
-                </div>
-            </div>
-            <div class="profile-col-2">
-                <select>
-                    <option value="1">Mọi người</option>
-                    <option value="2">Bạn bè</option>
-                    <option value="3">Ẩn thông tin</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Yahoo :</label>
-                <div class="profile-input-box">
-                    <input type="text" />
-                </div>
-            </div>
-            <div class="profile-col-2">
-                <select>
-                    <option value="1">Mọi người</option>
-                    <option value="2">Bạn bè</option>
-                    <option value="3">Ẩn thông tin</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Facebook :</label>
-                <div class="profile-input-box">
-                    <input type="text" />
-                </div>
-            </div>
-            <div class="profile-col-2">
-                <select>
-                    <option value="1">Mọi người</option>
-                    <option value="2">Bạn bè</option>
-                    <option value="3">Ẩn thông tin</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Skype :</label>
-                <div class="profile-input-box">
-                    <input type="text" />
-                </div>
-            </div>
-            <div class="profile-col-2">
-                <select>
-                    <option value="1">Mọi người</option>
-                    <option value="2">Bạn bè</option>
-                    <option value="3">Ẩn thông tin</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label">Phone :</label>
-                <div class="profile-input-box">
-                    
-                </div>
-            </div>
-            <div class="profile-col-2">
+                <div class="profile-col-2">
                 
-            </div>
-        </div>
-        <div class="row">
-            <div class="profile-col-6">
-                <label class="profile-label"></label>
-                <div class="profile-input-box">
-                    <input class="submit-button ac-btn" type="submit" id="" value="Lưu thay đổi" name="">
                 </div>
             </div>
-            <div class="profile-col-2">
+            <h4 class="profile-title">Thông tin liên hệ</h4>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Email :</label>
+                    <div class="profile-input-box">@Model.UserEmail</div>
+                </div>
+                <div class="profile-col-2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Yahoo :</label>
+                    <div class="profile-input-box">
+                        <input type="text" ng-model="form_data.Yahoo" />
+                    </div>
+                </div>
+                <div class="profile-col-2">
+                    @Html.DropDownListFor(m => m.YahooSettingTypeNumber, Model.LstPrivateStatus, new {id="YahooSettingTypeNumber",name="YahooSettingTypeNumber",ng_model="form_data.YahooSettingTypeNumber" });
+                </div>
+            </div>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Facebook :</label>
+                    <div class="profile-input-box">
+                        <input type="text" ng-model="form_data.FacebookUrl" />
+                    </div>
+                </div>
+                <div class="profile-col-2">
+                    @Html.DropDownListFor(m => m.FacebookUrlSettingTypeNumber, Model.LstPrivateStatus, new {id="FacebookUrlSettingTypeNumber",name="FacebookUrlSettingTypeNumber" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Skype :</label>
+                    <div class="profile-input-box">
+                        <input type="text" ng-model="form_data.Skype" />
+                    </div>
+                </div>
+                <div class="profile-col-2">
+                    @Html.DropDownListFor(m => m.SkypeSettingTypeNumber, Model.LstPrivateStatus, new {id="SkypeSettingTypeNumber",name="SkypeSettingTypeNumber" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label">Phone :</label>
+                    <div class="profile-input-box">
+                        @Model.Phone
+                    </div>
+                </div>
+                <div class="profile-col-2">
                 
+                </div>
+            </div>
+            <div class="row">
+                <div class="profile-col-6">
+                    <label class="profile-label"></label>
+                    <div class="profile-input-box">
+                        <input class="submit-button ac-btn" type="submit" id="" value="Lưu thay đổi" name="">
+                    </div>
+                </div>
+                <div class="profile-col-2">
+                
+                </div>
             </div>
         </div>
     </div>
-</div>
+    
+}

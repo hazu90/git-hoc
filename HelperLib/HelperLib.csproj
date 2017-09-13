@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppEnum.cs" />
+    <Compile Include="AppEnumDescriptionHelper.cs" />
     <Compile Include="CommonEnum.cs" />
     <Compile Include="EmailHelper.cs" />
     <Compile Include="EmailSender.cs" />

@@ -1,4 +1,5 @@
 ﻿using MvcApplication1.Business;
+using MvcApplication1.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,15 +21,30 @@ namespace MvcApplication1.Controllers
         {
             return View();
         }
-
+        
         public ActionResult Edit()
         {
             var userName= WebSecurity.CurrentUserName;
             //Lấy thông tin của user
             var userInfoBAL = new UserInformationBAL();
-            var userInfo = userInfoBAL.GetByUserName(userName);
 
-            return View();
+            var model = userInfoBAL.GetByUserName(userName);
+            return View(new UserInformationForEditModel() { 
+                            UserName = model.UserName,
+                            FirstName = model.FirstName,
+                            LastName = model.LastName,
+                            UserEmail = model.UserEmail,
+                            CityCode = model.CityCode,
+                            Status = model.Status
+                            
+                        });
+        }
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public JsonResult Edit(UserInformationForEditModel model)
+        {
+            var response = new ResponseModel();
+            return Json(response, JsonRequestBehavior.DenyGet);
         }
     }
 }

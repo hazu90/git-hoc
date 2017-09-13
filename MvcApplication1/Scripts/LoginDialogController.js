@@ -27,7 +27,6 @@
         RememberMe:false
     };
     $scope.login = function(){
-        //$scope.userInfo.__RequestVerificationToken = angular.element('[name=__RequestVerificationToken]').val();
         $http({
             method:'POST',
             url:'Account/Login',
