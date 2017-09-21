@@ -298,6 +298,7 @@
     <Content Include="Scripts\MenuLoginController.js" />
     <Content Include="Scripts\RegisterController.js" />
     <Content Include="Scripts\Services\DialogLoginService.js" />
+    <Content Include="Scripts\UserInformationController.js" />
     <Content Include="Views\Account\ActivateNotification.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml">
       <SubType>Code</SubType>
@@ -469,6 +470,7 @@
     <Content Include="Views\ExternalAccount\LoginSuccess.cshtml" />
     <Content Include="Views\UserInformation\Edit.cshtml" />
     <Content Include="Views\Menu\_MyProfilePartial.cshtml" />
+    <Content Include="Views\Shared\_SSOLayout.cshtml" />
     <None Include="Web.Oauth.config">
       <SubType>Designer</SubType>
     </None>

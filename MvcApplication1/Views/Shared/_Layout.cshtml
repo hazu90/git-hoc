@@ -206,6 +206,8 @@
         @Html.Partial("~/Views/Footer/_AdditionalToolAndCompany.cshtml")
         @*@Html.Action("ShowLoginDialog", "Account")*@
         <script src="~/Scripts/angular.min.js" type="text/javascript"></script>
+        @Scripts.Render("~/Scripts/main-content.js")
+        @*<script src="~/Scripts/angular.min.js" type="text/javascript"></script>
         <script src="~/Scripts/MainModule.js" type="text/javascript"></script>
         <script src="~/Scripts/Directives/ClickAnyWhereButHere.js" type="text/javascript"></script>
         <script src="~/Scripts/Directives/ShowMenuBarAlwaysOnTop.js" type="text/javascript"></script>
@@ -216,7 +218,7 @@
         <script src="~/Scripts/MenuLoginController.js" type="text/javascript"></script>
         <script src="~/Scripts/AdditionalNavigationController.js" type="text/javascript"></script>
         <script src="~/Scripts/LocationForCreateController.js" type="text/javascript"></script>
-        <script src="~/Scripts/UserInformationController.js" type="text/javascript"></script>
+        <script src="~/Scripts/UserInformationController.js" type="text/javascript"></script>*@
         @RenderSection("scripts", required: false)
     </body>
 </html>

@@ -125,6 +125,9 @@
     margin: 0;
     font-size: 13px;
 }
+#account_menu .items.spector{
+    border-bottom: #ccc 1px solid;
+}
 #account_menu .items a {
     color: #132a42;
     padding: 5px 15px;
