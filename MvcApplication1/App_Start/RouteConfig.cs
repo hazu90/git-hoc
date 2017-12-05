@@ -17,6 +17,7 @@ namespace MvcApplication1
             routes.MapRoute(name: "ForgotPasswordUrl",url: "quen-mat-khau",defaults: new { controller = "Account", action = "ForgotPassword" });
             routes.MapRoute(name: "AddLocation",url: "them-dia-diem",defaults: new { controller = "Location", action = "Create" });
             routes.MapRoute(name: "UserInformationUrl", url: "tai-khoan", defaults: new { controller = "UserInformation", action = "Edit" });
+            routes.MapRoute(name: "CityUrl", url: "{cityUrl}", defaults: new { controller = "Location", action = "GetByCity" });
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

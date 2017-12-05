@@ -3,8 +3,7 @@
     $scope.$window = $window;
     $scope.$window.onclick = function (event) {
         var clicked_element = event.target;
-        if(!clicked_element)
-        {
+        if(!clicked_element){
             return;
         }
         var clicked_classes = clicked_element.classList;

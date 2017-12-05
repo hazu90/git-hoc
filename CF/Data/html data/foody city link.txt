@@ -1,0 +1,757 @@
+<div class="root-cate ng-scope fl-show" id="head-province" ng-controller="LocationCtrl" ng-init="Init({Name:'Hà Nội',Id:'218'})" ng-class="{'fl-show':IsShow}" style="">
+<div class="rn-nav-name" ng-click="Show()">
+<span style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 85px;">Hà Nội</span> <span class="fa fa-sort-desc"></span>
+</div>
+<div id="popupLocation" class="foody-location" ng-class="{'fl-loading':IsLoading}" style="display: none;"><div class="arrow"></div><ul class="fl-panel"><!-- ngIf: Model.TopCities.length>0 || Model.OtherCities.length>0 --><li ng-if="Model.TopCities.length>0 || Model.OtherCities.length>0" class="ng-scope" style="">
+<div class="flp-title">
+<i class="fa fa-globe"></i>
+Select city</div>
+<div class="loc-contain">
+<div class="fa fa-search loc-search"></div>
+<input class="loc-query ng-pristine ng-untouched ng-valid ng-empty" placeholder="Tìm tỉnh thành" id="loc-query" ng-model="Query" ng-change="FilterLocation(Query)" ng-model-options="{ debounce: 500 }">
+</div> <!-- ngIf: Query --> <!-- ngIf: !Query --><ul class="flp-countries ng-scope" ng-if="!Query">
+<!-- ngIf: Model.TopCities.length>0 --><li ng-if="Model.TopCities.length>0" class="ng-scope">
+<ul>
+<!-- ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="217" href="/ho-chi-minh">
+<label class="ng-binding">TP. HCM</label>
+<span class="ng-binding">63,580</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="218" href="/ha-noi">
+<label class="ng-binding">Hà Nội</label>
+<span class="ng-binding">52,434</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="219" href="/da-nang">
+<label class="ng-binding">Đà Nẵng</label>
+<span class="ng-binding">15,172</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="221" href="/can-tho">
+<label class="ng-binding">Cần Thơ</label>
+<span class="ng-binding">6,062</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="248" href="/khanh-hoa">
+<label class="ng-binding">Khánh Hoà</label>
+<span class="ng-binding">5,158</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="223" href="/vung-tau">
+<label class="ng-binding">Vũng Tàu</label>
+<span class="ng-binding">3,464</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="220" href="/hai-phong">
+<label class="ng-binding">Hải Phòng</label>
+<span class="ng-binding">5,750</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="233" href="/binh-thuan">
+<label class="ng-binding">Bình Thuận</label>
+<span class="ng-binding">2,111</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="254" href="/lam-dong">
+<label class="ng-binding">Lâm Đồng</label>
+<span class="ng-binding">4,419</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="222" href="/dong-nai">
+<label class="ng-binding">Đồng Nai</label>
+<span class="ng-binding">5,194</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="265" href="/quang-ninh">
+<label class="ng-binding">Quảng Ninh</label>
+<span class="ng-binding">3,085</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="273" href="/hue">
+<label class="ng-binding">Huế</label>
+<span class="ng-binding">5,782</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="230" href="/binh-duong">
+<label class="ng-binding">Bình Dương</label>
+<span class="ng-binding">4,093</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="244" href="/hai-duong">
+<label class="ng-binding">Hải Dương</label>
+<span class="ng-binding">928</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities --><li ng-repeat="item in Model.TopCities" class="ng-scope">
+<a data-id="259" href="/ninh-thuan">
+<label class="ng-binding">Ninh Thuận</label>
+<span class="ng-binding">641</span>
+</a>
+</li><!-- end ngRepeat: item in Model.TopCities -->
+</ul>
+</li><!-- end ngIf: Model.TopCities.length>0 -->
+<!-- ngIf: Model.OtherCities.length>0 --><li ng-if="Model.OtherCities.length>0" class="ng-scope">
+<label>Tỉnh thành khác</label>
+<ul>
+<!-- ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="256" href="/nam-dinh">
+<label class="ng-binding">Nam Định</label>
+<span class="ng-binding">1,104</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="274" href="/tien-giang">
+<label class="ng-binding">Tiền Giang</label>
+<span class="ng-binding">1,854</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="460" href="/phu-quoc">
+<label class="ng-binding">Phú Quốc</label>
+<span class="ng-binding">727</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="250" href="/kon-tum">
+<label class="ng-binding">Kon Tum</label>
+<span class="ng-binding">459</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="263" href="/quang-nam">
+<label class="ng-binding">Quảng Nam</label>
+<span class="ng-binding">3,263</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="253" href="/lao-cai">
+<label class="ng-binding">Lào Cai</label>
+<span class="ng-binding">733</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="257" href="/nghe-an">
+<label class="ng-binding">Nghệ An</label>
+<span class="ng-binding">2,579</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="255" href="/long-an">
+<label class="ng-binding">Long An</label>
+<span class="ng-binding">1,582</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="231" href="/binh-dinh">
+<label class="ng-binding">Bình Định</label>
+<span class="ng-binding">3,579</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="224" href="/an-giang">
+<label class="ng-binding">An Giang</label>
+<span class="ng-binding">1,691</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="236" href="/dak-lak">
+<label class="ng-binding">Đắk Lắk</label>
+<span class="ng-binding">1,690</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="249" href="/kien-giang">
+<label class="ng-binding">Kiên Giang</label>
+<span class="ng-binding">1,406</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="261" href="/phu-yen">
+<label class="ng-binding">Phú Yên</label>
+<span class="ng-binding">1,371</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="277" href="/vinh-long">
+<label class="ng-binding">Vĩnh Long</label>
+<span class="ng-binding">1,245</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="264" href="/quang-ngai">
+<label class="ng-binding">Quảng Ngãi</label>
+<span class="ng-binding">1,238</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="269" href="/tay-ninh">
+<label class="ng-binding">Tây Ninh</label>
+<span class="ng-binding">1,214</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="240" href="/gia-lai">
+<label class="ng-binding">Gia Lai</label>
+<span class="ng-binding">1,210</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="234" href="/ca-mau">
+<label class="ng-binding">Cà Mau</label>
+<span class="ng-binding">1,112</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="272" href="/thanh-hoa">
+<label class="ng-binding">Thanh Hoá</label>
+<span class="ng-binding">1,094</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="239" href="/dong-thap">
+<label class="ng-binding">Đồng Tháp</label>
+<span class="ng-binding">1,055</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="229" href="/ben-tre">
+<label class="ng-binding">Bến Tre</label>
+<span class="ng-binding">984</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="232" href="/binh-phuoc">
+<label class="ng-binding">Bình Phước</label>
+<span class="ng-binding">928</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="267" href="/soc-trang">
+<label class="ng-binding">Sóc Trăng</label>
+<span class="ng-binding">888</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="275" href="/tra-vinh">
+<label class="ng-binding">Trà Vinh</label>
+<span class="ng-binding">833</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="266" href="/quang-tri">
+<label class="ng-binding">Quảng Trị</label>
+<span class="ng-binding">831</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="278" href="/vinh-phuc">
+<label class="ng-binding">Vĩnh Phúc</label>
+<span class="ng-binding">827</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="228" href="/bac-ninh">
+<label class="ng-binding">Bắc Ninh</label>
+<span class="ng-binding">754</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="262" href="/quang-binh">
+<label class="ng-binding">Quảng Bình</label>
+<span class="ng-binding">709</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="225" href="/bac-lieu">
+<label class="ng-binding">Bạc Liêu</label>
+<span class="ng-binding">685</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="258" href="/ninh-binh">
+<label class="ng-binding">Ninh Bình</label>
+<span class="ng-binding">652</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="271" href="/thai-nguyen">
+<label class="ng-binding">Thái Nguyên</label>
+<span class="ng-binding">559</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="243" href="/ha-tinh">
+<label class="ng-binding">Hà Tĩnh</label>
+<span class="ng-binding">506</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="245" href="/hau-giang">
+<label class="ng-binding">Hậu Giang</label>
+<span class="ng-binding">492</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="227" href="/bac-giang">
+<label class="ng-binding">Bắc Giang</label>
+<span class="ng-binding">482</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="260" href="/phu-tho">
+<label class="ng-binding">Phú Thọ</label>
+<span class="ng-binding">438</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="270" href="/thai-binh">
+<label class="ng-binding">Thái Bình</label>
+<span class="ng-binding">413</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="268" href="/son-la">
+<label class="ng-binding">Sơn La</label>
+<span class="ng-binding">363</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="252" href="/lang-son">
+<label class="ng-binding">Lạng Sơn</label>
+<span class="ng-binding">350</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="246" href="/hoa-binh">
+<label class="ng-binding">Hòa Bình</label>
+<span class="ng-binding">335</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="241" href="/ha-giang">
+<label class="ng-binding">Hà Giang</label>
+<span class="ng-binding">295</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="247" href="/hung-yen">
+<label class="ng-binding">Hưng Yên</label>
+<span class="ng-binding">267</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="237" href="/dak-nong">
+<label class="ng-binding">Đắk Nông</label>
+<span class="ng-binding">251</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="279" href="/yen-bai">
+<label class="ng-binding">Yên Bái</label>
+<span class="ng-binding">220</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="276" href="/tuyen-quang">
+<label class="ng-binding">Tuyên Quang</label>
+<span class="ng-binding">220</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="242" href="/ha-nam">
+<label class="ng-binding">Hà Nam</label>
+<span class="ng-binding">190</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="235" href="/cao-bang">
+<label class="ng-binding">Cao Bằng</label>
+<span class="ng-binding">153</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="238" href="/dien-bien">
+<label class="ng-binding">Điện Biên</label>
+<span class="ng-binding">122</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="226" href="/bac-kan">
+<label class="ng-binding">Bắc Kạn</label>
+<span class="ng-binding">93</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities --><li ng-repeat="item in Model.OtherCities" class="ng-scope">
+<a data-id="251" href="/lai-chau">
+<label class="ng-binding">Lai Châu</label>
+<span class="ng-binding">90</span>
+</a>
+</li><!-- end ngRepeat: item in Model.OtherCities -->
+</ul>
+</li><!-- end ngIf: Model.OtherCities.length>0 -->
+<!-- ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="76" class="ng-binding">Thailand</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="285" href="/bangkok">
+<label class="ng-binding">Bangkok</label>
+<span class="ng-binding">315</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="321" href="/nonthaburi">
+<label class="ng-binding">Nonthaburi</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="348" href="/nakhon-ratchasima">
+<label class="ng-binding">Nakhon Ratchasima</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="427" href="/prachuap-khiri-khan">
+<label class="ng-binding">Prachuap Khiri Khan</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="363" href="/samut-prakan">
+<label class="ng-binding">Samut Prakan</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="425" href="/Krabi">
+<label class="ng-binding">Krabi</label>
+<span class="ng-binding">7</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="426" href="/Chachoengsao">
+<label class="ng-binding">Chachoengsao</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="461" href="/mae-hong-son">
+<label class="ng-binding">Mae Hong Son</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="286" href="/pattaya">
+<label class="ng-binding">Chon Buri</label>
+<span class="ng-binding">30</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="287" href="/chiangmai">
+<label class="ng-binding">Chiangmai</label>
+<span class="ng-binding">12</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="288" href="/phuket">
+<label class="ng-binding">Phuket</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="42" class="ng-binding">Indonesia</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="310" href="/jakarta">
+<label class="ng-binding">Jakarta</label>
+<span class="ng-binding">173</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="311" href="/bali">
+<label class="ng-binding">Bali</label>
+<span class="ng-binding">13</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="424" href="/Yogyakarta">
+<label class="ng-binding">Yogyakarta</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="442" href="/bandung">
+<label class="ng-binding">Bandung</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="89" class="ng-binding">Cambodia</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="316" href="/phnom-penh">
+<label class="ng-binding">Phnom Penh</label>
+<span class="ng-binding">49</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="317" href="/siem-reap">
+<label class="ng-binding">Siem Reap</label>
+<span class="ng-binding">18</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="323" href="/kampot">
+<label class="ng-binding">Kampot</label>
+<span class="ng-binding">5</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="383" href="/kampong-cham">
+<label class="ng-binding">Kampong Cham</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="382" href="/kampong-thom">
+<label class="ng-binding">Kampong Thom</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="283" href="/preah-sihanouk">
+<label class="ng-binding">Preah Sihanouk</label>
+<span class="ng-binding">49</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="400" href="/svay-rieng">
+<label class="ng-binding">Svay Rieng</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="401" href="/Takeo">
+<label class="ng-binding">Takeo</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="381" href="/prey-veng">
+<label class="ng-binding">Prey Veng</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="52" class="ng-binding">Malaysia</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="403" href="/Malacca">
+<label class="ng-binding">Malacca</label>
+<span class="ng-binding">43</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="404" href="/Johor">
+<label class="ng-binding">Johor</label>
+<span class="ng-binding">7</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="319" href="/Selangor">
+<label class="ng-binding">Selangor</label>
+<span class="ng-binding">8</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="405" href="/Kedah">
+<label class="ng-binding">Kedah</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="408" href="/Pahang">
+<label class="ng-binding">Pahang</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="409" href="/Penang">
+<label class="ng-binding">Penang</label>
+<span class="ng-binding">3</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="412" href="/Terengganu">
+<label class="ng-binding">Terengganu</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="309" href="/kuala-lumpur">
+<label class="ng-binding">Kuala Lumpur</label>
+<span class="ng-binding">121</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="367" href="/putra-jaya">
+<label class="ng-binding">Putra Jaya</label>
+<span class="ng-binding">3</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="75" class="ng-binding">Taiwan</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="299" href="/taipei">
+<label class="ng-binding">Taipei City</label>
+<span class="ng-binding">40</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="336" href="/Chiayi-county">
+<label class="ng-binding">Chiayi County</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="419" href="/Kaohsiung%20City">
+<label class="ng-binding">Kaohsiung City</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="338" href="/Pingtung-county">
+<label class="ng-binding">Pingtung County</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="420" href="/taoyuan-city">
+<label class="ng-binding">Taoyuan City</label>
+<span class="ng-binding">4</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="421" href="/Taichung-city">
+<label class="ng-binding">Taichung City</label>
+<span class="ng-binding">3</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="90" class="ng-binding">Myanmar</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="300" href="/yangon">
+<label class="ng-binding">Yangon</label>
+<span class="ng-binding">38</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="371" href="/Mandalay">
+<label class="ng-binding">Mandalay</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="372" href="/Sagaing">
+<label class="ng-binding">Sagaing</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="380" href="/Shan">
+<label class="ng-binding">Shan</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="47" class="ng-binding">Japan</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="296" href="/tokyo">
+<label class="ng-binding">Tokyo</label>
+<span class="ng-binding">36</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="297" href="/kyoto">
+<label class="ng-binding">Kyoto</label>
+<span class="ng-binding">20</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="298" href="/osaka">
+<label class="ng-binding">Osaka</label>
+<span class="ng-binding">10</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="416" href="/Kyushu">
+<label class="ng-binding">Kyushu</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="88" class="ng-binding">Philippines</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="314" href="/metro-manila">
+<label class="ng-binding">Manila</label>
+<span class="ng-binding">36</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="428" href="/quezon">
+<label class="ng-binding">Quezon City</label>
+<span class="ng-binding">19</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="6" class="ng-binding">Australia</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="302" href="/New%20South%20Wales">
+<label class="ng-binding">New South Wales</label>
+<span class="ng-binding">32</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="301" href="/Victoria">
+<label class="ng-binding">Victoria</label>
+<span class="ng-binding">21</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="303" href="/Queensland">
+<label class="ng-binding">Queensland</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="335" href="/South%20Australia">
+<label class="ng-binding">South Australia</label>
+<span class="ng-binding">18</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="305" href="/Western%20Australia">
+<label class="ng-binding">Western Australia</label>
+<span class="ng-binding">8</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="1" class="ng-binding">United States</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="9" href="/california">
+<label class="ng-binding">California</label>
+<span class="ng-binding">17</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="59" href="/washington">
+<label class="ng-binding">Washington</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="41" href="/new-york">
+<label class="ng-binding">New York</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="2" class="ng-binding">Canada</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="71" href="/ontario">
+<label class="ng-binding">Ontario</label>
+<span class="ng-binding">5</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="91" class="ng-binding">South Korea</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="459" href="/Gyeongqi-Do">
+<label class="ng-binding">Gyeongqi-Do</label>
+<span class="ng-binding">2</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="312" href="/seoul">
+<label class="ng-binding">Seoul</label>
+<span class="ng-binding">18</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="87" class="ng-binding">Laos</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="315" href="/vientiane">
+<label class="ng-binding">Vientiane</label>
+<span class="ng-binding">1</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="21" class="ng-binding">China</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="295" href="/guangdong">
+<label class="ng-binding">Guangdong</label>
+<span class="ng-binding">40</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="68" class="ng-binding">Singapore</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="284" href="/singapore">
+<label class="ng-binding">Singapore</label>
+<span class="ng-binding">378</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries --><!-- ngIf: Model.WorldWideCountries.length>0 --><li ng-if="Model.WorldWideCountries.length>0" ng-repeat="item in Model.WorldWideCountries" class="ng-scope">
+<label data-id="39" class="ng-binding">Hong Kong</label>
+<ul>
+<!-- ngRepeat: c in item.Cities --><li ng-repeat="c in item.Cities" class="ng-scope">
+<a data-id="333" href="/hong-kong">
+<label class="ng-binding">Hong Kong City</label>
+<span class="ng-binding">123</span>
+</a>
+</li><!-- end ngRepeat: c in item.Cities -->
+</ul>
+</li><!-- end ngIf: Model.WorldWideCountries.length>0 --><!-- end ngRepeat: item in Model.WorldWideCountries -->
+</ul><!-- end ngIf: !Query --></li><!-- end ngIf: Model.TopCities.length>0 || Model.OtherCities.length>0 --></ul><div class="fl-summary">
+<a href="/ha-noi/o-dau">
+<i class="fa fa-map-marker"></i>
+<span class="ng-binding">237,824</span></a>
+<a href="/ha-noi/binh-luan">
+<i class="fa fa-comment"></i>
+<span class="ng-binding">973,981</span></a>
+<a href="/ha-noi/hinh-anh">
+<i class="fa fa-camera"></i>
+ <span class="ng-binding">6,748,410</span></a><a href="/ha-noi/bo-suu-tap">
+<i class="fa fa-bookmark"></i>
+<span class="ng-binding">14,675,794</span></a></div></div>
+</div>

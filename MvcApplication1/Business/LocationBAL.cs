@@ -47,5 +47,10 @@ namespace MvcApplication1.Business
             });
             return response;
         }
+
+        public List<Location> GetList()
+        {
+            return (new LocationDL()).GetList();
+        }
     }
 }

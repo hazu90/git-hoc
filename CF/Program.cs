@@ -1,4 +1,5 @@
-﻿using HtmlAgilityPack;
+﻿using CF.BL;
+using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,11 @@ namespace CF
         [STAThread]
         static void Main()
         {
-            string url = "https://www.foody.vn/";
-            HtmlWeb web = new HtmlWeb();
-            HtmlAgilityPack.HtmlDocument document = web.Load(url);
+            //var cityCrawlerBL = new CityCrawlerBL();
+            //cityCrawlerBL.GetData();
+
+            var locationCrawlerBL = new LocationCrawlerBL();
+            locationCrawlerBL.GetData();
         }
     }
 }

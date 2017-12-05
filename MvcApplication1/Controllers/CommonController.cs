@@ -7,20 +7,14 @@ using System.Web.Mvc;
 
 namespace MvcApplication1.Controllers
 {
-    public class CommonController : BaseController
+    public class CommonController : Controller
     {
-        //public ActionResult Paging(PagerModel pager)
-        //{
-        //    return View(pager);
-        //}
 
         public ActionResult Header()
         {
-            ViewBag.CurentUser = UserContext;
             return View();
         }
         [HttpGet]
-        [FilterAuthorize]
         public virtual ActionResult Download(string fileGuid, string fileName)
         {
             if (TempData[fileGuid] != null)

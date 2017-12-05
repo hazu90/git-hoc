@@ -34,7 +34,8 @@
                                                     Địa chỉ <span>*</span>
                                                 </div>
                                                 <div class="details">
-                                                    <input type="text" id="txtAddress" ng-model="LocationInfo.Address"  name="Address" />
+                                                    @Html.TextBoxFor(m=>m.Address , new {id="txtAddress",ng_model="LocationInfo.Address" })
+                                                    @*<input type="text" id="txtAddress" ng-model="LocationInfo.Address"  name="Address" />*@
                                                     <div style="padding:5px 0;">
                                                         <span class="field-validation-valid">
                                                             @Html.ValidationMessage("Address", "", new { @class = "text-danger" })

@@ -194,6 +194,7 @@
     <Compile Include="Business\CategoryGroupBAL.cs" />
     <Compile Include="Business\CityBAL.cs" />
     <Compile Include="Business\CountryBAL.cs" />
+    <Compile Include="Business\CulinaryBAL.cs" />
     <Compile Include="Business\DistrictBAL.cs" />
     <Compile Include="Business\GoogleCaptchaBAL.cs" />
     <Compile Include="Business\LocationBAL.cs" />
@@ -205,6 +206,7 @@
     <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CityController.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\ExternalAccountController.cs" />
     <Compile Include="Controllers\FoodyInfoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -217,6 +219,7 @@
     <Compile Include="DataLayer\CityDL.cs" />
     <Compile Include="DataLayer\ConnectionDB.cs" />
     <Compile Include="DataLayer\CountryDL.cs" />
+    <Compile Include="DataLayer\CulinaryDAL.cs" />
     <Compile Include="DataLayer\DistrictDL.cs" />
     <Compile Include="DataLayer\LocationDL.cs" />
     <Compile Include="DataLayer\UserInformationDAL.cs" />
@@ -347,6 +350,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Common\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -388,12 +392,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Backend.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Common\Header.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Common\Paging.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Banner\Index.cshtml" />

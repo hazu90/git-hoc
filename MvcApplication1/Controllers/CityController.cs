@@ -12,7 +12,7 @@ namespace MvcApplication1.Controllers
     {
         [AllowAnonymous]
         [ChildActionOnly]
-        [OutputCache(Duration = 86400)]
+        //[OutputCache(Duration = 86400)]
         public ActionResult GetAllCity()
         {
             var cityBAL = new CityBAL();

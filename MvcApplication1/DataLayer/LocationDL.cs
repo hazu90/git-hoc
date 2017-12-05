@@ -36,5 +36,14 @@ namespace MvcApplication1.DataLayer
                                 .QuerySingle<int>();
             }
         }
+
+        public List<Location> GetList()
+        {
+            using (var context = ConnectionDB.MainDB())
+            {
+                return context.StoredProcedure("Location_GetAll")
+                                .QueryMany<Location>();
+            }
+        }
     }
 }

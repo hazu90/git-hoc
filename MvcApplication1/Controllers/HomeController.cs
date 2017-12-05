@@ -15,7 +15,12 @@ namespace MvcApplication1.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-            return View();
+            // Lấy danh sách các địa điểm nhà hàng
+            var locationBL = new LocationBAL();
+            var culinaryBL = new CulinaryBAL();
+            ViewBag.AllCulinary = culinaryBL.GetAll();
+            var lstLocation = locationBL.GetList();
+            return View(lstLocation);
         }
         [AllowAnonymous]
         public ActionResult IsAuthenticated()

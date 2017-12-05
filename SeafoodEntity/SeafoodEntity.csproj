@@ -43,6 +43,7 @@
     <Compile Include="CategoryGroup.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Country.cs" />
+    <Compile Include="Culinary.cs" />
     <Compile Include="District.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

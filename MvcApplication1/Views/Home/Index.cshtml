@@ -1,3 +1,121 @@
-﻿@{
+﻿@using SeafoodEntity
+@{
+    var lstCulinary = (List<Culinary>)ViewBag.AllCulinary;
 }
-
+<div class="main-content-left">
+    @Html.Partial("~/Views/Shared/_LeftContent_MainPagePartial.cshtml")
+</div>
+<div class="main-content-right">
+    <div class="tool-right-content">
+        <ul>
+            <li><a href="javascript:void(0)" class="current">Mới nhất</a></li>
+            <li><a href="javascript:void(0)">Gần tôi</a></li>
+            <li></li>
+            <li><a href="javascript:void(0)">Đã lưu</a></li>
+            <li style="float: right;" >
+                <select id="slDistrictPlace">
+                    <option value="">- Quận/Huyện -</option>
+                    <option value="25">Hoan Kiem District</option>
+                    <option value="28">Tay Ho District</option>
+                    <option value="20">Ba Dinh District</option>
+                    <option value="29">Thanh Xuan District</option>
+                    <option value="24">Hai Ba Trung District</option>
+                    <option value="22">Dong Da District</option>
+                    <option value="21">Cau Giay District</option>
+                    <option value="26">Hoang Mai District</option>
+                    <option value="27">Long Bien District</option>
+                    <option value="23">Ha Dong District</option>
+                    <option value="945">South Tu Liem District</option>
+                    <option value="690">Bac Tu Liem District</option>
+                    <option value="674">Ba Vi</option>
+                    <option value="675">Chuong My</option>
+                    <option value="676">Dan Phuong</option>
+                    <option value="677">Dong Anh</option>
+                    <option value="678">Gia Lam</option>
+                    <option value="679">Hoai Duc</option>
+                    <option value="680">Me Linh</option>
+                    <option value="681">My Duc</option>
+                    <option value="682">Phu Xuyen</option>
+                    <option value="683">Phu Tho</option>
+                    <option value="684">Quoc Oai</option>
+                    <option value="685">Soc Son</option>
+                    <option value="686">Thach That</option>
+                    <option value="687">Thanh Oai</option>
+                    <option value="688">Thanh Tri</option>
+                    <option value="689">Thuong Tin</option>
+                    <option value="691">Ung Hoa</option>
+                    <option value="692">Son Tay</option>
+                </select>
+            </li>
+            <li style="float: right;">
+                <select class="ng-pristine ng-untouched ng-valid ng-empty">
+                        <option value="">- Ẩm thực -</option>
+                        @foreach (var culinaryItem in lstCulinary)
+                        {
+                            <option value="@culinaryItem.Id"> @culinaryItem.Name</option> 
+                        }
+                </select>
+            </li>
+            <li style="float: right;">
+                <select class="ng-pristine ng-untouched ng-valid ng-empty">
+                    <option value="">- Danh mục -</option>
+                        <option value="12">Sang trọng</option>
+                        <option value="39">Buffet</option>
+                        <option value="1">Nhà hàng</option>
+                        <option value="11">Ăn vặt/vỉa hè</option>
+                        <option value="56">Ăn chay</option>
+                        <option value="2">Café/Dessert</option>
+                        <option value="3">Quán ăn</option>
+                        <option value="4">Bar/Pub</option>
+                        <option value="54">Quán nhậu</option>
+                        <option value="43">Beer club</option>
+                        <option value="6">Tiệm bánh</option>
+                        <option value="44">Tiệc tận nơi</option>
+                        <option value="27">Shop Online</option>
+                        <option value="28">Giao cơm văn phòng</option>
+                        <option value="79">Khu Ẩm Thực</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <div class="writer-content">
+        <div class="content-item">
+            <div class="avatar">
+                <a href="/ha-noi/an-vat-an-trach" target="_blank">
+                    <img src="https://media.foody.vn/res/g26/252832/prof/s640x400/foody-mobile-2-jpg-606-636034201553247191.jpg">
+                </a>
+            </div>
+            <div class="items-content">
+                <div class="review-points">
+                    <span class="ng-binding">5.0</span>
+                </div>
+                <div class="title fd-text-ellip">
+                    <a href="/ha-noi/an-vat-an-trach" target="_blank"  class="ng-binding">Ăn Vặt An Trạch</a>
+                </div>
+                <div class="desc fd-text-ellip" >116 An Trạch, Quận Đống Đa, Hà Nội</div>
+            </div>
+            <div class="items-review" >
+                <div class="avatar">
+                    <a href="/thanh-vien/Tuyenoc">
+                        <img src="https://media.foody.vn/default/s100/user-default-female.png">
+                    </a>
+                </div>
+                <div class="users-content">
+                    <a target="_blank" href="/thanh-vien/Tuyenoc">
+                        <b >Tuyến Ốc</b>
+                    </a>
+                    <a target="_blank" href="/ha-noi/an-vat-an-trach/binh-luan-1477804">Quán đã chuyển về ngõ 126 hào nam rồi các bạn nhé</a>
+                </div>
+            </div>
+            <div class="items-count">
+                <a><i class="fa fa-comment"></i> <span class="ng-binding">1</span></a>
+                <a><i class="fa fa-camera"></i> <span class="ng-binding">6</span></a>
+                <i class="fa fa-bookmark"></i> <span class="ng-binding">0</span>
+                <a href="javascript:void(0)" class="item-save tool-custom-list-add" data-id="252832">
+                    <i class="fa fa-bookmark"></i>
+                    <span>Lưu</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

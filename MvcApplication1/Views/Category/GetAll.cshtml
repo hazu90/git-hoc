@@ -3,46 +3,49 @@
 @{
     Layout = null;
 }
-<div class="lst-select-control" id="lst-cate" ng-controller="CategoryController">
+<div class="lst-select-control" id="lst-cate" ng-controller="CategoryController" click-anywhere-but-here="hide()" is-active="isOpen">
     <div class="show-selected-item">
         <a href="#" ng-click="show_lst_items($event);">
             <span class="show-selected-item-label">{{selectedItem}}</span>
             <span class="show-selected-item-icon fa fa-sort-desc"></span>
         </a>
     </div>
-    <div ng-class="lstCssStyle">
-        <div class="arrow"></div>
-        <ul class="fl-panel">
-            <li>
-                <div class="flp-title">
-                    <i class="fa fa-bars"></i>
-                    <span>Select category</span>
-                </div>
-            </li>
-            @foreach (var cateGr in Model.LstCategoryGroup)
-            {
-                var lstCateItem = Model.LstCategory.FindAll(o => o.CateGrId == cateGr.CateGrId);
+    <div ng-show="isOpen">
+        <div class="lst-select-items minw200">
+            <div class="arrow"></div>
+            <ul class="fl-panel">
+                <li>
+                    <div class="flp-title">
+                        <i class="fa fa-bars"></i>
+                        <span>Select category</span>
+                    </div>
+                </li>
+                @foreach (var cateGr in Model.LstCategoryGroup)
+                {
+                    var lstCateItem = Model.LstCategory.FindAll(o => o.CateGrId == cateGr.CateGrId);
                 
-                <li data-id="@cateGr.CateGrId">
-                    <a id="gcat-@cateGr.CateGrId" rel="nofollow" href="/@cateGr.GrCateLink">
-                        <span style="float:left;">@cateGr.CateName </span> <span class="fa fa-angle-right" style="float: right; padding-top: 8px;"></span>
-                    </a>
-                    <ul class="menu-box" id="nav-place-1" style="overflow:auto;max-height:300px;">
-                        @foreach(var cateItem in lstCateItem )
-                        {
-                            <li>
-                                <a href="@(@"/"+cateGr.GrCateLink+@"/"+cateItem.CateLink )" title="@cateItem.CateName">
-                                    <span class="rm-nav-icon">
-                                        <img src="@cateItem.IconImgUrl" alt="" title="@cateItem.CateName" width="15" height="15">
-                                    </span>
-                                    <span class="rn-nav-name">@cateItem.CateName</span>
-                                    <span class="rn-nav-sum">80</span>
-                                </a>
-                            </li>    
-                        }
-                    </ul>
-                </li> 
-            }
-        </ul>
+                    <li data-id="@cateGr.CateGrId">
+                        <a id="gcat-@cateGr.CateGrId" rel="nofollow" href="/@cateGr.GrCateLink">
+                            <span style="float:left;">@cateGr.CateName </span> <span class="fa fa-angle-right" style="float: right; padding-top: 8px;"></span>
+                        </a>
+                        <ul class="menu-box" id="nav-place-1" style="overflow:auto;max-height:300px;">
+                            @foreach(var cateItem in lstCateItem )
+                            {
+                                <li>
+                                    <a href="@(@"/"+cateGr.GrCateLink+@"/"+cateItem.CateLink )" title="@cateItem.CateName">
+                                        <span class="rm-nav-icon">
+                                            <img src="@cateItem.IconImgUrl" alt="" title="@cateItem.CateName" width="15" height="15">
+                                        </span>
+                                        <span class="rn-nav-name">@cateItem.CateName</span>
+                                        <span class="rn-nav-sum">80</span>
+                                    </a>
+                                </li>    
+                            }
+                        </ul>
+                    </li> 
+                }
+            </ul>
+        </div>
     </div>
+    
 </div>

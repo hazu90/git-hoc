@@ -33,12 +33,18 @@ namespace MvcApplication1.Controllers
                 return View("CreateSuccess", new LocationSuccessForCreateModel() { 
                     LocationName = model.LocationName
                 });
-            }
+            }   
 
             model.LstCategory = (new CategoryBAL()).GetAll();
             model.LstCategoryGroup = (new CategoryGroupBAL()).GetAll();
 
             return View(model);
+        }
+
+        [AllowAnonymous]
+        public ActionResult GetByCity(string cityUrl)
+        {
+            return View();
         }
     }
 }
