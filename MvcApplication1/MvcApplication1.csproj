@@ -469,6 +469,7 @@
     <Content Include="Views\UserInformation\Edit.cshtml" />
     <Content Include="Views\Menu\_MyProfilePartial.cshtml" />
     <Content Include="Views\Shared\_SSOLayout.cshtml" />
+    <Content Include="Views\Location\Detail.cshtml" />
     <None Include="Web.Oauth.config">
       <SubType>Designer</SubType>
     </None>

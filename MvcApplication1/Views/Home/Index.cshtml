@@ -1,7 +1,13 @@
 ﻿@using SeafoodEntity
+@model List<Location>
 @{
     var lstCulinary = (List<Culinary>)ViewBag.AllCulinary;
 }
+
+@section banner {
+    @Html.Action("Index","Banner")
+}
+
 <div class="main-content-left">
     @Html.Partial("~/Views/Shared/_LeftContent_MainPagePartial.cshtml")
 </div>
@@ -79,43 +85,46 @@
         </ul>
     </div>
     <div class="writer-content">
-        <div class="content-item">
-            <div class="avatar">
-                <a href="/ha-noi/an-vat-an-trach" target="_blank">
-                    <img src="https://media.foody.vn/res/g26/252832/prof/s640x400/foody-mobile-2-jpg-606-636034201553247191.jpg">
-                </a>
-            </div>
-            <div class="items-content">
-                <div class="review-points">
-                    <span class="ng-binding">5.0</span>
-                </div>
-                <div class="title fd-text-ellip">
-                    <a href="/ha-noi/an-vat-an-trach" target="_blank"  class="ng-binding">Ăn Vặt An Trạch</a>
-                </div>
-                <div class="desc fd-text-ellip" >116 An Trạch, Quận Đống Đa, Hà Nội</div>
-            </div>
-            <div class="items-review" >
+        @foreach (var item in Model)
+        {
+            <div class="content-item">
                 <div class="avatar">
-                    <a href="/thanh-vien/Tuyenoc">
-                        <img src="https://media.foody.vn/default/s100/user-default-female.png">
+                    <a href="@item.HrefLink" target="_blank">
+                        <img src="@item.RepImgLink">
                     </a>
                 </div>
-                <div class="users-content">
-                    <a target="_blank" href="/thanh-vien/Tuyenoc">
-                        <b >Tuyến Ốc</b>
+                <div class="items-content">
+                    <div class="review-points">
+                        <span class="ng-binding">5.0</span>
+                    </div>
+                    <div class="title fd-text-ellip">
+                        <a href="@item.HrefLink" target="_blank"  class="ng-binding">@item.LocationName</a>
+                    </div>
+                    <div class="desc fd-text-ellip" >@item.Address</div>
+                </div>
+                <div class="items-review" >
+                    <div class="avatar">
+                        <a href="/thanh-vien/Tuyenoc">
+                            <img src="https://media.foody.vn/default/s100/user-default-female.png">
+                        </a>
+                    </div>
+                    <div class="users-content">
+                        <a target="_blank" href="/thanh-vien/Tuyenoc">
+                            <b >Tuyến Ốc</b>
+                        </a>
+                        <a target="_blank" href="/ha-noi/an-vat-an-trach/binh-luan-1477804">Quán đã chuyển về ngõ 126 hào nam rồi các bạn nhé</a>
+                    </div>
+                </div>
+                <div class="items-count">
+                    <a><i class="fa fa-comment"></i> <span class="ng-binding">1</span></a>
+                    <a><i class="fa fa-camera"></i> <span class="ng-binding">6</span></a>
+                    <i class="fa fa-bookmark"></i> <span class="ng-binding">0</span>
+                    <a href="javascript:void(0)" class="item-save tool-custom-list-add" data-id="252832">
+                        <i class="fa fa-bookmark"></i>
+                        <span>Lưu</span>
                     </a>
-                    <a target="_blank" href="/ha-noi/an-vat-an-trach/binh-luan-1477804">Quán đã chuyển về ngõ 126 hào nam rồi các bạn nhé</a>
                 </div>
             </div>
-            <div class="items-count">
-                <a><i class="fa fa-comment"></i> <span class="ng-binding">1</span></a>
-                <a><i class="fa fa-camera"></i> <span class="ng-binding">6</span></a>
-                <i class="fa fa-bookmark"></i> <span class="ng-binding">0</span>
-                <a href="javascript:void(0)" class="item-save tool-custom-list-add" data-id="252832">
-                    <i class="fa fa-bookmark"></i>
-                    <span>Lưu</span>
-                </a>
-            </div>
-        </div>
+        }
     </div>
 </div>

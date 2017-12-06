@@ -46,5 +46,11 @@ namespace MvcApplication1.Controllers
         {
             return View();
         }
+        
+        [AllowAnonymous]
+        public ActionResult Detail(string link)
+        {
+            return View();
+        }
     }
 }

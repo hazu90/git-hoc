@@ -32,6 +32,7 @@
     <body ng-app="SeaFoodyApp" show-menubar-always-on-top >
         <div class="header">
             <div class="wraper-img banner-header-top">
+                
                 @Html.Partial("~/Views/Menu/_BannerHeaderTopPartial.cshtml")
             </div>
             <div class="header-menu">
@@ -53,7 +54,8 @@
                 </div>
             </div>
         </div>
-        @Html.Action("Index","Banner")
+        @RenderSection("banner",false)
+        
         <div id="body" class="main-content">
             @RenderBody()
         </div>

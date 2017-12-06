@@ -63,7 +63,7 @@ namespace CF.BL
             {
                 foreach (var item in lstLocationCrawler)
                 {
-                    var sqlLine = string.Format("INSERT INTO [LocationCrawler]([Name],[HrefLink],[ImageLink],[AddressDescription]) VALUES('{0}','{1}','{2}','{3}') ", processDataBL.ProcessData(item.Name), processDataBL.ProcessData(item.HrefLink), processDataBL.ProcessData(item.ImageLink), processDataBL.ProcessData(item.AddressDescription));
+                    var sqlLine = string.Format("INSERT INTO [LocationCrawler]([Name],[HrefLink],[ImageLink],[AddressDescription]) VALUES(N'{0}',N'{1}',N'{2}',N'{3}') ", processDataBL.ProcessData(item.Name), processDataBL.ProcessData(item.HrefLink), processDataBL.ProcessData(item.ImageLink), processDataBL.ProcessData(item.AddressDescription));
                     writer.WriteLine(sqlLine);
                 }
                 writer.Flush();

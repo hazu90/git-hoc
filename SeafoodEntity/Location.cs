@@ -33,5 +33,7 @@ namespace SeafoodEntity
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public bool IsApproved { get; set; }
+        public string HrefLink { get; set; }
+        public string RepImgLink { get; set; }
     }
 }
