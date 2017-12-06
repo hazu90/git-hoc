@@ -54,8 +54,11 @@
   <ItemGroup>
     <Compile Include="BL\CityCrawlerBL.cs" />
     <Compile Include="BL\LocationCrawlerBL.cs" />
+    <Compile Include="BL\ProcessDataBL.cs" />
     <Compile Include="DAL\ConnectionDB.cs" />
+    <Compile Include="DAL\LocationCrawlerDL.cs" />
     <Compile Include="Models\CityCrawlerModel.cs" />
+    <Compile Include="Models\LocationCrawlerModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
