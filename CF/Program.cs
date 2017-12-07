@@ -20,7 +20,7 @@ namespace CF
             //cityCrawlerBL.GetData();
 
             var locationCrawlerBL = new LocationCrawlerBL();
-            locationCrawlerBL.GenerateScriptSql();
+            locationCrawlerBL.GenerateLocationDetailFile();
         }
     }
 }

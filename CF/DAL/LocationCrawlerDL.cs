@@ -21,5 +21,14 @@ namespace CF.DAL
                         .Execute();
             }
         }
+
+        public List<LocationCrawlerModel> GetAll()
+        {
+            using (var context = ConnectionDB.MainDB())
+            {
+                return context.StoredProcedure("LocationCrawler_GetAll")
+                                .QueryMany<LocationCrawlerModel>();
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using CF.Models;
+﻿using CF.DAL;
+using CF.Models;
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,7 @@ namespace CF.BL
                 OverrideEncoding = Encoding.UTF8,
             };
             HtmlAgilityPack.HtmlDocument document = web.Load(@""+ConfigurationManager.AppSettings["LocationDataLink"].ToString());
+            
             var htmlNode = document.DocumentNode.SelectNodes("//*[@id=\"ajaxRequestDiv\"]/div/div[2]/div").ToArray();
             var lstLocationCrawler = new List<LocationCrawlerModel>();
             foreach (var item in htmlNode)
@@ -54,7 +56,6 @@ namespace CF.BL
 
             return lstLocationCrawler;
         }
-
         public void GenerateScriptSql()
         {
             var processDataBL = new ProcessDataBL();
@@ -68,6 +69,28 @@ namespace CF.BL
                 }
                 writer.Flush();
             } 
+        }
+
+        public void GenerateLocationDetailFile()
+        {
+            var locationDL = new LocationCrawlerDL();
+            var lstLocationCrawler = locationDL.GetAll();
+            HtmlWeb web = new HtmlWeb()
+            {
+                AutoDetectEncoding = false,
+                OverrideEncoding = Encoding.UTF8,
+            };
+            
+            foreach (var item in lstLocationCrawler)
+            {
+                var document = web.Load(@"https://www.foody.vn"+item.HrefLink);
+                var htmlNode = document.DocumentNode.InnerHtml;
+                using (var writer = new StreamWriter(ConfigurationManager.AppSettings["LocationDetailData"].ToString() + item.HrefLink.Replace("/","") ))
+                {
+                    writer.Write(htmlNode);
+                    writer.Flush();
+                } 
+            }
         }
     }
 }
