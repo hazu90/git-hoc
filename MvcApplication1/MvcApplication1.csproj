@@ -236,6 +236,7 @@
     <Compile Include="Models\CategoryGroupModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\LocationForCreateModel.cs" />
+    <Compile Include="Models\LocationForDetailModel.cs" />
     <Compile Include="Models\LocationSuccessForCreateModel.cs" />
     <Compile Include="Models\RegisterInfoModel.cs" />
     <Compile Include="Models\ResponseModel.cs" />
@@ -269,6 +270,7 @@
     <Content Include="Content\img\vn.png" />
     <Content Include="Content\img\x.png" />
     <Content Include="Content\lastest_news.css" />
+    <Content Include="Content\location_detail.css" />
     <Content Include="Content\login_container.css" />
     <Content Include="Content\login_dialog.css" />
     <Content Include="Content\main_content.css" />

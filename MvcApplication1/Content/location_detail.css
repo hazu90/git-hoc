@@ -1,0 +1,14 @@
+﻿.location-detail-summary{
+    position: relative;
+    background: #fff;
+    display: inline-block;
+}
+.location-detail-summary .location-image-reperation{
+    float: left;
+    height: 275px;
+}
+.location-detail-summary .location-content-base{
+    margin-left: 25px;
+    width: 635px;
+    float: left;
+}

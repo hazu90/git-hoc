@@ -1,3 +1,42 @@
-﻿@{
+﻿@using MvcApplication1.Models
+@model LocationForDetailModel
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<div class="location-detail-summary">
+    <div class="location-view-count">
+        <div class="location-view-user">
+            <span>@Model.ViewCount </span> lượt xem 
+        </div>
+        <div class="location-fb-like">
+
+        </div>
+        <div class="location-gb-like">
+
+        </div>
+    </div>
+    <div class="location-image-reperation">
+        <a href="@Model.HrefLink">
+            <img src="@Model.RepImgLink" style="width:488px; " alt="@Model.LocationName" />
+        </a>
+    </div>
+    <div class="location-content-base">
+        <div class="location-address-area">
+            <a href="@Model.CityLink" ><span>@Model.CityName</span> >></a>
+            <a href="@Model.DistrictLink"><span>@Model.DistrictName </span> >> </a>
+            <a href="@Model.WardLink"><span>@Model.WardName</span></a>   
+        </div>
+        <div class="location-name-fashion">
+            <div class="location-name-item">
+                <span>@Model.LocationName</span>
+            </div>
+            <div class="location-fashion-item">
+                <a href="@Model.CategoryLink">@Model.CategoryName</a>
+                <a href="@Model.CulinaryLink">@Model.CulinaryName</a>
+                <span>@Model.OrientedCustomer</span>
+            </div>
+        </div>
+
+    </div>
+</div>
